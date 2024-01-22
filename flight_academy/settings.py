@@ -51,10 +51,9 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'home',
-    'flights',
     'about',
-    'contact',
-    'newsletter',
+    # 'contact',
+    # 'newsletter',
 ]
 
 MIDDLEWARE = [
