@@ -27,12 +27,15 @@ body {
     width: fit-content;
 }
 
-.shop-now-button {
-    background: black;
+.learn-more-button {
+    background: rgb(251, 0, 14);
     color: white;
     min-width: 260px;
 }
 
+.btn-red {
+    background: rgb(251, 0, 14);
+    color: #fff;
 }
 
 .btn-white {
@@ -53,13 +56,13 @@ body {
     color: white !important;
 }
 
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
+.learn-more-button:hover,
+.learn-more-button:active,
+.learn-more-button:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
+    background: rgb(165, 28, 32);
     color: white;
 }
 
