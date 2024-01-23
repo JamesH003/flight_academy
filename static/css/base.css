@@ -33,9 +33,11 @@ body {
     min-width: 260px;
 }
 
-.btn-black {
-    background: black;
-    color: white;
+}
+
+.btn-white {
+    background: #fff !important;
+    color: #000;
 }
 
 .btn-outline-black {
@@ -63,6 +65,10 @@ body {
 
 .text-black {
     color: #000 !important;
+}
+
+.text-white {
+    color: #fff !important;
 }
 
 .border-black {
