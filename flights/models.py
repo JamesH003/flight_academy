@@ -21,6 +21,7 @@ class Aircraft(models.Model):
 
     class Meta:
         ordering = ["aircraft_type"]
+        verbose_name_plural = 'Aircraft'
 
     def __str__(self):
         return self.aircraft_type
