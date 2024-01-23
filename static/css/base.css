@@ -73,6 +73,9 @@ body {
     background: #000 !important;
 }
 
+.bg-navy {
+    background: rgb(19, 29, 39);
+}
 
 
 /* -------------------------------- Media Queries */
