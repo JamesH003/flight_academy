@@ -3,7 +3,12 @@ html {
 }
 
 body {
-    background: url('/media/flight\ academy\ test-2.jpeg') no-repeat center center fixed;
+    height: calc(100vh - 128px);
+    color: #555;
+    font-family: 'Roboto Condensed', sans-serif;
+    overscroll-behavior: none;
+}
+
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
