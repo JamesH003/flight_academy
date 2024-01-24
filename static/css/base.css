@@ -136,6 +136,13 @@ body {
     height: 50vh;
 }
 
+.voucher-image,
+.placeholder-voucher-image {
+    max-width: 100%;
+    height: auto;
+}
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
