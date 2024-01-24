@@ -1,7 +1,5 @@
 html {
     height: 100%;
-    margin: 0;
-    padding: 0;
 }
 
 body {
@@ -171,5 +169,15 @@ body {
 
     .header-container {
         padding-top: 128px;
+    }
+}
+
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 80px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
     }
 }
