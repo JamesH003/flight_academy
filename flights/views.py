@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
-from .models import Voucher
+from django.shortcuts import render, get_object_or_404, redirect
+from .models import Voucher, Aircraft
+from .forms import VoucherForm
 
 # Create your views here.
 
@@ -25,3 +26,14 @@ def voucher_detail(request, voucher_id):
     }
     
     return render(request, 'flights/voucher_detail.html', context)
+
+
+def add_voucher(request):
+    form = VoucherForm(request.POST or None, request.FILES or None)
+
+    if request.method == 'POST':
+        if form.is_valid():
+            form.save()
+            return redirect('vouchers')
+
+    return render(request, 'flights/add_voucher.html', {'form': form})
