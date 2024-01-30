@@ -37,3 +37,24 @@ def add_voucher(request):
             return redirect('vouchers')
 
     return render(request, 'flights/add_voucher.html', {'form': form})
+
+
+def edit_voucher(request, id):
+    """ A view to allow a superuser to edit a voucher """
+    voucher = get_object_or_404(Voucher, id=id)
+    if not request.user.is_superuser:
+        return redirect('vouchers')
+    form = VoucherForm(
+        request.POST or None, request.FILES or None, instance=voucher)
+    if request.method == 'POST':
+        if form.is_valid():
+            form.save()
+            return redirect('vouchers')
+    context = {
+        'form': form,
+        'voucher': voucher,
+    }
+
+    return render(request, 'flights/edit_voucher.html', context)
+
+
