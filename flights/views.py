@@ -58,3 +58,10 @@ def edit_voucher(request, id):
     return render(request, 'flights/edit_voucher.html', context)
 
 
+def delete_voucher(request, id):
+    """ A view to allow a superuser to delete a voucher """
+    voucher = get_object_or_404(Voucher, id=id)
+    if not request.user.is_superuser:
+        return redirect('vouchers')
+    voucher.delete()
+    return redirect('vouchers')
