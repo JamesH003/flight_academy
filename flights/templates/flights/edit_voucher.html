@@ -10,4 +10,24 @@
 {% endblock %}
 
 {% block content %}
+<div class="row">
+    <div class="col-12 col-md-6">
+      <form class="mb-3" method="POST" action="{% url 'edit_voucher' voucher.id %}" enctype="multipart/form-data">
+        <h1>
+          Edit a Voucher:
+        </h1>
+          {% if "placeholder" in voucher.image.url %}
+              <img src="" alt="{{ upload.caption }}" class="img-fluid img-preview">
+          {% else %}
+              <img src="{{ voucher.image.url }}" alt="{{ voucher.title }}" class="img-fluid img-preview">
+          {% endif %}
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div>
+          <button type="submit" class="btn btn-primary">Save</button>
+          <a href="{{ request.META.HTTP_REFERER }}" class="btn btn-danger">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
 {% endblock %}
