@@ -7,4 +7,5 @@ urlpatterns = [
     path('add_voucher/', views.add_voucher, name='add_voucher'),
     path('<voucher_id>/', views.voucher_detail, name='voucher_detail'),
     path('edit/<int:id>', views.edit_voucher, name='edit_voucher'),
+    path('delete/<int:id>', views.delete_voucher, name='delete_voucher'),
 ]
