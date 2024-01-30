@@ -29,6 +29,7 @@ def voucher_detail(request, voucher_id):
 
 
 def add_voucher(request):
+    """ A view to allow a superuser to add a new voucher """
     form = VoucherForm(request.POST or None, request.FILES or None)
 
     if request.method == 'POST':
