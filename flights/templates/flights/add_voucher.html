@@ -10,6 +10,15 @@
 {% endblock %}
 
 {% block content %}
+<div class="{% if request.user.is_superuser %}d-block{% else %}d-none{% endif %}">
+    <h2>Add new voucher</h2>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Voucher</button>
+    </form>
+</div>
+
 {% endblock %}
 {% block postloadjs %}
 {% endblock %}
