@@ -70,16 +70,16 @@
                                 </span>
                                 <span class="text-uppercase">Keep Shopping</span>
                             </a>
-                            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                            <input type="submit" class="btn btn-red rounded-0 text-uppercase mt-5" value="Add to Bag">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
                 </form>
 
                 {% if request.user.is_superuser %}
-                <a href="{% url 'edit_voucher' voucher.id %}" class="btn btn-primary">Edit</a>
+                <a href="{% url 'edit_voucher' voucher.id %}" class="btn btn-red rounded-0 text-uppercase my-2">Edit</a>
                 <!-- Delete Modal to be added -->
-                <a href="{% url 'delete_voucher' voucher.id %}" class="btn btn-red">Delete</a>
+                <a href="{% url 'delete_voucher' voucher.id %}" class="btn btn-red rounded-0 text-uppercase my-2">Delete</a>
                 <!-- <a class="btn btn-red" data-bs-toggle="modal" data-bs-target="#modal-delete-voucher-{{ voucher.id }}">Delete</a> -->
 
 
