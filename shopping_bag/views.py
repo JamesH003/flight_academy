@@ -21,5 +21,39 @@ def add_to_shopping_bag(request, voucher_id):
         shopping_bag[voucher_id] = quantity
 
     request.session['shopping_bag'] = shopping_bag
-    print(request.session['shopping_bag'])
     return redirect(redirect_url)
+
+
+# view to adjust the quantity of vouchers in the shopping bag
+def adjust_shopping_bag(request, voucher_id):
+    """ Adjust the quantity of the specified voucher in the shopping bag """
+
+    shopping_bag = request.session.get('shopping_bag', {})
+    voucher = get_object_or_404(Voucher, pk=voucher_id)
+    quantity = int(request.POST.get('quantity'))
+
+    if quantity > 0:
+        shopping_bag[voucher_id] = quantity
+        messages.success(request, f'Updated {voucher.title} quantity to {shopping_bag[voucher_id]}')
+    else:
+        shopping_bag.pop(voucher_id)
+        messages.success(request, f'Removed {voucher.title} from your shopping bag')
+
+    request.session['shopping_bag'] = shopping_bag
+    return redirect(reverse('view_shopping_bag'))
+
+
+# view to remove vouchers from the shopping bag
+def remove_from_shopping_bag(request, voucher_id):
+    """ Remove the specified voucher from the shopping bag """
+
+    try:
+        voucher = get_object_or_404(Voucher, pk=voucher_id)
+        shopping_bag = request.session.get('shopping_bag', {})
+        shopping_bag.pop(voucher_id)
+
+        request.session['shopping_bag'] = shopping_bag
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        return HttpResponse(status=500)
