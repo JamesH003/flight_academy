@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'about',
     'flights',
     'shopping_bag',
+    'payments',
     # 'contact',
     # 'newsletter',
 ]
