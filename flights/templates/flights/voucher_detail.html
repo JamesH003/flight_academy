@@ -32,9 +32,6 @@
                 <h3>{{ voucher.title }}</h3>
                 <p>{{ voucher.description }}</p>
                 <p>€{{ voucher.cost }}</p>
-                <h4>
-                    <a href="" class="learn-more-button btn btn-lg rounded-0 text-uppercase py-3">Buy Now</a>
-                </h4>
                 <form class="form" action="{% url 'add_to_shopping_bag' voucher.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
