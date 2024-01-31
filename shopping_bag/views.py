@@ -1,6 +1,8 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404, reverse, HttpResponse
+from django.contrib import messages
 
-# Create your views here.
+from flights.models import Voucher
+
 
 def view_shopping_bag(request):
     """ A view that renders the shopping bag contents page """
