@@ -1,21 +1,42 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
+from django.conf import settings
 
 from .forms import OrderForm
+from shopping_bag.contexts import shopping_bag_contents
+
+import stripe
 
 
 def payments(request):
+    stripe_public_key = settings.STRIPE_PUBLIC_KEY
+    stripe_secret_key = settings.STRIPE_SECRET_KEY
+
     shopping_bag = request.session.get('shopping_bag', {})
     if not shopping_bag:
         messages.error(request, "Your shopping bag is currently empty")
         return redirect(reverse('vouchers'))
 
+    current_shopping_bag = shopping_bag_contents(request)
+    total = current_shopping_bag['grand_total']
+    stripe_total = round(total * 100)
+    stripe.api_key = stripe_secret_key
+    intent = stripe.PaymentIntent.create(
+        amount=stripe_total,
+        currency=settings.STRIPE_CURRENCY,
+    )
+
+
     order_form = OrderForm()
+
+    if not stripe_public_key:
+        messages.warning(request, 'Stripe public key is missing. \
+            Did you forget to set it in your environment?')
     template = 'payments/payments.html'
     context = {
         'order_form': order_form,
-        'stripe_public_key': 'pk_test_51Of1FzFIBeo32zW9gNHC9Qqda1a55dVuvm9wunbKXFSbM1miigw4vYXQ75sio78eJFrfpYZtjJjDYO74xJkuhLhr00zyFHzPcQ',
-        'client_secret': 'test client secret',
+        'stripe_public_key': stripe_public_key,
+        'client_secret': intent.client_secret,
     }
 
     return render(request, template, context)
