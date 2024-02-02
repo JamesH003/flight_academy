@@ -39,6 +39,11 @@ body {
     min-width: 260px;
 }
 
+.checkout-btn {
+    background: rgb(251, 0, 14);
+    color: white;
+}
+
 .btn-red {
     background: rgb(251, 0, 14);
     color: #fff;
