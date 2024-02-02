@@ -83,3 +83,24 @@ def payments(request):
     }
 
     return render(request, template, context)
+
+
+def payments_success(request, order_number):
+    """
+    Handle successful checkouts
+    """
+    save_info = request.session.get('save_info')
+    order = get_object_or_404(Order, order_number=order_number)
+    messages.success(request, f'Order successfully processed! \
+        Your order number is {order_number}. A confirmation \
+        email will be sent to {order.email}')
+
+    if 'shopping_bag' in request.session:
+        del request.session['shopping_bag']
+
+    template = 'payments/payments_success.html'
+    context = {
+        'order': order,
+    }
+
+    return render(request, template, context)
