@@ -2,6 +2,7 @@ from django.http import HttpResponse
 
 from .models import Order, OrderLineItem
 from flights.models import Voucher
+from user_profile.models import UserProfile
 
 import json
 import time
@@ -39,6 +40,14 @@ class StripeWH_Handler:
         billing_details = stripe_charge.billing_details
         grand_total = round(stripe_charge.amount / 100, 2)
 
+        # Update profile information if save_info was checked
+        user_profile = None
+        username = intent.metadata.username
+        if username != 'AnonymousUser':
+            user_profile = UserProfile.objects.get(user__username=username)
+            user_profile.save()
+
+
         order_exists = False
         attempt = 1
         while attempt <= 5:
@@ -63,6 +72,7 @@ class StripeWH_Handler:
             try:
                 order = Order.objects.create(
                     full_name=billing_details.name,
+                    user_profile=profile,
                     email=billing_details.email,
                     original_shopping_bag=shopping_bag,
                     stripe_pid=pid,

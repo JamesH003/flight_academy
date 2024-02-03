@@ -6,6 +6,7 @@ from django.conf import settings
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 from flights.models import Voucher
+from user_profile.models import UserProfile
 from shopping_bag.contexts import shopping_bag_contents
 
 import stripe
@@ -114,6 +115,13 @@ def payments_success(request, order_number):
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
+
+    if request.user.is_authenticated:
+        user_profile = UserProfile.objects.get(user=request.user)
+        # Attach the user's profile to the order
+        order.user_profile = user_profile
+        order.save()
+
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}')
