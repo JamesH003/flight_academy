@@ -16,6 +16,9 @@
                 <h2 class="display-3 logo-font text-white">Vouchers</h2>
             </div>
         </div>
+        <a class="{% if request.user.is_superuser %}d-block{% else %}d-none{% endif %} nav-link main-logo-link" href="{% url 'add_voucher' %}">
+            <h2 class="logo-font my-0"><strong>Add Voucher</strong></h2>
+        </a>
 
         <div class="row">
             <div class="col-12">
