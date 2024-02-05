@@ -1,8 +1,9 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from .models import Voucher, Aircraft
 from .forms import VoucherForm
 
-# Create your views here.
 
 def all_vouchers(request):
     """ A view to show all vouchers """
@@ -28,29 +29,51 @@ def voucher_detail(request, voucher_id):
     return render(request, 'flights/voucher_detail.html', context)
 
 
+@login_required
 def add_voucher(request):
     """ A view to allow a superuser to add a new voucher """
-    form = VoucherForm(request.POST or None, request.FILES or None)
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only Flight Academy management can access this.')
+        return redirect(reverse('vouchers'))
 
     if request.method == 'POST':
+        form = VoucherForm(request.POST or None, request.FILES or None)
         if form.is_valid():
             form.save()
+            messages.success(request, 'You have successfully added a new voucher!')
             return redirect('vouchers')
+        else:
+            messages.error(request, 'Failed to add voucher. Please ensure the form is valid.')
+    else:
+            form = VoucherForm()
+
+    template = 'flights/add_product.html'
+    context = {
+            'form': form,
+    }
 
     return render(request, 'flights/add_voucher.html', {'form': form})
 
 
+@login_required
 def edit_voucher(request, id):
     """ A view to allow a superuser to edit a voucher """
     voucher = get_object_or_404(Voucher, id=id)
     if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only Flight Academy management can access this.')
         return redirect('vouchers')
     form = VoucherForm(
         request.POST or None, request.FILES or None, instance=voucher)
     if request.method == 'POST':
         if form.is_valid():
             form.save()
+            messages.success(request, f'Successfully updated {voucher.title}')
             return redirect('vouchers')
+        else:
+            messages.error(request, f'Failed to update {voucher.title}. Please ensure the form is valid.')
+    else:
+        form = VoucherForm(instance=voucher)
+        messages.info(request, f'You are editing {voucher.title}.')
     context = {
         'form': form,
         'voucher': voucher,
@@ -59,10 +82,12 @@ def edit_voucher(request, id):
     return render(request, 'flights/edit_voucher.html', context)
 
 
+@login_required
 def delete_voucher(request, id):
     """ A view to allow a superuser to delete a voucher """
     voucher = get_object_or_404(Voucher, id=id)
     if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only Flight Academy management can access this.')
         return redirect('vouchers')
     voucher.delete()
     return redirect('vouchers')
