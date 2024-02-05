@@ -14,38 +14,42 @@
         <div class="row">
             <div class="col-12 voucher-bg-image d-flex flex-column align-items-center justify-content-center">
                 <h2 class="display-3 logo-font text-white">Vouchers</h2>
+                <a class="{% if request.user.is_superuser %}d-block{% else %}d-none{% endif %} nav-link main-logo-link" href="{% url 'add_voucher' %}">
+                    <h2 class="btn btn-red rounded-0"><strong>Add Voucher</strong></h2>
+                </a>
             </div>
         </div>
-        <a class="{% if request.user.is_superuser %}d-block{% else %}d-none{% endif %} nav-link main-logo-link" href="{% url 'add_voucher' %}">
-            <h2 class="logo-font my-0"><strong>Add Voucher</strong></h2>
-        </a>
 
-        <div class="row">
-            <div class="col-12">
-                <div class="row"></div>
+        <div class="row voucher-bg">
+            <div class="col-12 col-md-10 offset-1">
                 <div class="row">
                     {% for voucher in vouchers %}
-                        <div class="col-12 col-md-4 col-lg-3 container-fluid">
-                            <div class="card h-100 border-0">
+                        <div class="col-12 col-md-6 container">
+                            <div class="card mt-5 mb-2 mx-3">
                                 {% if voucher.image %}
                                 <a href="{% url 'voucher_detail' voucher.id %}">
-                                    <img class="voucher-image mt-5" src="{{ voucher.image.url }}" alt="{{ voucher.title }}">
+                                    <img class="voucher-image" src="{{ voucher.image.url }}" alt="{{ voucher.title }}">
                                 </a>
                                 {% else %}
                                 <a href="{% url 'voucher_detail' voucher.id %}">
-                                    <img class="placeholder-voucher-image mt-5" src="{% static 'images/voucher-placeholder-image.jpeg' %}" alt="{{ voucher.title }}">
+                                    <img class="placeholder-voucher-image" src="{% static 'images/voucher-placeholder-image.jpeg' %}" alt="{{ voucher.title }}">
                                 </a>
                                 {% endif %}
-                                <div class="card-body">
-                                    <p>{{ voucher.title }}</p>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="row">
-                                        <div class="col">
-                                            <p>€{{ voucher.cost }}</p>
+                                <a class="text-decoration-none" href="{% url 'voucher_detail' voucher.id %}">
+                                    <div class="card-body">
+                                        <p class="voucher-title text-center display-4">{{ voucher.title }}</p>
+                                        <hr>
+                                        <p class="text-center voucher-text mt-4"><i class="fas fa-plane text-red mx-auto my-auto"></i> {{ voucher.aircraft_type }}</p>
+                                    </div>
+                                    <div class="bg-navy">
+                                        <div class="row">
+                                            <div class="col">
+                                                <p class="text-center voucher-text text-white">€{{ voucher.cost }}</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
+
                             </div>
                         </div>
                     {% endfor %}
