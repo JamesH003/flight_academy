@@ -12,13 +12,13 @@
 {% block content %}
 <div class="container my-3">
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 col-md-8">
             <div class="{% if request.user.is_superuser %}d-block{% else %}d-none{% endif %}">
-                <h2>Add new voucher</h2>
+                <h2 class="display-4">Add a new Voucher:</h2>
                 <form method="POST" action="" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <button class="mb-5" type="submit">Add Voucher</button>
+                    <button class="btn btn-red rounded-0 mb-3" type="submit">Add Voucher</button>
                 </form>
             </div>
         </div>
