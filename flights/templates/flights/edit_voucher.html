@@ -10,24 +10,26 @@
 {% endblock %}
 
 {% block content %}
-<div class="row">
-    <div class="col-12 col-md-6">
-      <form class="mb-3" method="POST" action="{% url 'edit_voucher' voucher.id %}" enctype="multipart/form-data">
-        <h1>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-8">
+      <form class="my-3" method="POST" action="{% url 'edit_voucher' voucher.id %}" enctype="multipart/form-data">
+        <h2 class="display-4">
           Edit a Voucher:
-        </h1>
+        </h2>
           {% if "placeholder" in voucher.image.url %}
               <img src="" alt="{{ upload.caption }}" class="img-fluid img-preview">
           {% else %}
               <img src="{{ voucher.image.url }}" alt="{{ voucher.title }}" class="img-fluid img-preview">
           {% endif %}
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ form|crispy }}
         <div>
-          <button type="submit" class="btn btn-primary">Save</button>
-          <a href="{{ request.META.HTTP_REFERER }}" class="btn btn-danger">Cancel</a>
+          <button type="submit" class="btn text-white bg-navy">Save</button>
+          <a href="{{ request.META.HTTP_REFERER }}" class="btn btn-red">Cancel</a>
         </div>
       </form>
+    </div>
     </div>
   </div>
 {% endblock %}
