@@ -16,6 +16,7 @@ class VoucherAdmin(admin.ModelAdmin):
     list_display = (
         'title',
         'description',
+        'aircraft_type',
         'duration',
         'cost',
         'image',
