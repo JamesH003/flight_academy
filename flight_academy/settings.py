@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'shopping_bag',
     'payments',
     'user_profile',
+    'training',
     # 'contact',
     # 'newsletter',
 
