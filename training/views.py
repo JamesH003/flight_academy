@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Training
 
 from flights.models import Aircraft
-# from .forms import TrainingForm
+from .forms import TrainingForm
 
 
 def training(request):
@@ -29,5 +29,31 @@ def training_detail(request, training_id):
     }
     
     return render(request, 'training/training_detail.html', context)
+
+
+@login_required
+def add_training(request):
+    """ A view to allow a superuser to add a new Training Course """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only Flight Academy management can access this.')
+        return redirect(reverse('training'))
+
+    if request.method == 'POST':
+        form = TrainingForm(request.POST or None, request.FILES or None)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'You have successfully added a new Training Course!')
+            return redirect('training')
+        else:
+            messages.error(request, 'Failed to add training course. Please ensure the form is valid.')
+    else:
+            form = TrainingForm()
+
+    template = 'training/add_training.html'
+    context = {
+            'form': form,
+    }
+
+    return render(request, 'training/add_training.html', {'form': form})
 
 
