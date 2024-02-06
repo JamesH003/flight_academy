@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-12 voucher-bg-image d-flex flex-column align-items-center justify-content-center">
                 <h2 class="display-3 logo-font text-white">Training Courses</h2>
-                <a class="{% if request.user.is_superuser %}d-block{% else %}d-none{% endif %} nav-link main-logo-link" href="{% url 'add_voucher' %}">
+                <a class="{% if request.user.is_superuser %}d-block{% else %}d-none{% endif %} nav-link main-logo-link" href="{% url 'add_training' %}">
                     <h2 class="btn btn-lg btn-red rounded-0"><strong>Add Training Course</strong></h2>
                 </a>
             </div>
@@ -23,19 +23,19 @@
         <div class="row voucher-bg">
             <div class="col-12 col-md-10 offset-md-1">
                 <div class="row">
-                    {% for training in trainings %}
+                    {% for training in training %}
                         <div class="col-12 col-md-6 container">
                             <div class="card mt-5 mb-2 mx-3">
                                 {% if training.image %}
-                                <a href="{% url 'voucher_detail' voucher.id %}">
-                                    <img class="voucher-image" src="{{ voucher.image.url }}" alt="{{ voucher.title }}">
+                                <a href="{% url 'training_detail' training.id %}">
+                                    <img class="voucher-image" src="{{ training.image.url }}" alt="{{ training.title }}">
                                 </a>
                                 {% else %}
-                                <a href="{% url 'voucher_detail' voucher.id %}">
-                                    <img class="placeholder-voucher-image" src="{% static 'images/voucher-placeholder-image.jpeg' %}" alt="{{ voucher.title }}">
+                                <a href="{% url 'training_detail' training.id %}">
+                                    <img class="placeholder-voucher-image" src="{% static 'images/voucher-placeholder-image.jpeg' %}" alt="{{ training.title }}">
                                 </a>
                                 {% endif %}
-                                <a class="text-decoration-none" href="{% url 'voucher_detail' voucher.id %}">
+                                <a class="text-decoration-none" href="{% url 'training_detail' training.id %}">
                                     <div class="card-body">
                                         <p class="voucher-title text-center display-4">{{ training.title }}</p>
                                         <hr>
