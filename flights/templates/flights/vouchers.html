@@ -15,13 +15,13 @@
             <div class="col-12 voucher-bg-image d-flex flex-column align-items-center justify-content-center">
                 <h2 class="display-3 logo-font text-white">Vouchers</h2>
                 <a class="{% if request.user.is_superuser %}d-block{% else %}d-none{% endif %} nav-link main-logo-link" href="{% url 'add_voucher' %}">
-                    <h2 class="btn btn-red rounded-0"><strong>Add Voucher</strong></h2>
+                    <h2 class="btn btn-lg btn-red rounded-0"><strong>Add Voucher</strong></h2>
                 </a>
             </div>
         </div>
 
         <div class="row voucher-bg">
-            <div class="col-12 col-md-10 offset-1">
+            <div class="col-12 col-md-10 offset-md-1">
                 <div class="row">
                     {% for voucher in vouchers %}
                         <div class="col-12 col-md-6 container">
@@ -58,9 +58,6 @@
         </div>
     </div>
 
-    <a href="{% url 'add_voucher' %}" class="nav-link main-logo-link">
-        <h2 class="logo-font my-0"><strong>Add Voucher</strong></h2>
-    </a>
 
     <!-- back to top of page button -->
     <div class="btt-button btn-red shadow-sm rounded-0 border border-black">
