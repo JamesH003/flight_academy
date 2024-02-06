@@ -57,7 +57,7 @@ INSTALLED_APPS = [
     'payments',
     'user_profile',
     'training',
-    # 'contact',
+    'contact',
     # 'newsletter',
 
     # other

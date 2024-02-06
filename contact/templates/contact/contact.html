@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="container my-3">
+    <div class="row">
+        <div class="col-12 col-md-8">
+            <div class="{% if request.user.is_superuser %}d-block{% else %}d-none{% endif %}">
+                <h2 class="display-4">Register Your Interest In Training</h2>
+                <p>Please enter your details below and a member of our team will be in touch with further information.</p>
+                <form method="POST" action="" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <a href="{{ request.META.HTTP_REFERER }}" class="btn bg-navy text-white rounded-0 mb-3">Cancel</a>
+                    <button class="btn btn-red rounded-0 mb-3" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block postloadjs %}
+{% endblock %}
+
