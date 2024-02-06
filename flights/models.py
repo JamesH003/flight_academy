@@ -44,7 +44,7 @@ class Voucher(models.Model):
         "image", default="placeholder", null=False, blank=False)
 
     class Meta:
-        ordering = ["cost"]
+        ordering = ["aircraft_type"]
 
     def __str__(self):
         return self.title
