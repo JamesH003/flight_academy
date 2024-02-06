@@ -84,3 +84,12 @@ def edit_training(request, id):
     return render(request, 'training/edit_training.html', context)
 
 
+@login_required
+def delete_training(request, id):
+    """ A view to allow a superuser to delete a training course """
+    training = get_object_or_404(Training, id=id)
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only Flight Academy management can access this.')
+        return redirect('training')
+    training.delete()
+    return redirect('training')
