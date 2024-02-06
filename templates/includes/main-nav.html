@@ -1,6 +1,6 @@
 <div class="collapse navbar-collapse bg-navy" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Training
             </a>
@@ -9,6 +9,12 @@
                 <a href="" class="dropdown-item ">Private Pilot Licence (PPL)</a>
                 <a href="" class="dropdown-item ">ATPL (A) Integrated Pilot Programme</a>
             </div>
+        </li> -->
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'training' %}">
+                Training
+            </a>
         </li>
 
         <li class="nav-item dropdown">
@@ -24,8 +30,8 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white" href="#">
-                Newsletter
+            <a class="logo-font font-weight-bold nav-link text-white" href="{% url 'contact' %}">
+                Contact Us
             </a>
         </li>
     </ul>
