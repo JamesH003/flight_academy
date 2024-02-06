@@ -57,3 +57,30 @@ def add_training(request):
     return render(request, 'training/add_training.html', {'form': form})
 
 
+@login_required
+def edit_training(request, id):
+    """ A view to allow a superuser to edit a Training Course """
+    training = get_object_or_404(Training, id=id)
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only Flight Academy management can access this.')
+        return redirect('training')
+    form = TrainingForm(
+        request.POST or None, request.FILES or None, instance=training)
+    if request.method == 'POST':
+        if form.is_valid():
+            form.save()
+            messages.success(request, f'Successfully updated {training.title}')
+            return redirect('training')
+        else:
+            messages.error(request, f'Failed to update {training.title}. Please ensure the form is valid.')
+    else:
+        form = TrainingForm(instance=training)
+        messages.info(request, f'You are editing {training.title}.')
+    context = {
+        'form': form,
+        'training': training,
+    }
+
+    return render(request, 'training/edit_training.html', context)
+
+

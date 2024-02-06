@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-8">
+      <form class="my-3" method="POST" action="{% url 'edit_training' training.id %}" enctype="multipart/form-data">
+        <h2 class="display-4">
+          Edit a Training Course:
+        </h2>
+          {% if "placeholder" in training.image.url %}
+              <img src="" alt="{{ training.title }}" class="img-fluid img-preview">
+          {% else %}
+              <img src="{{ training.image.url }}" alt="{{ training.title }}" class="img-fluid img-preview">
+          {% endif %}
+        {% csrf_token %}
+        {{ form|crispy }}
+        <div>
+          <a href="{{ request.META.HTTP_REFERER }}" class="btn btn-red rounded-0">Cancel</a>
+          <button type="submit" class="btn text-white bg-navy rounded-0">Save</button>
+        </div>
+      </form>
+    </div>
+    </div>
+  </div>
+{% endblock %}
