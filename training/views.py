@@ -17,3 +17,17 @@ def training(request):
     }
     
     return render(request, 'training/training.html', context)
+
+
+def training_detail(request, training_id):
+    """ A view to show individual training course details """
+
+    training = get_object_or_404(Training, pk=training_id)
+
+    context = {
+        'training': training,
+    }
+    
+    return render(request, 'training/training_detail.html', context)
+
+
