@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">    
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div>
+                    {% if training.image %}
+                            <img class="voucher-image mt-3 mt-md-5" src="{{ training.image.url }}" alt="{{ training.title }}">
+                    {% else %}
+                            <img class="placeholder-voucher-image mt-3" src="{% static 'images/voucher-placeholder-image.jpeg' %}" alt="{{ training.title }}">
+                    {% endif %}
+                    <hr>
+                <p class="voucher-text text-center"><i class="fas fa-plane text-red mx-auto my-auto"></i> {{ training.aircraft_type }}</p>
+                    <hr>
+                    
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mt-3">
+                <h3 class="voucher-details-title mt-4 text-center">{{ training.title }}</h3>
+                    <hr>
+                <p class="voucher-text text-center">€{{ training.cost }}</p>
+                    <hr>
+                <p class="voucher-description">{{ training.description }}</p>
+                    
+                    {% if request.user.is_superuser %}
+                    <a href="{% url 'edit_training' training.id %}" class="btn bg-navy text-white rounded-0 text-uppercase my-2">Edit</a>
+                    <!-- Delete Modal to be added -->
+                    <a href="{% url 'delete_training' training.id %}" class="btn btn-red rounded-0 text-uppercase my-2">Delete</a>
+                    <!-- <a class="btn btn-red" data-bs-toggle="modal" data-bs-target="#modal-delete-voucher-{{ voucher.id }}">Delete</a> -->
+                    {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'flights/includes/quantity_input_script.html' %}
+{% endblock %}
