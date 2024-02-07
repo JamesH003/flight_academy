@@ -46,7 +46,7 @@
                 <div class="row">
                     <div class="col-12 col-md-8">
                         <p class="p-2">Flight Academy recruits over 40 fulltime and experienced EASA flight instructors, most of them with 1000’s of hours flying and instructing in international and EASA airspace.
-                            All our FI’s have successfully passed our thorough standardisation course, deemed to be one of the toughest in the industry, to ensure their training standards are not just in line with our quality system but outstanding.</p>
+                            All our FI's have successfully passed our thorough standardisation course, deemed to be one of the toughest in the industry, to ensure their training standards are not just in line with our quality system but outstanding.</p>
                     </div>
                     <div class="col-12 col-md-4 about-image-3"></div>
                 </div>
@@ -56,6 +56,18 @@
                 <div class="col-12 about-image-4 d-flex flex-column align-items-center justify-content-center">
                     <h2 class="display-3 logo-font text-white p-2">Ultimate Skills</h2>
                     <p class="text-white">Train with Airline Captains</p>
+                </div>
+            </div>
+
+            <div class="row my-5">
+                <div class="col-12 col-md-6 mx-auto text-center">
+                    <h2>Sign up to the Flight Academy Newsletter</h2>
+                    <form method="POST" action="" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <a href="{{ request.META.HTTP_REFERER }}" class="btn bg-navy text-white rounded-0 mb-3">Cancel</a>
+                        <button class="btn btn-red rounded-0 mb-3" type="submit">Submit</button>
+                    </form>
                 </div>
             </div>
        </div>
