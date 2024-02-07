@@ -18,7 +18,7 @@
           Edit a Training Course:
         </h2>
           {% if "placeholder" in training.image.url %}
-              <img src="" alt="{{ training.title }}" class="img-fluid img-preview">
+              <img src="{% static 'images/training-placeholder.jpg' %}" alt="{{ training.title }}" class="img-fluid img-preview">
           {% else %}
               <img src="{{ training.image.url }}" alt="{{ training.title }}" class="img-fluid img-preview">
           {% endif %}
