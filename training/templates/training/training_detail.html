@@ -17,7 +17,7 @@
                     {% if 'placeholder' not in training.image.url %}
                             <img class="voucher-image mt-3 mt-md-5" src="{{ training.image.url }}" alt="{{ training.title }}">
                     {% else %}
-                            <img class="placeholder-voucher-image mt-3" src="{% static 'images/voucher-placeholder-image.jpeg' %}" alt="{{ training.title }}">
+                            <img class="placeholder-voucher-image mt-3" src="{% static 'images/training-placeholder.jpg' %}" alt="{{ training.title }}">
                     {% endif %}
                     <hr>
                 <p class="voucher-text text-center"><i class="fas fa-plane text-red mx-auto my-auto"></i> {{ training.aircraft_type }}</p>
@@ -36,7 +36,8 @@
 
                 {% if request.user.is_superuser %}
                     <a href="{% url 'edit_training' training.id %}" class="btn bg-navy text-white rounded-0 text-uppercase py-3 my-2">Edit</a>
-                    <!-- Delete Modal to be added -->
+
+                    <!-- Delete Modal -->
                     <a href="#" class="btn btn-red rounded-0 text-uppercase py-3 my-2" data-toggle="modal" data-target="#modal-delete-training-{{ training.id }}">Delete</a>
                     
                     <div class="modal fade" id="modal-delete-training-{{ training.id }}" tabindex="-1" aria-labelledby="modal-delete-label-{{ training.id }}" aria-hidden="true">
@@ -44,8 +45,8 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h1 class="modal-title fs-5" id="modal-delete-label-{{ training.id }}">Delete Training Course</h1>
-                                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
-                                    <i class="fas fa-close"></i>
+                                <button type="button" class="btn-close btn-red" data-dismiss="modal" aria-label="Close">
+                                    <i class="fas fa-close text-white"></i>
                                 </button>
                             </div>
                             <div class="modal-body text-center">
