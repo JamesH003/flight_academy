@@ -32,12 +32,20 @@ class Training(models.Model):
     """
     A model to handle the training course options
     """
+    MODES = [
+        ("Modular", "Modular"),
+        ("Integrated", "Integrated"),
+    ]
+
     title = models.CharField(max_length=100, null=False, blank=False)
     description = models.TextField(null=False, blank=False)
     licence_type = models.ForeignKey(
         Licence, on_delete=models.CASCADE, null=False, blank=False)
     cost = models.PositiveIntegerField(null=False, blank=False)
-    mode_of_training = models.CharField(max_length=40, null=False, blank=False)
+    mode_of_training = models.CharField(
+        choices=MODES, default="Modular", max_length=50,
+        null=False, blank=False
+    )
     aircraft_type = models.ForeignKey(
         Aircraft, on_delete=models.CASCADE, null=False, blank=False)
     image = CloudinaryField(
