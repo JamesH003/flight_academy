@@ -23,10 +23,10 @@
         <div class="row voucher-bg">
             <div class="col-12 col-md-10 offset-md-1">
                 <div class="row">
-                    {% for training in training %}
+                    {% for training in trainings %}
                         <div class="col-12 col-md-6 container">
                             <div class="card mt-5 mb-2 mx-3">
-                                {% if training.image %}
+                                {% if 'placeholder' not in training.image.url %}
                                 <a href="{% url 'training_detail' training.id %}">
                                     <img class="voucher-image" src="{{ training.image.url }}" alt="{{ training.title }}">
                                 </a>
