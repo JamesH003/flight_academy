@@ -10,10 +10,10 @@ from .forms import TrainingForm
 def training(request):
     """ A view to show all training courses """
 
-    training = Training.objects.all()
+    trainings = Training.objects.all()
 
     context = {
-        'training': training,
+        'trainings': trainings,
     }
     
     return render(request, 'training/training.html', context)
