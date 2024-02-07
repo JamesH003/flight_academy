@@ -18,7 +18,7 @@
           Edit a Voucher:
         </h2>
           {% if "placeholder" in voucher.image.url %}
-              <img src="" alt="{{ upload.caption }}" class="img-fluid img-preview">
+              <img src="{% static 'images/voucher-placeholder-image.jpg' %}" alt="{{ voucher.title }}" class="img-fluid img-preview">
           {% else %}
               <img src="{{ voucher.image.url }}" alt="{{ voucher.title }}" class="img-fluid img-preview">
           {% endif %}

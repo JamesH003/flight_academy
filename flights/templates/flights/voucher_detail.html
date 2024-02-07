@@ -17,7 +17,7 @@
                     {% if voucher.image %}
                             <img class="voucher-image mt-3 mt-md-5" src="{{ voucher.image.url }}" alt="{{ voucher.title }}">
                     {% else %}
-                            <img class="placeholder-voucher-image mt-3" src="{% static 'images/voucher-placeholder-image.jpeg' %}" alt="{{ voucher.title }}">
+                            <img class="placeholder-voucher-image mt-3" src="{% static 'images/voucher-placeholder-image.jpg' %}" alt="{{ voucher.title }}">
                     {% endif %}
                     <hr>
                 <p class="voucher-text text-center"><i class="fas fa-plane text-red mx-auto my-auto"></i> {{ voucher.aircraft_type }}</p>
