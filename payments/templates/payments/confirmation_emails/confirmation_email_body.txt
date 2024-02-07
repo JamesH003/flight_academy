@@ -1,0 +1,16 @@
+Hello {{ order.full_name }}!
+
+This is a confirmation of your order at Flight Academy. Your order information is below:
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Order Total: €{{ order.grand_total }}
+
+Your order will be emailed to {{ order.email }} within the next few minutes.
+
+Thank you for your order!
+
+Safe flying,
+
+Flight Academy
