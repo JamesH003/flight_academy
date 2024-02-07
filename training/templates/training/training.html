@@ -13,7 +13,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 training-bg-image d-flex flex-column align-items-center justify-content-center">
-                <h2 class="display-3 logo-font text-white">Training Courses</h2>
+                <h2 class="display-3 logo-font text-center text-white">Training Courses</h2>
                 <a class="{% if request.user.is_superuser %}d-block{% else %}d-none{% endif %} nav-link main-logo-link" href="{% url 'add_training' %}">
                     <h2 class="btn btn-lg btn-red rounded-0"><strong>Add Training Course</strong></h2>
                 </a>
