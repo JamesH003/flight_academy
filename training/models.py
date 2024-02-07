@@ -1,4 +1,4 @@
-from django.core.validators import MinValueValidator
+from django.core.validators import MinValueValidator, MaxValueValidator
 from cloudinary.models import CloudinaryField
 from django.db import models
 
@@ -7,12 +7,16 @@ from flights.models import Aircraft
 
 class Licence(models.Model):
     """
-    A model to handle licence types.
+    A model to handle licence types
     """
     ENGINES = [("1", "1"), ("2", "2"),]
 
     licence_type = models.CharField(max_length=100, null=False, blank=False)
-    required_flight_time = models.PositiveIntegerField(null=False, blank=False)
+    required_flight_time = models.PositiveIntegerField(
+        default=30,
+        validators=[MinValueValidator(30), MaxValueValidator(1500)],
+        null=False, blank=False
+    )
     engines = models.CharField(
         choices=ENGINES, default="1",
         max_length=1, null=False, blank=False)
