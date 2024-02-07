@@ -30,10 +30,12 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', False)
 
-ALLOWED_HOSTS = ['8000-jamesh003-flightacademy-jkta2my2pnq.ws-eu107.gitpod.io', 'localhost', 'flight-academy-e7e5adf022d9.herokuapp.com']
-
+ALLOWED_HOSTS = []
+host = os.environ.get('SITE_NAME')
+if host:
+    ALLOWED_HOSTS.append(host)
 
 # Application definition
 
@@ -202,3 +204,4 @@ STRIPE_CURRENCY = 'eur'
 STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET', '')
+DEFAULT_FROM_EMAIL = 'flightacademy@example.com'
