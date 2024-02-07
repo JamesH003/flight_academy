@@ -31,13 +31,41 @@
                 <p class="voucher-text text-center">€{{ training.cost }}</p>
                     <hr>
                 <p class="voucher-description">{{ training.description }}</p>
-                    
-                    {% if request.user.is_superuser %}
-                    <a href="{% url 'edit_training' training.id %}" class="btn bg-navy text-white rounded-0 text-uppercase my-2">Edit</a>
+
+                <a href="{% url 'contact' %}" class="btn btn-red rounded-0 text-uppercase px-5 py-3 my-2">Learn More</a>
+
+                {% if request.user.is_superuser %}
+                    <a href="{% url 'edit_training' training.id %}" class="btn bg-navy text-white rounded-0 text-uppercase py-3 my-2">Edit</a>
                     <!-- Delete Modal to be added -->
-                    <a href="{% url 'delete_training' training.id %}" class="btn btn-red rounded-0 text-uppercase my-2">Delete</a>
-                    <!-- <a class="btn btn-red" data-bs-toggle="modal" data-bs-target="#modal-delete-voucher-{{ voucher.id }}">Delete</a> -->
-                    {% endif %}
+                    <a href="#" class="btn btn-red rounded-0 text-uppercase py-3 my-2" data-toggle="modal" data-target="#modal-delete-training-{{ training.id }}">Delete</a>
+                    
+                    <div class="modal fade" id="modal-delete-training-{{ training.id }}" tabindex="-1" aria-labelledby="modal-delete-label-{{ training.id }}" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="modal-delete-label-{{ training.id }}">Delete Training Course</h1>
+                                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+                                    <i class="fas fa-close"></i>
+                                </button>
+                            </div>
+                            <div class="modal-body text-center">
+                                Are you sure you want to delete this Training Course?
+                                <br>
+                                <small>This action is permanent, and cannot be undone.</small>
+                                <br><br>
+                                {% if "placeholder" not in training.image.url %}
+                                <img src="{{ training.image.url }}" alt="{{ training.title }}" class="img-fluid img-full">
+                                {% endif %}
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn bg-navy text-white rounded-0 text-uppercase px-5 py-3 my-2" data-dismiss="modal">No</button>
+                                <a href="{% url 'delete_training' training.id %}" class="btn btn-red rounded-0 text-uppercase px-5 py-3 my-2">Yes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                    
             </div>
         </div>
     </div>
