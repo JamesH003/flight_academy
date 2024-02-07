@@ -32,7 +32,7 @@
                                 </a>
                                 {% else %}
                                 <a href="{% url 'training_detail' training.id %}">
-                                    <img class="placeholder-voucher-image" src="{% static 'images/voucher-placeholder-image.jpeg' %}" alt="{{ training.title }}">
+                                    <img class="placeholder-voucher-image" src="{% static 'images/training-placeholder.jpg' %}" alt="{{ training.title }}">
                                 </a>
                                 {% endif %}
                                 <a class="text-decoration-none" href="{% url 'training_detail' training.id %}">
