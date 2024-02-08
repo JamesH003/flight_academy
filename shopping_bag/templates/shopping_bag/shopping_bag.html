@@ -52,7 +52,7 @@
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <div class="input-group-prepend">
-                                                        <button class="decrement-qty btn btn-sm btn-red rounded-0" data-item_id="{{ item.voucher_id }}" id="decrement-qty_{{ item.voucher_id }}">
+                                                        <button class="decrement-qty btn btn-sm btn-red-quantity" data-item_id="{{ item.voucher_id }}" id="decrement-qty_{{ item.voucher_id }}">
                                                             <span>
                                                                 <i class="fas fa-minus fa-sm"></i>
                                                             </span>
@@ -62,7 +62,7 @@
                                                         name="quantity" value="{{ item.quantity }}" min="1" max="99" 
                                                         data-item_id="{{ item.voucher_id }}" id="id_qty_{{ item.voucher_id }}">
                                                     <div class="input-group-append">
-                                                        <button class="increment-qty btn btn-sm btn-red rounded-0" data-item_id="{{ item.voucher_id }}" id="increment-qty_{{ item.voucher_id }}">
+                                                        <button class="increment-qty btn btn-sm btn-red-quantity" data-item_id="{{ item.voucher_id }}" id="increment-qty_{{ item.voucher_id }}">
                                                             <span>
                                                                 <i class="fas fa-plus fa-sm"></i>
                                                             </span>
@@ -85,13 +85,13 @@
                                 </td>
                                 <tr>
                                     <td colspan="5" class="text-right">
-                                        <a href="{% url 'vouchers' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                        <a href="{% url 'vouchers' %}" class="btn btn-navy btn-lg">
                                             <span class="icon">
                                                 <i class="fas fa-chevron-left"></i>
                                             </span>
                                             <span class="text-uppercase">Keep Shopping</span>
                                         </a>
-                                        <a href="{% url 'payments' %}" class="btn checkout-btn rounded-0 btn-lg mt-1 mt-sm-0">
+                                        <a href="{% url 'payments' %}" class="btn btn-red btn-lg">
                                             <span class="text-uppercase">Secure Checkout</span>
                                             <span class="icon">
                                                 <i class="fas fa-lock"></i>
@@ -104,7 +104,7 @@
                     </div>
                 {% else %}
                     <p class="lead mb-5">Your shopping bag is empty</p>
-                    <a href="{% url 'vouchers' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                    <a href="{% url 'vouchers' %}" class="btn btn-navy btn-lg">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>

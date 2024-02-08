@@ -33,17 +33,17 @@
                 <p class="voucher-description">{{ voucher.description }}</p>
                     
                 {% if request.user.is_superuser %}
-                <a href="{% url 'edit_voucher' voucher.id %}" class="btn bg-navy text-white rounded-0 text-uppercase py-3 my-2">Edit</a>
+                <a href="{% url 'edit_voucher' voucher.id %}" class="btn btn-navy text-uppercase">Edit</a>
 
                 <!-- Delete Modal -->
-                <a href="#" class="btn btn-red rounded-0 text-uppercase py-3 my-2" data-toggle="modal" data-target="#modal-delete-voucher-{{ voucher.id }}">Delete</a>
+                <a href="#" class="btn btn-red text-uppercase" data-toggle="modal" data-target="#modal-delete-voucher-{{ voucher.id }}">Delete</a>
                 
                 <div class="modal fade" id="modal-delete-voucher-{{ voucher.id }}" tabindex="-1" aria-labelledby="modal-delete-label-{{ voucher.id }}" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h1 class="modal-title fs-5" id="modal-delete-label-{{ voucher.id }}">Delete Voucher</h1>
-                                <button type="button" class="btn-close btn-red" data-dismiss="modal" aria-label="Close">
+                                <button type="button" class="btn-close close-btn-red" data-dismiss="modal" aria-label="Close">
                                     <i class="fas fa-close text-white"></i>
                                 </button>
                             </div>
@@ -57,8 +57,8 @@
                                 {% endif %}
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn bg-navy text-white rounded-0 text-uppercase px-5 py-3 my-2" data-dismiss="modal">No</button>
-                                <a href="{% url 'delete_voucher' voucher.id %}" class="btn btn-red rounded-0 text-uppercase px-5 py-3 my-2">Yes</a>
+                                <button type="button" class="btn btn-navy" data-dismiss="modal">No</button>
+                                <a href="{% url 'delete_voucher' voucher.id %}" class="btn btn-red text-uppercase">Yes</a>
                             </div>
                         </div>
                     </div>
@@ -73,7 +73,7 @@
                                 <div class="form-group w-50">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <button class="decrement-qty btn btn-red rounded-0" data-item_id="{{ voucher.id }}" id="decrement-qty_{{ voucher.id }}">
+                                            <button class="decrement-qty btn btn-red-quantity rounded-0" data-item_id="{{ voucher.id }}" id="decrement-qty_{{ voucher.id }}">
                                                 <span class="icon">
                                                     <i class="fas fa-minus"></i>
                                                 </span>
@@ -83,7 +83,7 @@
                                             name="quantity" value="1" min="1" max="99" 
                                             data-item_id="{{ voucher.id }}" id="id_qty_{{ voucher.id }}">
                                         <div class="input-group-append">
-                                            <button class="increment-qty btn btn-red rounded-0" data-item_id="{{ voucher.id }}" id="increment-qty_{{ voucher.id }}">
+                                            <button class="increment-qty btn btn-red-quantity rounded-0" data-item_id="{{ voucher.id }}" id="increment-qty_{{ voucher.id }}">
                                                 <span class="icon">
                                                     <i class="fas fa-plus"></i>
                                                 </span>
@@ -94,13 +94,13 @@
                             </div>
     
                             <div class="col-12">
-                                <a href="{% url 'vouchers' %}" class="btn text-white bg-navy rounded-0 my-5">
+                                <a href="{% url 'vouchers' %}" class="btn btn-navy my-5">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
-                                <input type="submit" class="btn btn-red rounded-0 text-uppercase my-5" value="Add to Bag">
+                                <input type="submit" class="btn btn-red text-uppercase my-5" value="Add to Bag">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>

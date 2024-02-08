@@ -57,11 +57,47 @@ body {
 .btn-red {
     background: rgb(251, 0, 14);
     color: #fff;
+    border-radius: 0;
+    margin-bottom: 1rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.close-btn-red {
+    background: rgb(251, 0, 14);
+    color: #fff;
+    border-radius: 0;
+    margin-bottom: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.btn-red-quantity {
+    background: rgb(251, 0, 14);
+    color: #fff;
+}
+
+.btn-navy {
+    background-color: rgb(19, 29, 39);
+    color: #fff;
+    border-radius: 0;
+    margin-bottom: 1rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .btn-white {
     background: #fff !important;
     color: #000;
+}
+
+.btn-close {
+    background: rgb(251, 0, 14);
+    color: #fff;
 }
 
 .btn-outline-black {
@@ -85,9 +121,22 @@ body {
 .learn-more-button:focus,
 .btn-red:hover,
 .btn-red:active,
-.btn-red:focus {
+.btn-red:focus,
+.btn-red-quantity:hover,
+.btn-red-quantity:active,
+.btn-red-quantity:focus,
+.btn-close:hover,
+.btn-close:active,
+.btn-close:focus {
     background: rgb(165, 28, 32);
     color: white;
+}
+
+.btn-navy:hover,
+.btn-navy:active,
+.btn-navy:focus {
+    background-color: rgb(58, 72, 85);
+    color: #fff;
 }
 
 .text-black {

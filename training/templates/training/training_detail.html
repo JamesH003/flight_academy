@@ -32,20 +32,20 @@
                     <hr>
                 <p class="voucher-description">{{ training.description }}</p>
 
-                <a href="{% url 'contact' %}" class="btn btn-red rounded-0 text-uppercase px-5 py-3 my-2">Learn More</a>
+                <a href="{% url 'contact' %}" class="btn btn-red rounded-0 text-uppercase">Learn More</a>
 
                 {% if request.user.is_superuser %}
-                    <a href="{% url 'edit_training' training.id %}" class="btn bg-navy text-white rounded-0 text-uppercase py-3 my-2">Edit</a>
+                    <a href="{% url 'edit_training' training.id %}" class="btn btn-navy text-uppercase">Edit</a>
 
                     <!-- Delete Modal -->
-                    <a href="#" class="btn btn-red rounded-0 text-uppercase py-3 my-2" data-toggle="modal" data-target="#modal-delete-training-{{ training.id }}">Delete</a>
+                    <a href="#" class="btn btn-red text-uppercase" data-toggle="modal" data-target="#modal-delete-training-{{ training.id }}">Delete</a>
                     
                     <div class="modal fade" id="modal-delete-training-{{ training.id }}" tabindex="-1" aria-labelledby="modal-delete-label-{{ training.id }}" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h1 class="modal-title fs-5" id="modal-delete-label-{{ training.id }}">Delete Training Course</h1>
-                                <button type="button" class="btn-close btn-red" data-dismiss="modal" aria-label="Close">
+                                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
                                     <i class="fas fa-close text-white"></i>
                                 </button>
                             </div>
@@ -59,8 +59,8 @@
                                 {% endif %}
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn bg-navy text-white rounded-0 text-uppercase px-5 py-3 my-2" data-dismiss="modal">No</button>
-                                <a href="{% url 'delete_training' training.id %}" class="btn btn-red rounded-0 text-uppercase px-5 py-3 my-2">Yes</a>
+                                <button type="button" class="btn btn-navy text-uppercase" data-dismiss="modal">No</button>
+                                <a href="{% url 'delete_training' training.id %}" class="btn btn-red">Yes</a>
                             </div>
                         </div>
                     </div>

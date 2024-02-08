@@ -18,7 +18,7 @@
                 <form method="POST" action="" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <a href="{{ request.META.HTTP_REFERER }}" class="btn bg-navy text-white rounded-0 mb-3">Cancel</a>
+                    <a href="{{ request.META.HTTP_REFERER }}" class="btn btn-navy">Cancel</a>
                     <button class="btn btn-red rounded-0 mb-3" type="submit">Add Voucher</button>
                 </form>
             </div>
