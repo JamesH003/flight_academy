@@ -1,74 +1,64 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page_header %}
-    <div class="header-container">
-        <div class="row">
-            <div class="col"></div>
+{% block content %}
+    <div class="row">
+        <div class="col-12 about-image-1 d-flex flex-column align-items-center justify-content-center">
+            <h2 class="display-3 logo-font text-white">About Us</h2>
+            <p class="text-white small">Focused on Training Excellence</p>
         </div>
     </div>
-{% endblock %}
 
-{% block content %}
-       <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 about-image-1 d-flex flex-column align-items-center justify-content-center">
-                    <h2 class="display-3 logo-font text-white">About Us</h2>
-                    <p class="text-white small">Focused on Training Excellence</p>
-                </div>
+    <div class="container-fluid row my-5">
+        <div class="col d-flex flex-column justify-content-center">
+            <h2 class="display-3 p-1">Focused on Training Excellence</h2>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <p class="p-2">Welcome to Flight Academy. We specialize in Private Pilot License(PPL), Commercial Pilot Licence(CPL) and Airline Transport Pilot License (ATPL) training, providing top-notch education for aspiring aviators. Experience the thrill of flight with our introductory flight vouchers – the perfect gift for aviation enthusiasts. Join us on a journey to the skies, where dreams take flight.</p>
             </div>
+            <div class="col-12 col-md-6">
+                <p class="p-2">At Flight Academy we believe that our instructors are, without exception, highly motivated, charismatic individuals with fascinating aviation backgrounds and a wealth of knowledge and experience. They are passionate about what they do and are committed to help our cadets realise their potential to become exceptional pilots.</p>
+            </div>
+        </div>
+    </div>
 
-            <div class="container-fluid row my-5">
-                <div class="col d-flex flex-column justify-content-center">
-                    <h2 class="display-3 p-1">Focused on Training Excellence</h2>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <p class="p-2">Welcome to Flight Academy. We specialize in Private Pilot License(PPL), Commercial Pilot Licence(CPL) and Airline Transport Pilot License (ATPL) training, providing top-notch education for aspiring aviators. Experience the thrill of flight with our introductory flight vouchers – the perfect gift for aviation enthusiasts. Join us on a journey to the skies, where dreams take flight.</p>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <p class="p-2">At Flight Academy we believe that our instructors are, without exception, highly motivated, charismatic individuals with fascinating aviation backgrounds and a wealth of knowledge and experience. They are passionate about what they do and are committed to help our cadets realise their potential to become exceptional pilots.</p>
-                    </div>
-                </div>
-            </div>
+    <div class="row">
+        <div class="col-12 about-image-2 d-flex flex-column align-items-center justify-content-center">
+            <h2 class="display-3 logo-font text-white p-2">Knowledge to Fly</h2>
+            <p class="text-white">Our strength is our people</p>
+        </div>
+    </div>
 
-            <div class="row">
-                <div class="col-12 about-image-2 d-flex flex-column align-items-center justify-content-center">
-                    <h2 class="display-3 logo-font text-white p-2">Knowledge to Fly</h2>
-                    <p class="text-white">Our strength is our people</p>
-                </div>
+    <div class="container-fluid row my-5">
+        <div class="col d-flex flex-column justify-content-center">
+            <h2 class="display-3 p-1">Flying School</h2>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-8">
+                <p class="p-2">Flight Academy recruits over 40 fulltime and experienced EASA flight instructors, most of them with 1000’s of hours flying and instructing in international and EASA airspace.
+                    All our FI's have successfully passed our thorough standardisation course, deemed to be one of the toughest in the industry, to ensure their training standards are not just in line with our quality system but outstanding. At the heart of our training program is a fleet of meticulously maintained and technologically advanced aircraft. We take pride in offering a diverse range of aircraft types, catering to various training needs. From nimble single-engine planes for initial training to sophisticated multi-engine aircraft for advanced courses, our fleet is a testament to our commitment to providing comprehensive aviation education.</p>
             </div>
+            <div class="col-12 col-md-4 about-image-3"></div>
+        </div>
+    </div>
 
-            <div class="container-fluid row my-5">
-                <div class="col d-flex flex-column justify-content-center">
-                    <h2 class="display-3 p-1">Flying School</h2>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-8">
-                        <p class="p-2">Flight Academy recruits over 40 fulltime and experienced EASA flight instructors, most of them with 1000’s of hours flying and instructing in international and EASA airspace.
-                            All our FI's have successfully passed our thorough standardisation course, deemed to be one of the toughest in the industry, to ensure their training standards are not just in line with our quality system but outstanding.</p>
-                    </div>
-                    <div class="col-12 col-md-4 about-image-3"></div>
-                </div>
-            </div>
+    <div class="row">
+        <div class="col-12 about-image-4 d-flex flex-column align-items-center justify-content-center">
+            <h2 class="display-3 logo-font text-white p-2">Ultimate Skills</h2>
+            <p class="text-white">Train with Airline Captains</p>
+        </div>
+    </div>
 
-            <div class="row">
-                <div class="col-12 about-image-4 d-flex flex-column align-items-center justify-content-center">
-                    <h2 class="display-3 logo-font text-white p-2">Ultimate Skills</h2>
-                    <p class="text-white">Train with Airline Captains</p>
-                </div>
-            </div>
-
-            <div class="row my-5">
-                <div class="col-12 col-md-6 mx-auto text-center">
-                    <h2>Sign up to the Flight Academy Newsletter</h2>
-                    <form method="POST" action="" enctype="multipart/form-data">
-                        {% csrf_token %}
-                        {{ form|crispy }}
-                        <a href="{{ request.META.HTTP_REFERER }}" class="btn btn-navy">Cancel</a>
-                        <button class="btn btn-red" type="submit">Submit</button>
-                    </form>
-                </div>
-            </div>
-       </div>
+    <div class="row my-5">
+        <div class="col-12 col-md-6 mx-auto text-center">
+            <h2>Sign up to the Flight Academy Newsletter</h2>
+            <form method="POST" action="{% url 'about' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <a href="{{ request.META.HTTP_REFERER }}" class="btn btn-navy">Cancel</a>
+                <button class="btn btn-red" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
 {% endblock %}
