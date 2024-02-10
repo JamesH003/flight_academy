@@ -445,6 +445,9 @@ header {
 }
 
 /* footer social links */
+.social-link {
+    font-size: 1.5em;
+}
 
 /* -------------------------------- Media Queries */
 
