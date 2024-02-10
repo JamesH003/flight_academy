@@ -37,7 +37,7 @@ header {
     
 }
 
-/* about - flying school background img */
+/* about - flying school section background img - headset */
 .overlay-headset {
     background: url('https://res.cloudinary.com/dgnlyp5r0/image/upload/v1707402225/static/images/david-clark-headset.f6492a6ae860.jpg') no-repeat center right, rgba(255, 255, 255, 0.85);
     background-blend-mode: overlay;
@@ -138,12 +138,6 @@ header {
     color: rgb(251, 0, 14);
 }
 
-
-/* .btn-white {
-    background: #fff !important;
-    color: #000;
-} */
-
 /* close button */
 .btn-close {
     background: rgb(251, 0, 14);
@@ -190,19 +184,22 @@ header {
     color: #fff;
 }
 
-
+/* font color black - !important to override Bootstrap */
 .text-black {
     color: #000 !important;
 }
 
+/* font color white - !important to override Bootstrap */
 .text-white {
     color: #fff !important;
 }
 
+/* font color red - !important to override Bootstrap */
 .text-red {
     color: rgb(251, 0, 14);
 }
 
+/* border color black - !important to override Bootstrap */
 .border-black {
     border: 1px solid black !important;
 }
@@ -248,14 +245,6 @@ header {
 .about-p {
     font-size: 1.3em;
     text-align: center;
-}
-
-/* bg-img of headset on about page */
-.about-image-3 {
-    background: url('../images/david-clark-headset.jpeg') no-repeat center center;
-    height: 40vh;
-    display: block;
-    background-size: contain;
 }
 
 /* sim image on about page */
@@ -343,6 +332,7 @@ header {
     z-index: 99999999;
 }
 
+/* change cursor to pointer for links */
 .btt-link,
 .update-link,
 .remove-item {
@@ -380,6 +370,7 @@ header {
 }
 
 /* Convenience classes - colors copied from Bootstrap */
+/* arrows at top right of toasts */
 .arrow-primary {
     border-bottom-color: #007bff !important;
 }
