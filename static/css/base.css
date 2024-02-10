@@ -438,6 +438,12 @@ header {
 }
 
 /* bg overlay on newsletter section of about page */
+.overlay-about-newsletter {
+    background: url('../images/cessna-cockpit.jpg') no-repeat center center, linear-gradient(to bottom right, rgb(255, 255, 255), 60%, rgba(255, 255, 255, 0.439));
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
 /* footer social links */
 
 /* -------------------------------- Media Queries */
