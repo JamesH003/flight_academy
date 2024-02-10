@@ -31,9 +31,10 @@ header {
 /* overlay on homepage */
 .overlay-homepage {
     height: calc(100vh - 80px);
-    background: url('../images/flight-academy-test-2.jpeg') no-repeat center center, linear-gradient(to right, rgba(18, 27, 36, 1), 70%, rgba(18, 27, 36, 0.3));
+    background: url('https://res.cloudinary.com/dgnlyp5r0/image/upload/v1707402221/static/images/flight-academy-test-2.79c076b1e3cd.jpg') no-repeat center center, linear-gradient(to right, rgba(18, 27, 36, 1), 70%, rgba(18, 27, 36, 0.3));
     background-size: cover;
     background-blend-mode: overlay;
+    
 }
 
 /* about - flying school background img */
