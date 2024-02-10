@@ -23,6 +23,11 @@ header {
     z-index: 9999;
 }
 
+/* vertical white divided on full-screen navbar */
+.border-left {
+    border-left: 1px solid #fff;
+}
+
 /* overlay on homepage */
 .overlay-homepage {
     height: calc(100vh - 80px);
