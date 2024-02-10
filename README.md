@@ -1,5 +1,7 @@
 # [FLIGHT ACADEMY](https://flight-academy-e7e5adf022d9.herokuapp.com)
 
+Welcome to Flight Academy! Flight Academy is a website used to advertise and promote the training options and vouchers available for sale from the flight school of the same name. Users are able to browse through the multiple training courses on offer and learn more about each individual course. They also have the option of registering their interest in a particular course in order to receive further information and contact from the flight school. Users can also browse through the list of flight vouchers available and make a purchase directly through the site. People interested in becoming a pilot or aviation enthusiasts in general will find this website useful as they can obtain the information required to begin planning their training, or sign up for a monthly newsletter where they will get the latest industry news. From the site owners perspective, the Flight Academy website is a well laid out, clean and informative. The site admin can create, edit and delete new vouchers and training courses from the front end without having to access the admin panel. The site is aimed at users from early teens upwards and at anyone who has an interest in aviation from both a professional and casual perspective. Users will find the site intuitive and responsive across all devices.
+
 <!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 In this section, you will include a few paragraphs providing an overview of your project.
