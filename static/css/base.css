@@ -1,18 +1,31 @@
-html {
+html, body {
     height: 100%;
+    overflow-y: auto;
+}
+
+/* footer positioning */
+body > footer {
+    position: sticky;
+    top: 100vh;
 }
 
 body {
-    height: calc(100vh - 128px);
+    min-height: 100%;
     color: #555;
     font-family: 'Roboto Condensed', sans-serif;
     overscroll-behavior: none;
 }
 
 /* header styling sticky */
+header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999;
+}
+
 /* overlay on homepage */
 .overlay-homepage {
-    height: calc(100vh - 128px);
+    height: calc(100vh - 80px);
     background: url('../images/flight-academy-test-2.jpeg') no-repeat center center, linear-gradient(to right, rgba(18, 27, 36, 1), 70%, rgba(18, 27, 36, 0.3));
     background-size: cover;
     background-blend-mode: overlay;
