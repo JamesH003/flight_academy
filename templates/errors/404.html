@@ -2,20 +2,18 @@
 {% load static %}
 
 {% block content %}
-    <div class="row h-100">
-        <div class="col overlay-allauth-pages">
-            <div class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3 mt-4">
-                <h1 class="display-4 logo-font text-black">
-                    The page you are looking for isn't available
-                </h1>
-                <div class="my-5">
-                    <h4>
-                        <a href="{% url 'vouchers' %}" 
-                            class="shop-now-button btn btn-navy text-uppercase">
-                                Return to shop
-                        </a>
-                    </h4>
-                </div>
+    <div class="row h-100 overlay-allauth-pages">
+        <div class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3 mt-4">
+            <h1 class="display-4 logo-font text-black">
+                The page you are looking for isn't available
+            </h1>
+            <div class="my-5">
+                <h4>
+                    <a href="{% url 'vouchers' %}" 
+                        class="shop-now-button btn btn-navy text-uppercase">
+                            Return to shop
+                    </a>
+                </h4>
             </div>
         </div>
     </div>
