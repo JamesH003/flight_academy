@@ -4,6 +4,16 @@
 {% block content %}
     <div class="row">
         <div class="col-12 overlay-contact-page">
+            <div class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
+                    <h2 class="contact-h2 mt-3">Register Your Interest In Training</h2>
+                    <p>Please enter your details below and a member of our team will be in touch with further information.</p>
+                    <form method="POST" action="" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <a href="{{ request.META.HTTP_REFERER }}" class="btn btn-navy">Cancel</a>
+                        <button class="btn btn-red" type="submit">Submit</button>
+                    </form>
+            </div>
         </div>
     </div>
 
