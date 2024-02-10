@@ -1,30 +1,20 @@
-<div class="collapse navbar-collapse bg-navy" id="main-nav">
-    <ul class="navbar-nav w-auto mx-auto">
-        <!-- <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Training
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="training-options-link">
-                <a href="" class="dropdown-item">Introductory Flight</a>
-                <a href="" class="dropdown-item ">Private Pilot Licence (PPL)</a>
-                <a href="" class="dropdown-item ">ATPL (A) Integrated Pilot Programme</a>
-            </div>
-        </li> -->
-
+<div class="collapse navbar-collapse bg-navy w-100 mx-0 px-5" id="main-nav">
+    <ul class="navbar-nav w-100">
+        
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'training' %}">
+            <a class="logo-font font-weight-bold nav-link text-white" href="{% url 'training' %}">
                 Training
             </a>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'vouchers' %}">
+            <a class="logo-font font-weight-bold nav-link text-white" href="{% url 'vouchers' %}">
                 Vouchers
             </a>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'about' %}">
+            <a class="logo-font font-weight-bold nav-link text-white" href="{% url 'about' %}">
                 About
             </a>
         </li>
@@ -34,5 +24,43 @@
                 Contact Us
             </a>
         </li>
+        <div class="d-flex d-md-none border-line"></div>
+
+        <div class="d-flex flex-row justify-content-between">
+            <li class="d-flex d-md-none nav-item dropdown">
+                <a class="text-white nav-link" href="#" id="user-options" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <div class="text-center">
+                        <div><i class="fas fa-user fa-lg"></i></div>
+                        <p class="my-0">Account <i class="fa-solid fa-caret-down"></i></p> 
+                    </div>
+                </a>
+                <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                    {% if request.user.is_authenticated %}
+                    <a href="{% url 'user_profile' %}" class="dropdown-item">Profile</a>
+                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                    {% else %}
+                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                    {% endif %}
+                </div>
+            </li>
+    
+            <li class="d-flex d-md-none nav-item">
+                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link"
+                    href="{% url 'view_shopping_bag' %}">
+                    <div class="text-center">
+                        <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                        <p class="my-0">
+                            {% if grand_total %}
+                            €{{ grand_total|floatformat:2 }}
+                            {% else %}
+                            €0.00
+                            {% endif %}
+                        </p>
+                    </div>
+                </a>
+            </li>
+        </div>
     </ul>
 </div>
