@@ -29,5 +29,6 @@ urlpatterns = [
     path('user_profile/', include('user_profile.urls')),
     path('training/', include('training.urls')),
     path('contact/', include('contact.urls')),
+    path('newsletter/', include('newsletter.urls')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
