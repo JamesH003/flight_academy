@@ -333,11 +333,13 @@ header {
 
 /* styling for back to top button */
 .btt-button {
-    height: 42px;
-    width: 42px;
+    height: 30px;
+    width: 30px;
     position: fixed;
     bottom: 10px;
     right: 10px;
+    background-color:rgb(251, 0, 14);
+    z-index: 99999999;
 }
 
 .btt-link,
