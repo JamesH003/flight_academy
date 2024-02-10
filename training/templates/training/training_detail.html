@@ -47,6 +47,8 @@
                             <br><br>
                             {% if "placeholder" not in training.image.url %}
                             <img src="{{ training.image.url }}" alt="{{ training.title }}" class="img-fluid img-full">
+                            {% else %}
+                            <img class="placeholder-voucher-image mt-3" src="{% static 'images/training-placeholder.jpg' %}" alt="{{ training.title }}">
                             {% endif %}
                         </div>
                         <div class="modal-footer">
