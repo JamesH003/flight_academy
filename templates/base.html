@@ -46,18 +46,22 @@
     <!-- favicon -->
   <link rel="icon" type="image/x-icon" href="{% static 'images/flight-academy-favicon.png' %}">
 
-    <title>Flight Academy{% block extra_title %}{% endblock %}</title>
-  </head>
-  <body>
-    <header class="container-fluid fixed-top">
-        <div id="topnav" class="row bg-navy pt-lg-2 d-none d-lg-flex">
+<body>
 
-            <!-- logo -->
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h1 class="logo-font text-white my-0"><strong>Flight Academy <i class="fas fa-plane text-red"></i> </strong></h1>
-                </a>
-            </div>
+	<header class="container-fluid bg-navy">
+		<div id="topnav" class="row bg-navy justify-content-between">
+			<!-- logo -->
+			<div class="col-4 order-0 text-center text-lg-left my-auto">
+				<a href="{% url 'home' %}" class="nav-link main-logo-link">
+					<h1 class="logo-font text-white my-0">
+						<strong class="d-flex flex-row">
+							<span class="d-none d-sm-flex">F</span><span class="d-none d-md-flex">light</span>
+							<span class="d-none d-sm-flex">A</span><span class="d-none d-md-flex">cademy</span>
+							<i class="fas fa-plane text-red"></i>
+						</strong>
+					</h1>
+				</a>
+			</div>
 
               <!-- shopping bag -->
               <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
