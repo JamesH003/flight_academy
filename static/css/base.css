@@ -9,6 +9,8 @@ body {
     overscroll-behavior: none;
 }
 
+/* header styling sticky */
+/* overlay on homepage */
 .overlay-homepage {
     height: calc(100vh - 128px);
     background: url('../images/flight-academy-test-2.jpeg') no-repeat center center, linear-gradient(to right, rgba(18, 27, 36, 1), 70%, rgba(18, 27, 36, 0.3));
@@ -16,6 +18,8 @@ body {
     background-blend-mode: overlay;
 }
 
+/* about - flying school background img */
+/* loading overlay */
 .overlay {
     height: 100%;
     width: 100%;
@@ -35,6 +39,7 @@ body {
     width: 1.5rem;
 }
 
+/* large uppercase text */
 .logo-font {
     text-transform: uppercase;
 }
@@ -43,17 +48,14 @@ body {
     width: fit-content;
 }
 
+/* main homepage red button */
 .learn-more-button {
     background: rgb(251, 0, 14);
     color: white;
     min-width: 260px;
 }
 
-.checkout-btn {
-    background: rgb(251, 0, 14);
-    color: white;
-}
-
+/* red button across site */
 .btn-red {
     background: rgb(251, 0, 14);
     color: #fff;
@@ -65,6 +67,7 @@ body {
     padding-bottom: 0.5rem;
 }
 
+/* red styling for btt button */
 .close-btn-red {
     background: rgb(251, 0, 14);
     color: #fff;
@@ -74,11 +77,13 @@ body {
     padding-bottom: 0.5rem;
 }
 
+/* quantity buttons in payment flow */
 .btn-red-quantity {
     background: rgb(251, 0, 14);
     color: #fff;
 }
 
+/* dark navy buttons across site */
 .btn-navy {
     background-color: rgb(19, 29, 39);
     color: #fff;
@@ -90,22 +95,28 @@ body {
     padding-bottom: 0.5rem;
 }
 
-.btn-white {
+/* stying for dropdown menu within account button */
+/* white font color for dropdown options */
+/* red font for hover on dropdown options */
+/* .btn-white {
     background: #fff !important;
     color: #000;
-}
+} */
 
+/* close button */
 .btn-close {
     background: rgb(251, 0, 14);
     color: #fff;
 }
 
+/* black outline on allauth form buttons */
 .btn-outline-black {
     background: white;
     color: black !important; /* use important to override link colors for <a> elements */
     border: 1px solid black;
 }
 
+/* hover effect for allauth buttons with black outline */
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
@@ -113,9 +124,7 @@ body {
     color: white !important;
 }
 
-.checkout-btn:hover,
-.checkout-btn:active,
-.checkout-btn:focus,
+/* hover effect for red buttons */
 .learn-more-button:hover,
 .learn-more-button:active,
 .learn-more-button:focus,
@@ -132,12 +141,14 @@ body {
     color: white;
 }
 
+/* hover effecr for navy buttons */
 .btn-navy:hover,
 .btn-navy:active,
 .btn-navy:focus {
     background-color: rgb(58, 72, 85);
     color: #fff;
 }
+
 
 .text-black {
     color: #000 !important;
@@ -155,14 +166,17 @@ body {
     border: 1px solid black !important;
 }
 
-.bg-black {
-    background: #000 !important;
+/* red divider line in mobile dropdown nav menu */
+.border-line {
+    border: 1px solid rgb(251, 0, 14);
 }
 
+/* navy background color in navbar and footer */
 .bg-navy {
     background: rgb(19, 29, 39);
 }
 
+/* top bg image on about page  */
 .about-image-1 {
     background: url('../images/diamond-cockpit-students.jpeg') no-repeat center center rgba(18, 27, 36, 0.75);
     background-size: cover;
@@ -171,11 +185,7 @@ body {
     height: 75vh;
 }
 
-.about-para-text {
-    font-size: 1.2rem;
-    padding-bottom: 4em;
-}
-
+/* second bg image on about page */
 .about-image-2 {
     background: url('../images/students-classroom.jpeg') 50% 0 fixed, rgba(18, 27, 36, 0.75);
     background-size: cover;
@@ -187,10 +197,12 @@ body {
     height: 50vh;
 }
 
+/* large h2 font on about page */
 .about-h2 {
-    font-size: 3.5em;
+/* small sub-text on about page */
 }
 
+/* bg-img of headset on about page */
 .about-image-3 {
     background: url('../images/david-clark-headset.jpeg') no-repeat center center;
     height: 40vh;
@@ -198,6 +210,7 @@ body {
     background-size: contain;
 }
 
+/* sim image on about page */
 .about-image-4 {
     background: url('../images/a320-simulator.jpeg') 50% 0 fixed, rgba(18, 27, 36, 0.50);
     background-size: cover;
@@ -209,16 +222,19 @@ body {
     height: 50vh;
 }
 
+/* image sizing of voucher image and placeholder image */
 .voucher-image,
 .placeholder-voucher-image {
     max-width: 100%;
     height: auto;
 }
 
+/* image preview on edit pages */
 .img-preview {
     max-height: 231px;
 }
 
+/* top image on vouchers page */
 .voucher-bg-image {
     background: url('../images/flying-lesson.jpeg') no-repeat rgba(18, 27, 36, 0.75);
     background-size: cover;
@@ -227,32 +243,39 @@ body {
     height: 55vh;
 }
 
+/* text on voucher detail page */
 .voucher-text {
     font-size: 1.8em;
     margin-top: 1rem;
     color: #555;
 }
 
+/* voucher title text color */
 .voucher-title {
     color: #555;
 }
 
+/* voucher title font size */
 .voucher-details-title {
     font-size: 2.5em;
 }
 
+/* voucher text font size */
 .voucher-description {
     font-size: 1.2em;
 }
 
+/* voucher page off white color */
 .voucher-bg {
     background-color: rgb(246, 247, 249);
 }
 
+/* shadow effect around vouchers and training course options */
 .card {
     box-shadow: 11px 11px 10px #adb5bd;
 }
 
+/* training page top bg image */
 .training-bg-image {
     background: url('../images/students-runway.jpg') 34% no-repeat rgba(18, 27, 36, 0.75);
     background-size: cover;
@@ -261,6 +284,7 @@ body {
     height: 55vh;
 }
 
+/* styling for back to top button */
 .btt-button {
     height: 42px;
     width: 42px;
@@ -275,6 +299,7 @@ body {
     cursor: pointer;
 }
 
+/* container for success, error, info messages */
 .message-container {
     position: fixed;
     top: 72px;
@@ -286,11 +311,13 @@ body {
     overflow: visible;
 }
 
+/* colored top of message container */
 .toast-cap {
     height: 2px;
 }
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+/* arrow up at top right corner of message container */
 .arrow-up {
     width: 0; 
     height: 0; 
@@ -335,17 +362,18 @@ body {
     border-bottom-color: #343a40 !important;
 }
 
-.bag-notification-wrapper {
-    height: 100px;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
+/* shopping bag summary */
 .shopping-bag-notification-wrapper {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
 }
+
+/* contact form h2 font size */
+/* bg overlay on contact page */
+/* bg overlay on allauth pages */
+/* bg overlay on newsletter section of about page */
+/* footer social links */
 
 /* -------------------------------- Media Queries */
 

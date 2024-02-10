@@ -36,7 +36,6 @@
     border: 1px solid #000;
 }
 
-
 #loading-page-overlay {
     display: none;
     position: fixed;
@@ -59,4 +58,3 @@
 .text-red {
     color: rgb(251, 0, 14);
 }
-
