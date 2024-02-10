@@ -4,6 +4,25 @@
 {% block content %}
 <div class="row">
   <div class="col-12 overlay-contact-page py-4">
+    <div class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
+      <form class="my-3" method="POST" action="{% url 'edit_voucher' voucher.id %}" enctype="multipart/form-data">
+        <h2 class="display-4">
+          Edit a Voucher:
+        </h2>
+        {% if "placeholder" in voucher.image.url %}
+        <img src="{% static 'images/voucher-placeholder-image.jpg' %}" alt="{{ voucher.title }}"
+          class="img-fluid img-preview">
+        {% else %}
+        <img src="{{ voucher.image.url }}" alt="{{ voucher.title }}" class="img-fluid img-preview">
+        {% endif %}
+        {% csrf_token %}
+        {{ form|crispy }}
+        <div>
+          <a href="{{ request.META.HTTP_REFERER }}" class="btn btn-red rounded-0">Cancel</a>
+          <button type="submit" class="btn btn-navy">Save</button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
 {% endblock %}
