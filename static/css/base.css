@@ -332,6 +332,12 @@ header {
     box-shadow: 11px 11px 10px #adb5bd;
 }
 
+.large-text-voucher-training {
+    font-size: 3.2rem;
+    font-weight: 300;
+    line-height: 1.2;
+} 
+
 /* training page top bg image */
 .training-bg-image {
     background: url('https://res.cloudinary.com/dgnlyp5r0/image/upload/v1707402222/static/images/students-runway.06752af4a644.jpg') 34% no-repeat rgba(18, 27, 36, 0.75);
