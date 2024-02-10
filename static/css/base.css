@@ -37,6 +37,12 @@ header {
 }
 
 /* about - flying school background img */
+.overlay-headset {
+    background: url('../images/david-clark-headset.jpeg') no-repeat center right, rgba(255, 255, 255, 0.85);
+    background-blend-mode: overlay;
+    background-size: contain;
+}
+
 /* loading overlay */
 .overlay {
     height: 100%;
