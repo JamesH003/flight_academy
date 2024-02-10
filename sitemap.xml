@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://flight-academy-e7e5adf022d9.herokuapp.com/</loc>
+  <lastmod>2024-02-10T18:39:56+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://flight-academy-e7e5adf022d9.herokuapp.com/training/</loc>
+  <lastmod>2024-02-10T18:39:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://flight-academy-e7e5adf022d9.herokuapp.com/vouchers/</loc>
+  <lastmod>2024-02-10T18:39:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://flight-academy-e7e5adf022d9.herokuapp.com/about/</loc>
+  <lastmod>2024-02-10T18:39:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://flight-academy-e7e5adf022d9.herokuapp.com/contact/</loc>
+  <lastmod>2024-02-10T18:39:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://flight-academy-e7e5adf022d9.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2024-02-10T18:39:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://flight-academy-e7e5adf022d9.herokuapp.com/accounts/login/</loc>
+  <lastmod>2024-02-10T18:39:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://flight-academy-e7e5adf022d9.herokuapp.com/shopping_bag/</loc>
+  <lastmod>2024-02-10T18:39:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://flight-academy-e7e5adf022d9.herokuapp.com/accounts/login/?next=/training/add_training/</loc>
+  <lastmod>2024-02-10T18:39:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://flight-academy-e7e5adf022d9.herokuapp.com/training/2/</loc>
+  <lastmod>2024-02-10T18:39:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://flight-academy-e7e5adf022d9.herokuapp.com/training/1/</loc>
+  <lastmod>2024-02-10T18:39:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://flight-academy-e7e5adf022d9.herokuapp.com/training/3/</loc>
+  <lastmod>2024-02-10T18:39:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://flight-academy-e7e5adf022d9.herokuapp.com/accounts/login/?next=/vouchers/add_voucher/</loc>
+  <lastmod>2024-02-10T18:39:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://flight-academy-e7e5adf022d9.herokuapp.com/vouchers/2/</loc>
+  <lastmod>2024-02-10T18:39:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://flight-academy-e7e5adf022d9.herokuapp.com/vouchers/1/</loc>
+  <lastmod>2024-02-10T18:39:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://flight-academy-e7e5adf022d9.herokuapp.com/vouchers/4/</loc>
+  <lastmod>2024-02-10T18:39:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://flight-academy-e7e5adf022d9.herokuapp.com/vouchers/20/</loc>
+  <lastmod>2024-02-10T18:39:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://flight-academy-e7e5adf022d9.herokuapp.com/vouchers/7/</loc>
+  <lastmod>2024-02-10T18:39:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://flight-academy-e7e5adf022d9.herokuapp.com/vouchers/21/</loc>
+  <lastmod>2024-02-10T18:39:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://flight-academy-e7e5adf022d9.herokuapp.com/vouchers/5/</loc>
+  <lastmod>2024-02-10T18:39:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://flight-academy-e7e5adf022d9.herokuapp.com/vouchers/6/</loc>
+  <lastmod>2024-02-10T18:39:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://flight-academy-e7e5adf022d9.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2024-02-10T18:39:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://flight-academy-e7e5adf022d9.herokuapp.com/accounts/signup/?next=%2Ftraining%2Fadd_training%2F</loc>
+  <lastmod>2024-02-10T18:39:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://flight-academy-e7e5adf022d9.herokuapp.com/accounts/signup/?next=%2Fvouchers%2Fadd_voucher%2F</loc>
+  <lastmod>2024-02-10T18:39:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://flight-academy-e7e5adf022d9.herokuapp.com/accounts/login/?next=%2Ftraining%2Fadd_training%2F</loc>
+  <lastmod>2024-02-10T18:39:56+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://flight-academy-e7e5adf022d9.herokuapp.com/accounts/login/?next=%2Fvouchers%2Fadd_voucher%2F</loc>
+  <lastmod>2024-02-10T18:39:56+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+
+
+</urlset>

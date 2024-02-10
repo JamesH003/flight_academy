@@ -1,0 +1,3 @@
+User-agent: *
+Disallow
+Sitemap: https://flight-academy-e7e5adf022d9.herokuapp.com/sitemap.xml
