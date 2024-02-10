@@ -39,7 +39,7 @@ header {
 
 /* about - flying school background img */
 .overlay-headset {
-    background: url('../images/david-clark-headset.jpeg') no-repeat center right, rgba(255, 255, 255, 0.85);
+    background: url('https://res.cloudinary.com/dgnlyp5r0/image/upload/v1707402225/static/images/david-clark-headset.f6492a6ae860.jpg') no-repeat center right, rgba(255, 255, 255, 0.85);
     background-blend-mode: overlay;
     background-size: contain;
 }
@@ -219,7 +219,7 @@ header {
 
 /* top bg image on about page  */
 .about-image-1 {
-    background: url('../images/diamond-cockpit-students.jpeg') no-repeat center center rgba(18, 27, 36, 0.75);
+    background: url('https://res.cloudinary.com/dgnlyp5r0/image/upload/v1707402224/static/images/diamond-cockpit-students.f89be93d34e9.jpg') no-repeat center center rgba(18, 27, 36, 0.75);
     background-size: cover;
     background-blend-mode: multiply;
     width: 100%;
@@ -228,7 +228,7 @@ header {
 
 /* second bg image on about page */
 .about-image-2 {
-    background: url('../images/students-classroom.jpeg') 50% 0 fixed, rgba(18, 27, 36, 0.75);
+    background: url('https://res.cloudinary.com/dgnlyp5r0/image/upload/v1707402220/static/images/students-classroom.afc079e446e4.jpg') 50% 0 fixed, rgba(18, 27, 36, 0.75);
     background-size: cover;
     background-blend-mode: multiply;
     width: 100%;
@@ -260,7 +260,7 @@ header {
 
 /* sim image on about page */
 .about-image-4 {
-    background: url('../images/a320-simulator.jpeg') 50% 0 fixed, rgba(18, 27, 36, 0.50);
+    background: url('https://res.cloudinary.com/dgnlyp5r0/image/upload/v1707402221/static/images/a320-simulator.93ddb2206bca.jpg') 50% 0 fixed, rgba(18, 27, 36, 0.50);
     background-size: cover;
     background-blend-mode: multiply;
     width: 100%;
@@ -284,7 +284,7 @@ header {
 
 /* top image on vouchers page */
 .voucher-bg-image {
-    background: url('../images/flying-lesson.jpeg') no-repeat rgba(18, 27, 36, 0.75);
+    background: url('https://res.cloudinary.com/dgnlyp5r0/image/upload/v1707402223/static/images/flying-lesson.36b73889a022.jpg') no-repeat rgba(18, 27, 36, 0.75);
     background-size: cover;
     background-blend-mode: multiply;
     width: 100%;
@@ -325,7 +325,7 @@ header {
 
 /* training page top bg image */
 .training-bg-image {
-    background: url('../images/students-runway.jpg') 34% no-repeat rgba(18, 27, 36, 0.75);
+    background: url('https://res.cloudinary.com/dgnlyp5r0/image/upload/v1707402222/static/images/students-runway.06752af4a644.jpg') 34% no-repeat rgba(18, 27, 36, 0.75);
     background-size: cover;
     background-blend-mode: multiply;
     width: 100%;
@@ -426,21 +426,21 @@ header {
 
 /* bg overlay on contact page */
 .overlay-contact-page {
-    background: url('../images/flight-academy-test-2.jpeg') no-repeat center center, linear-gradient(to right, rgb(255, 255, 255), 80%, rgba(255, 255, 255, 0.467));
+    background: url('https://res.cloudinary.com/dgnlyp5r0/image/upload/v1707402221/static/images/flight-academy-test-2.79c076b1e3cd.jpg') no-repeat center center, linear-gradient(to right, rgb(255, 255, 255), 80%, rgba(255, 255, 255, 0.467));
     background-size: cover;
     background-blend-mode: overlay;
 }
 
 /* bg overlay on allauth pages */
 .overlay-allauth-pages {
-    background: url('../images/cessnas-flying.jpg') no-repeat center center, linear-gradient(to bottom right, rgb(255, 255, 255), 75%, rgba(255, 255, 255, 0.439));
+    background: url('https://res.cloudinary.com/dgnlyp5r0/image/upload/v1707526923/static/images/cessnas-flying.339dad6e14de.jpg') no-repeat center center, linear-gradient(to bottom right, rgb(255, 255, 255), 75%, rgba(255, 255, 255, 0.439));
     background-size: cover;
     background-blend-mode: overlay;
 }
 
 /* bg overlay on newsletter section of about page */
 .overlay-about-newsletter {
-    background: url('../images/cessna-cockpit.jpg') no-repeat center center, linear-gradient(to bottom right, rgb(255, 255, 255), 60%, rgba(255, 255, 255, 0.439));
+    background: url('https://res.cloudinary.com/dgnlyp5r0/image/upload/v1707526919/static/images/cessna-cockpit.608735a64708.jpg') no-repeat center center, linear-gradient(to bottom right, rgb(255, 255, 255), 60%, rgba(255, 255, 255, 0.439));
     background-size: cover;
     background-blend-mode: overlay;
 }
