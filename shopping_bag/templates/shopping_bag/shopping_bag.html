@@ -2,8 +2,8 @@
 {% load static %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container my-5 mb-2">
+<div class="overlay"></div>
+    <div class="container my-4 mb-2">
         <div class="row">
             <div class="col">
                 <hr>
@@ -13,7 +13,7 @@
         </div>
 
         {% if shopping_bag_items %}
-        <div class="row font-weight-bold text-center d-none d-sm-flex">
+        <div class="row font-weight-bold text-center lead d-none d-sm-flex">
             <div class="col">Voucher Info</div>
             <div class="col"></div>
             <div class="col">Price</div>
@@ -23,149 +23,88 @@
 
         {% for item in shopping_bag_items %}
 
-                <div class="row my-5">
-                    <!-- image -->
-                    <div class="col-6 col-sm">
-                        <img class="img-fluid rounded" src="{{ item.voucher.image.url }}" alt="">
-                    </div>
-                    <!-- description -->
-                    <div class="col-6 col-sm my-3 font-weight-bold">{{ item.voucher.title }}</div>
-                    <!-- price -->
-                    <div class="col-12 col-sm my-3 text-center font-weight-bold">
-                        <span class="d-inline-block d-sm-none font-weight-normal">Price:</span>
-                        €{{ item.voucher.cost }}
-                    </div>
-                    <!-- quantity -->
-                    <div class="col-12 col-sm">
-                        <form class="form update-form" action="{% url 'adjust_shopping_bag' item.voucher_id %}" method="POST">
-                            {% csrf_token %}
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <button class="decrement-qty btn btn-sm btn-red-quantity" data-item_id="{{ item.voucher_id }}" id="decrement-qty_{{ item.voucher_id }}">
-                                            <span>
-                                                <i class="fas fa-minus fa-sm"></i>
-                                            </span>
-                                        </button>
-                                    </div>
-                                    <input class="form-control form-control-sm qty-input" type="number" 
-                                        name="quantity" value="{{ item.quantity }}" min="1" max="99" 
-                                        data-item_id="{{ item.voucher_id }}" id="id_qty_{{ item.voucher_id }}">
-                                    <div class="input-group-append">
-                                        <button class="increment-qty btn btn-sm btn-red-quantity" data-item_id="{{ item.voucher_id }}" id="increment-qty_{{ item.voucher_id }}">
-                                            <span>
-                                                <i class="fas fa-plus fa-sm"></i>
-                                            </span>
-                                        </button>
-                                    </div>
-                                </div>
+        <div class="row my-3">
+            <!-- image -->
+            <div class="col-6 col-sm">
+                <img class="img-fluid rounded" src="{{ item.voucher.image.url }}" alt="">
+            </div>
+
+            <!-- description -->
+            <div class="col-6 col-sm lead font-weight-bold">{{ item.voucher.title }}</div>
+
+            <!-- price -->
+            <div class="col-12 col-sm my-3 text-center lead font-weight-bold">
+                <span class="d-inline-block d-sm-none">Price:</span>
+                €{{ item.voucher.cost }}
+            </div>
+
+            <!-- quantity -->
+            <div class="col-12 col-sm">
+                <form class="form update-form" action="{% url 'adjust_shopping_bag' item.voucher_id %}" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <button class="decrement-qty btn btn-sm btn-red-quantity"
+                                    data-item_id="{{ item.voucher_id }}" id="decrement-qty_{{ item.voucher_id }}">
+                                    <span>
+                                        <i class="fas fa-minus fa-sm"></i>
+                                    </span>
+                                </button>
                             </div>
-                        </form>
-                        <a class="update-link text-info"><small>Update</small></a>
-                        <a class="remove-item text-danger float-right" id="remove_{{ item.voucher_id }}"><small>Remove</small></a>
+                            <input class="form-control form-control-sm qty-input" type="number" name="quantity"
+                                value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.voucher_id }}"
+                                id="id_qty_{{ item.voucher_id }}">
+                            <div class="input-group-append">
+                                <button class="increment-qty btn btn-sm btn-red-quantity"
+                                    data-item_id="{{ item.voucher_id }}" id="increment-qty_{{ item.voucher_id }}">
+                                    <span>
+                                        <i class="fas fa-plus fa-sm"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <!-- subtotal -->
-                    <div class="col-12 col-sm my-3 text-center font-weight-bold">
-                        <span class="d-inline-block d-sm-none font-weight-normal">Subtotal:</span>
-                        €{{ item.subtotal }}
-                    </div>
-                </div>
-
-                <hr>
-
-        {% endfor %}
-
-        
-                    <div class="table-responsive rounded">
-                        <table class="table table-sm table-borderless">
-                            <thead class="text-black">
-                                <tr>
-                                    <th scope="col">Voucher Info</th>
-                                    <th scope="col"></th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Qty</th>
-                                    <th scope="col">Subtotal</th>
-                                </tr>
-                            </thead>
-
-                            {% for item in shopping_bag_items %}
-                                <tr>
-                                    <td class="p-3 w-25">
-                                        <img class="img-fluid rounded" src="{{ item.voucher.image.url }}" alt="">
-                                    </td>
-                                    <td class="py-3 w-25">
-                                        <p class="my-0"><strong>{{ item.voucher.title }}</strong></p>
-                                    </td>
-                                    <td class="py-3">
-                                        <p class="my-0">€{{ item.voucher.cost }}</p>
-                                    </td>
-                                    <td class="py-3 w-25">
-                                        <form class="form update-form" action="{% url 'adjust_shopping_bag' item.voucher_id %}" method="POST">
-                                            {% csrf_token %}
-                                            <div class="form-group">
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend">
-                                                        <button class="decrement-qty btn btn-sm btn-red-quantity" data-item_id="{{ item.voucher_id }}" id="decrement-qty_{{ item.voucher_id }}">
-                                                            <span>
-                                                                <i class="fas fa-minus fa-sm"></i>
-                                                            </span>
-                                                        </button>
-                                                    </div>
-                                                    <input class="form-control form-control-sm qty-input" type="number" 
-                                                        name="quantity" value="{{ item.quantity }}" min="1" max="99" 
-                                                        data-item_id="{{ item.voucher_id }}" id="id_qty_{{ item.voucher_id }}">
-                                                    <div class="input-group-append">
-                                                        <button class="increment-qty btn btn-sm btn-red-quantity" data-item_id="{{ item.voucher_id }}" id="increment-qty_{{ item.voucher_id }}">
-                                                            <span>
-                                                                <i class="fas fa-plus fa-sm"></i>
-                                                            </span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                        <a class="update-link text-info"><small>Update</small></a>
-                                        <a class="remove-item text-danger float-right" id="remove_{{ item.voucher_id }}"><small>Remove</small></a>
-                                    </td>
-                                    <td class="py-3">
-                                        <p class="my-0">€{{ item.subtotal }}</p>
-                                    </td>
-                                </tr>
-                            {% endfor %}
-                            <tr>
-                                <td colspan="5" class="pt-5 text-right">
-                                    <h6><strong>Shopping Bag Total: €{{ total|floatformat:2 }}</strong></h6>
-                                </td>
-                                <tr>
-                                    <td colspan="5" class="text-right">
-                                        <a href="{% url 'vouchers' %}" class="btn btn-navy btn-lg">
-                                            <span class="icon">
-                                                <i class="fas fa-chevron-left"></i>
-                                            </span>
-                                            <span class="text-uppercase">Keep Shopping</span>
-                                        </a>
-                                        <a href="{% url 'payments' %}" class="btn btn-red btn-lg">
-                                            <span class="text-uppercase">Secure Checkout</span>
-                                            <span class="icon">
-                                                <i class="fas fa-lock"></i>
-                                            </span>
-                                        </a>
-                                    </td>
-                                </tr>
-                            </tr>
-                        </table>
-                    </div>
-                {% else %}
-                    <p class="lead mb-5">Your shopping bag is empty</p>
-                    <a href="{% url 'vouchers' %}" class="btn btn-navy btn-lg">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="text-uppercase">Keep Shopping</span>
-                    </a>
-                {% endif %}
+                </form>
+                <a class="update-link text-info"><small>Update</small></a>
+                <a class="remove-item text-danger float-right" id="remove_{{ item.voucher_id }}"><small>Remove</small></a>
+            </div>
+            <!-- subtotal -->
+            <div class="col-12 col-sm my-3 text-center lead font-weight-bold">
+                <span class="d-inline-block d-sm-none font-weight-normal">Subtotal:</span>
+                €{{ item.subtotal }}
             </div>
         </div>
+
+        <hr>
+        {% endfor %}
+        <div class="d-flex justify-content-end">
+            <h6 class="mb-3 font-weight-bold"><strong>Shopping Bag Total: €{{ total|floatformat:2 }}</strong></h6>
+        </div>
+        <div class="d-flex flex-column align-items-end">
+            <a href="{% url 'vouchers' %}" class="btn btn-navy btn-lg mb-2">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Keep Shopping</span>
+            </a>
+            <a href="{% url 'payments' %}" class="btn btn-red btn-lg">
+                <span class="text-uppercase">Secure Checkout</span>
+                <span class="icon">
+                    <i class="fas fa-lock"></i>
+                </span>
+            </a>
+        </div>
+
+        {% else %}
+        <p class="lead mb-5">Your shopping bag is empty</p>
+        <a href="{% url 'vouchers' %}" class="btn btn-navy btn-lg">
+            <span class="icon">
+                <i class="fas fa-chevron-left"></i>
+            </span>
+            <span class="text-uppercase">Keep Shopping</span>
+        </a>
+        {% endif %}
     </div>
 {% endblock %}
 
@@ -175,23 +114,24 @@
 
 <script>
     // update quantity on click
-    $('.update-link').click(function(e) {
+    $('.update-link').click(function (e) {
         var form = $(this).prev('.update-form');
         form.submit();
     })
 
     // remove item and reload on click
-    $('.remove-item').click(function(e) {
+    $('.remove-item').click(function (e) {
         var csrfToken = "{{ csrf_token }}";
         var voucherId = $(this).attr('id').split('remove_')[1];
         var url = `/shopping_bag/remove/${voucherId}`;
-        var data = {'csrfmiddlewaretoken': csrfToken};
+        var data = {
+            'csrfmiddlewaretoken': csrfToken
+        };
 
         $.post(url, data)
-        .done(function() {
-            location.reload();
-        });
+            .done(function () {
+                location.reload();
+            });
     });
 </script>
 {% endblock %}
-
