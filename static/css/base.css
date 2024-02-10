@@ -461,6 +461,11 @@ header {
     font-size: 1.5em;
 }
 
+/* hover effect on social links in footer - !important to override Bootstrap */
+.social-link:hover {
+    color: rgb(251, 0, 14) !important;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
