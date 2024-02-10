@@ -239,7 +239,14 @@ header {
 
 /* large h2 font on about page */
 .about-h2 {
+    font-size: 4em;
+    text-align: center;
+}
+
 /* small sub-text on about page */
+.about-p {
+    font-size: 1.3em;
+    text-align: center;
 }
 
 /* bg-img of headset on about page */
