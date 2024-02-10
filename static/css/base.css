@@ -130,6 +130,21 @@ header {
 .dropdown-item {
     color: #fff;
 }
+.nav-item a:hover {
+    color: rgb(251, 0, 14) !important;
+}
+
+.dropdown div:hover {
+    color: rgb(251, 0, 14);
+}
+
+.nav-item div:hover {
+    color: rgb(251, 0, 14);
+}
+
+.nav-link div:hover {
+    color: rgb(251, 0, 14);
+}
 
 /* red font for hover on dropdown options */
 .dropdown-item:hover,
