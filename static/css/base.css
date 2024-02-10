@@ -419,6 +419,10 @@ header {
 }
 
 /* contact form h2 font size */
+.contact-h2 {
+    font-size: 2.9em;
+}
+
 /* bg overlay on contact page */
 /* bg overlay on allauth pages */
 /* bg overlay on newsletter section of about page */
