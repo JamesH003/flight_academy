@@ -45,6 +45,8 @@
                             <br><br>
                             {% if "placeholder" not in voucher.image.url %}
                             <img src="{{ voucher.image.url }}" alt="{{ voucher.title }}" class="img-fluid img-full">
+                            {% else %}
+                            <img class="placeholder-voucher-image mt-3" src="{% static 'images/voucher-placeholder-image.jpg' %}" alt="{{ voucher.title }}">
                             {% endif %}
                         </div>
                         <div class="modal-footer">
