@@ -424,6 +424,12 @@ header {
 }
 
 /* bg overlay on contact page */
+.overlay-contact-page {
+    background: url('../images/flight-academy-test-2.jpeg') no-repeat center center, linear-gradient(to right, rgb(255, 255, 255), 80%, rgba(255, 255, 255, 0.467));
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
 /* bg overlay on allauth pages */
 /* bg overlay on newsletter section of about page */
 /* footer social links */
