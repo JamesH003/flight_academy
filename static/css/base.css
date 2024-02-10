@@ -126,22 +126,27 @@ header {
     border-radius: 0;
 }
 
-/* white font color for dropdown options */
+/* white font color for account dropdown options */
 .dropdown-item {
     color: #fff;
 }
+
+/* hover effect on nav bar links */
 .nav-item a:hover {
     color: rgb(251, 0, 14) !important;
 }
 
+/* account link hover on medium and larger screens */
 .dropdown div:hover {
     color: rgb(251, 0, 14);
 }
 
+/* hover effect on account and shopping bag on small screens */
 .nav-item div:hover {
     color: rgb(251, 0, 14);
 }
 
+/* hover effecr on shopping bag on medium screens and larger */
 .nav-link div:hover {
     color: rgb(251, 0, 14);
 }
