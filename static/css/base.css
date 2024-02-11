@@ -51,7 +51,7 @@ header {
     top: 0;
     left: 0;
     position: fixed;
-    background: white;
+    background: #fff;
     z-index: -1;
 }
 
@@ -76,7 +76,7 @@ header {
 /* main homepage red button */
 .learn-more-button {
     background: rgb(251, 0, 14);
-    color: white;
+    color: #fff;
     min-width: 260px;
 }
 
@@ -168,14 +168,14 @@ header {
 .btn-outline-black {
     background: white;
     color: black !important; /* use important to override link colors for <a> elements */
-    border: 1px solid black;
+    border: 1px solid #000;
 }
 
 /* hover effect for allauth buttons with black outline */
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
-    background: black;
+    background: #000;
     color: white !important;
 }
 
@@ -193,7 +193,7 @@ header {
 .btn-close:active,
 .btn-close:focus {
     background: rgb(165, 28, 32);
-    color: white;
+    color: #fff;
 }
 
 /* hover effecr for navy buttons */
@@ -221,7 +221,7 @@ header {
 
 /* border color black - !important to override Bootstrap */
 .border-black {
-    border: 1px solid black !important;
+    border: 1px solid #000 !important;
 }
 
 /* red divider line in mobile dropdown nav menu */
