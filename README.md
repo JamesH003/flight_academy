@@ -284,6 +284,15 @@ Contact
 ![screenshot](documentation/features/features-signin.png)
 
 
+### Future Features
+
+- Carousel Effect for homepage images
+    - Add carousel effect to scroll through multiple images on the homepage to display more aspects of the Flight School.
+- Gallery Section
+    - Gallery to display images of the Flight School to give the user a better understanding of the quality of the school.
+- Job Vacancies Section
+    - Section to advertise job vacancies and accept applications.
+
 
 - [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content.
 - [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
