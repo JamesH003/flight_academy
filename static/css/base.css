@@ -13,7 +13,8 @@ body {
     min-height: 100%;
     color: #555;
     font-family: 'Roboto Condensed', sans-serif;
-    overscroll-behavior: none;
+    -ms-scroll-chaining: none;
+        overscroll-behavior: none;
 }
 
 /* header styling sticky */
@@ -31,6 +32,8 @@ header {
 /* overlay on homepage */
 .overlay-homepage {
     height: calc(100vh - 80px);
+    background: url('https://res.cloudinary.com/dgnlyp5r0/image/upload/v1707402221/static/images/flight-academy-test-2.79c076b1e3cd.jpg') no-repeat center center, -webkit-gradient(linear, left top, right top, from(rgba(18, 27, 36, 1)), color-stop(70%), to(rgba(18, 27, 36, 0.3)));
+    background: url('https://res.cloudinary.com/dgnlyp5r0/image/upload/v1707402221/static/images/flight-academy-test-2.79c076b1e3cd.jpg') no-repeat center center, -o-linear-gradient(left, rgba(18, 27, 36, 1), 70%, rgba(18, 27, 36, 0.3));
     background: url('https://res.cloudinary.com/dgnlyp5r0/image/upload/v1707402221/static/images/flight-academy-test-2.79c076b1e3cd.jpg') no-repeat center center, linear-gradient(to right, rgba(18, 27, 36, 1), 70%, rgba(18, 27, 36, 0.3));
     background-size: cover;
     background-blend-mode: overlay;
@@ -57,9 +60,15 @@ header {
 
 /* from Bulma */
 .icon {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
 }
@@ -70,6 +79,8 @@ header {
 }
 
 .main-logo-link {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -329,7 +340,8 @@ header {
 
 /* shadow effect around vouchers and training course options */
 .card {
-    box-shadow: 11px 11px 10px #adb5bd;
+    -webkit-box-shadow: 11px 11px 10px #adb5bd;
+            box-shadow: 11px 11px 10px #adb5bd;
 }
 
 .large-text-voucher-training {
@@ -443,6 +455,8 @@ header {
 
 /* bg overlay on contact page */
 .overlay-contact-page {
+    background: url('https://res.cloudinary.com/dgnlyp5r0/image/upload/v1707402221/static/images/flight-academy-test-2.79c076b1e3cd.jpg') no-repeat center center, -webkit-gradient(linear, left top, right top, from(rgb(255, 255, 255)), color-stop(80%), to(rgba(255, 255, 255, 0.467)));
+    background: url('https://res.cloudinary.com/dgnlyp5r0/image/upload/v1707402221/static/images/flight-academy-test-2.79c076b1e3cd.jpg') no-repeat center center, -o-linear-gradient(left, rgb(255, 255, 255), 80%, rgba(255, 255, 255, 0.467));
     background: url('https://res.cloudinary.com/dgnlyp5r0/image/upload/v1707402221/static/images/flight-academy-test-2.79c076b1e3cd.jpg') no-repeat center center, linear-gradient(to right, rgb(255, 255, 255), 80%, rgba(255, 255, 255, 0.467));
     background-size: cover;
     background-blend-mode: overlay;
@@ -450,6 +464,8 @@ header {
 
 /* bg overlay on allauth pages */
 .overlay-allauth-pages {
+    background: url('https://res.cloudinary.com/dgnlyp5r0/image/upload/v1707526923/static/images/cessnas-flying.339dad6e14de.jpg') no-repeat center center, -webkit-gradient(linear, left top, right bottom, from(rgb(255, 255, 255)), color-stop(75%), to(rgba(255, 255, 255, 0.439)));
+    background: url('https://res.cloudinary.com/dgnlyp5r0/image/upload/v1707526923/static/images/cessnas-flying.339dad6e14de.jpg') no-repeat center center, -o-linear-gradient(top left, rgb(255, 255, 255), 75%, rgba(255, 255, 255, 0.439));
     background: url('https://res.cloudinary.com/dgnlyp5r0/image/upload/v1707526923/static/images/cessnas-flying.339dad6e14de.jpg') no-repeat center center, linear-gradient(to bottom right, rgb(255, 255, 255), 75%, rgba(255, 255, 255, 0.439));
     background-size: cover;
     background-blend-mode: overlay;
@@ -457,6 +473,8 @@ header {
 
 /* bg overlay on newsletter section of about page */
 .overlay-about-newsletter {
+    background: url('https://res.cloudinary.com/dgnlyp5r0/image/upload/v1707526919/static/images/cessna-cockpit.608735a64708.jpg') no-repeat center center, -webkit-gradient(linear, left top, right bottom, from(rgb(255, 255, 255)), color-stop(60%), to(rgba(255, 255, 255, 0.439)));
+    background: url('https://res.cloudinary.com/dgnlyp5r0/image/upload/v1707526919/static/images/cessna-cockpit.608735a64708.jpg') no-repeat center center, -o-linear-gradient(top left, rgb(255, 255, 255), 60%, rgba(255, 255, 255, 0.439));
     background: url('https://res.cloudinary.com/dgnlyp5r0/image/upload/v1707526919/static/images/cessna-cockpit.608735a64708.jpg') no-repeat center center, linear-gradient(to bottom right, rgb(255, 255, 255), 60%, rgba(255, 255, 255, 0.439));
     background-size: cover;
     background-blend-mode: overlay;
@@ -497,6 +515,22 @@ header {
     display: none;
 }
 
+.allauth-form-inner-content input::-webkit-input-placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content input::-moz-placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content input:-ms-input-placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content input::-ms-input-placeholder {
+    color: #aab7c4;
+}
+
 .allauth-form-inner-content input::placeholder {
     color: #aab7c4;
 }
@@ -521,7 +555,11 @@ header {
     border-radius: 0;
 
     /* standard bootstrap btn transitions */
+    -webkit-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+    -o-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,
