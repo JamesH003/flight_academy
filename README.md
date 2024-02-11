@@ -11,29 +11,12 @@ The design of the site is intended to reflect the business and industry it inten
 
 ### Colour Scheme
 
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+- `#ffffff` used for primary text.
+- `#fb000e` used for primary highlights.
+- `#555555` used for secondary text.
+- `#131d27` used for secondary highlights.
 
-Explain your colours and the colour scheme.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
-
-- `#000000` used for primary text.
-- `#E84610` used for primary highlights.
-- `#4A4A4F` used for secondary text.
-- `#009FE3` used for secondary highlights.
-
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Consider adding a link and screenshot for your colour scheme using "coolors".
-https://coolors.co/generate
-
-When you add a colour to the palette, the URL is dynamically updated, making it easier for you to return back to your colour palette later if needed.
-
-Example:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
-
-I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0-000000) to generate my colour palette.
+I used [coolors.co](https://coolors.co/131d27-fb000e-ffffff-555555-f6f7f9) to generate my colour palette.
 
 ![screenshot](documentation/coolors.png)
 
