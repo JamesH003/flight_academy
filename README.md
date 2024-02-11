@@ -315,59 +315,316 @@ Contact
 Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models.
 Understanding the relationships between different tables can save time later in the project.
 
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Using your defined models (one example below), create an ERD with the relationships identified.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
-
 ```python
-class Product(models.Model):
-    category = models.ForeignKey(
-        "Category", null=True, blank=True, on_delete=models.SET_NULL)
-    sku = models.CharField(max_length=254, null=True, blank=True)
-    name = models.CharField(max_length=254)
-    description = models.TextField()
-    has_sizes = models.BooleanField(default=False, null=True, blank=True)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
-    rating = models.DecimalField(
-        max_digits=6, decimal_places=2, null=True, blank=True)
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
+class Voucher(models.Model):
+    """
+    A model to handle the various flight vouchers.
+    """
+    title = models.CharField(max_length=100, null=False, blank=False)
+    description = models.TextField(null=False, blank=False)
+    duration = models.PositiveIntegerField(
+        default=30,
+        validators=[MinValueValidator(30)],
+        null=False, blank=False)
+    cost = models.PositiveIntegerField(null=False, blank=False)
+    aircraft_type = models.ForeignKey(
+        Aircraft, on_delete=models.CASCADE, null=False, blank=False)
+    image = CloudinaryField(
+        "image", default="placeholder", null=False, blank=False)
+
+    class Meta:
+        ordering = ["aircraft_type"]
 
     def __str__(self):
-        return self.name
+        return self.title
 ```
 
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+```python
+class Aircraft(models.Model):
+    """
+    A model to handle aircraft types.
+    """
+    SEATS = [("2", "2"), ("4", "4"),]
+    ENGINES = [("1", "1"), ("2", "2"),]
 
-A couple recommendations for building free ERDs:
-- [Draw.io](https://draw.io)
-- [Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning)
+    aircraft_type = models.CharField(max_length=100, null=False, blank=False)
+    seats = models.CharField(
+        choices=SEATS, default="2",
+        max_length=1, null=False, blank=False)
+    engines = models.CharField(
+        choices=ENGINES, default="1",
+        max_length=1, null=False, blank=False)
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
+    class Meta:
+        ordering = ["aircraft_type"]
+        verbose_name_plural = 'Aircraft'
 
-![screenshot](documentation/erd.png)
+    def __str__(self):
+        return self.aircraft_type
+```
 
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+```python
+class Contact(models.Model):
+    """ A model to handle a contact form """
 
-Using Markdown formatting to represent an example ERD table using the Product model above:
+    first_name = models.CharField(max_length=75, blank=False, null=False)
+    last_name = models.CharField(max_length=75, blank=False, null=False)
+    email = models.EmailField(max_length=256, blank=False, null=False)
+    phone_num = models.CharField(max_length=30, null=True)
+    specific_course = models.ForeignKey(
+        Training, on_delete=models.CASCADE, null=False, blank=False)
+    message = models.TextField(blank=False, null=False)
+    msg_date = models.DateTimeField(auto_now_add=True, blank=False, null=False)
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
+    def __str__(self):
+        return self.email
+```
 
-- Table: **Product**
+```python
+class Newsletter(models.Model):
+    """
+    A model to handle the newsletter signups.
+    """
+    email = models.EmailField(max_length=256, null=False, blank=False)
+
+    def __str__(self):
+        return self.email
+```
+
+```python
+class Order(models.Model):
+    order_number = models.CharField(max_length=32, null=False, editable=False)
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
+                                    null=True, blank=True, related_name='orders')
+    full_name = models.CharField(max_length=50, null=False, blank=False)
+    email = models.EmailField(max_length=254, null=False, blank=False)
+    phone_number = models.CharField(max_length=20, null=False, blank=False)
+    country = models.CharField(max_length=40, null=False, blank=False)
+    postcode = models.CharField(max_length=20, null=True, blank=True)
+    town_or_city = models.CharField(max_length=40, null=False, blank=False)
+    street_address1 = models.CharField(max_length=80, null=False, blank=False)
+    street_address2 = models.CharField(max_length=80, null=True, blank=True)
+    county = models.CharField(max_length=80, null=True, blank=True)
+    date = models.DateTimeField(auto_now_add=True)
+    order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+    grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+    original_shopping_bag = models.TextField(null=False, blank=False, default='')
+    stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
+
+    def _generate_order_number(self):
+        """
+        Generate a random, unique order number using UUID
+        """
+        return uuid.uuid4().hex.upper()
+
+    def update_total(self):
+        """
+        Update grand total each time a line item is added
+        """
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
+        self.grand_total = self.order_total
+        self.save()
+
+    def save(self, *args, **kwargs):
+        """
+        Override the original save method to set the order number
+        if it hasn't been set already
+        """
+        if not self.order_number:
+            self.order_number = self._generate_order_number()
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.order_number
+```
+
+```python
+class OrderLineItem(models.Model):
+    order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
+    voucher = models.ForeignKey(Voucher, null=False, blank=False, on_delete=models.CASCADE)
+    quantity = models.IntegerField(null=False, blank=False, default=0)
+    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
+
+    def save(self, *args, **kwargs):
+        """
+        Override the original save method to set the lineitem total
+        and update the order total
+        """
+        self.lineitem_total = self.voucher.cost * self.quantity
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.order.order_number
+```
+
+```python
+class Licence(models.Model):
+    """
+    A model to handle licence types
+    """
+    ENGINES = [("1", "1"), ("2", "2"),]
+
+    licence_type = models.CharField(max_length=100, null=False, blank=False)
+    required_flight_time = models.PositiveIntegerField(
+        default=30,
+        validators=[MinValueValidator(30), MaxValueValidator(1500)],
+        null=False, blank=False
+    )
+    engines = models.CharField(
+        choices=ENGINES, default="1",
+        max_length=1, null=False, blank=False)
+
+    class Meta:
+        ordering = ["required_flight_time"]
+
+    def __str__(self):
+        return self.licence_type
+```
+
+```python
+class Training(models.Model):
+    """
+    A model to handle the training course options
+    """
+    MODES = [
+        ("Modular", "Modular"),
+        ("Integrated", "Integrated"),
+    ]
+
+    title = models.CharField(max_length=100, null=False, blank=False)
+    description = models.TextField(null=False, blank=False)
+    licence_type = models.ForeignKey(
+        Licence, on_delete=models.CASCADE, null=False, blank=False)
+    cost = models.PositiveIntegerField(null=False, blank=False)
+    mode_of_training = models.CharField(
+        choices=MODES, default="Modular", max_length=50,
+        null=False, blank=False
+    )
+    aircraft_type = models.ForeignKey(
+        Aircraft, on_delete=models.CASCADE, null=False, blank=False)
+    image = CloudinaryField(
+        "image", default="placeholder", null=False, blank=False)
+
+    class Meta:
+        ordering = ["cost"]
+        verbose_name_plural = 'Training'
+
+    def __str__(self):
+        return self.title
+```
+
+```python
+class UserProfile(models.Model):
+    """
+    A user profile model for maintaining a user profile and order history
+    """
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    full_name = models.CharField(max_length=50, null=False, blank=False)
+    email = models.EmailField(max_length=254, null=False, blank=False)
+
+    def __str__(self):
+        return self.user.username
+
+
+@receiver(post_save, sender=User)
+def create_or_update_user_profile(sender, instance, created, **kwargs):
+    """
+    Create or update the user profile
+    """
+    if created:
+        UserProfile.objects.create(user=instance)
+    # Existing users: just save the profile
+    instance.userprofile.save()
+```
+
+![screenshot](documentation/erd-screenshot.png)
+
+- Table: **Voucher**
 
     | **PK** | **id** (unique) | Type | Notes |
     | --- | --- | --- | --- |
-    | **FK** | category | ForeignKey | FK to **Category** model |
-    | | sku | CharField | |
-    | | name | CharField | |
+    | | title | CharField | |
     | | description | TextField | |
-    | | has_sizes | BooleanField | |
-    | | price | DecimalField | |
-    | | rating | DecimalField | |
-    | | image_url | URLField | |
-    | | image | ImageField | |
+    | | duration | PositiveIntegerField | |
+    | | cost | PositiveIntegerField | |
+    | | aircraft_type | ForeignKey | FK to **Aircraft** model |
+    | | image | CloudinaryField | |
+
+- Table: **Aircraft**
+
+    | **PK** | **id** (unique) | Type | Notes |
+    | --- | --- | --- | --- |
+    | | aircraft_type | CharField | FK to **Voucher** model |
+    | | seats | CharField | |
+    | | engines | TextField | |
+
+- Table: **Contact**
+
+    | **PK** | **id** (unique) | Type | Notes |
+    | --- | --- | --- | --- |
+    | | first_name | CharField | |
+    | | last_name | CharField | |
+    | | email | EmailField | |
+    | | phone_num | CharField | |
+    | | specific_course | ForeignKey | FK to **Training** model |
+    | | message | TextField | |
+    | | msg_date | TextField | |
+
+- Table: **Newsletter**
+
+    | **PK** | **id** (unique) | Type | Notes |
+    | --- | --- | --- | --- |
+    | | email | EmailField | |
+
+- Table: **Order**
+
+    | **PK** | **id** (unique) | Type | Notes |
+    | --- | --- | --- | --- |
+    | | order_number | CharField | |
+    | | user_profile | ForeignKey | FK to **UserProfile** model |
+    | | full_name | CharField | |
+    | | email | EmailField | |
+    | | date | DateTimeField | |
+    | | grand_total | DecimalField | |
+    | | original_shopping_bag | TextField | |
+    | | stripe_pid | CharField | |
+
+- Table: **OrderLineItem**
+
+    | **PK** | **id** (unique) | Type | Notes |
+    | --- | --- | --- | --- |
+    | | order | ForeignKey | FK to **Order** model |
+    | | voucher | ForeignKey | FK to **Voucher** model |
+    | | quantity | IntegerField | |
+    | | lineitem_total | DecimalField | |
+
+- Table: **Licence**
+
+    | **PK** | **id** (unique) | Type | Notes |
+    | --- | --- | --- | --- |
+    | | licence_type | CharField | |
+    | | required_flight_time | PositiveIntegerField | |
+    | | engines | CharField | |
+
+- Table: **Training**
+
+    | **PK** | **id** (unique) | Type | Notes |
+    | --- | --- | --- | --- |
+    | | title | CharField | |
+    | | description | TextField | |
+    | | licence_type | ForeignKey | FK to **Licence** model |
+    | | cost | PositiveIntegerField | |
+    | | mode_of_training | CharField | |
+    | | aircraft_type | ForeignKey | FK to **Aircraft** model |
+    | | image | CloudinaryField | |
+
+- Table: **UserProfile**
+
+    | **PK** | **id** (unique) | Type | Notes |
+    | --- | --- | --- | --- |
+    | | user | OneToOneField | |
+    | | full_name | CharField | |
+    | | email | EmailField | |
 
 ## Agile Development Process
 
