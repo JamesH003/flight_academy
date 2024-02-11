@@ -20,26 +20,6 @@ I used [coolors.co](https://coolors.co/131d27-fb000e-ffffff-555555-f6f7f9) to ge
 
 ![screenshot](documentation/coolors.png)
 
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-If you've used CSS `:root` variables, consider also including a code snippet here!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
-
-I've used CSS `:root` variables to easily update the global colour scheme by changing only one value, instead of everywhere in the CSS file.
-
-```css
-:root {
-    /* P = Primary | S = Secondary */
-    --p-text: #000000;
-    --p-highlight: #E84610;
-    --s-text: #4A4A4F;
-    --s-highlight: #009FE3;
-    --white: #FFFFFF;
-    --black: #000000;
-}
-```
-
 ### Typography
 
 - [Roboto Condensed](https://fonts.google.com/specimen/Roboto+Condensed) was used for all text.
@@ -82,24 +62,6 @@ I've used CSS `:root` variables to easily update the global colour scheme by cha
 - As a site administrator, I should be able to delete training courses, so that I can remove courses that are no longer available.
 
 ## Wireframes
-
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, display your wireframe screenshots using a Markdown `table`.
-Instructions on how to do Markdown `tables` start on line #213 on this site: https://pandao.github.io/editor.md/en.html
-
-Alternatively, dropdowns are a way to condense several wireframes into a collapsible menu to save space.
-Dropdowns in Markdown are considered some of the only acceptable HTML components that are allowed for assessment purposes.
-
-**IMPORTANT**! **IMPORTANT**! **IMPORTANT**!
-The example below uses the `details` and `summary` code elements.
-However, for these scripts to work, I've had to add spaces within the `< >` elements.
-
-You MUST remove these spaces for it to work properly on your own README/TESTING files.
-Remove the spaces within the `< >` brackets for the `details` and `summary` code elements,
-for the Mobile, Tablet, and Desktop wireframes.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
 To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
 I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
@@ -732,47 +694,12 @@ provided by Code Institute.
 I have incorporate a newsletter sign-up form on my application, to allow users to supply their
 email address if they are interested in learning more. 
 
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Option 1 (MailChimp):
-- Sign up for a Mailchimp account
-- This allows up to 2,500 subscription email sends per month
-- Incorporate the code and scripts into your project like in the CI lessons.
-
-Option 2 (Django):
-- Create a custom newsletter app in your project, with a custom model.
-- This method satisfies two assessment criteria:
-    - include a newsletter
-    - one of your custom models
-- It doesn't need anything except the "email" on the model.
-- Example:
-    ```python
-    class Newsletter(models.Model):
-    email = models.EmailField(null=False, blank=False)
-
-    def __str__(self):
-        return self.email
-    ```
-- Consider using the same `send_mail()` functionality used on the `webhook_handler.py` file.
-    - You can trigger an email sent out to subscribed users when new products are added to the site!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
 ## Testing
 
 For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
 ## Deployment
-
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-**IMPORTANT:**
-
-- ⚠️ DO NOT update the environment variables to your own! These should NOT be included in this file; just demo values! ⚠️
-- ⚠️ DO NOT update the environment variables to your own! These should NOT be included in this file; just demo values! ⚠️
-- ⚠️ DO NOT update the environment variables to your own! These should NOT be included in this file; just demo values! ⚠️
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
 The live deployed application can be found deployed on [Heroku](https://flight-academy-e7e5adf022d9.herokuapp.com).
 
@@ -788,132 +715,6 @@ To obtain your own Postgres Database, sign-up with your GitHub account, then fol
 - You can leave the **Tags** blank.
 - Select the **Region** and **Data Center** closest to you.
 - Once created, click on the new database name, where you can view the database URL and Password.
-
-### Amazon AWS
-
-This project uses [AWS](https://aws.amazon.com) to store media and static files online, due to the fact that Heroku doesn't persist this type of data.
-
-Once you've created an AWS account and logged-in, follow these series of steps to get your project connected.
-Make sure you're on the **AWS Management Console** page.
-
-#### S3 Bucket
-
-- Search for **S3**.
-- Create a new bucket, give it a name (matching your Heroku app name), and choose the region closest to you.
-- Uncheck **Block all public access**, and acknowledge that the bucket will be public (required for it to work on Heroku).
-- From **Object Ownership**, make sure to have **ACLs enabled**, and **Bucket owner preferred** selected.
-- From the **Properties** tab, turn on static website hosting, and type `index.html` and `error.html` in their respective fields, then click **Save**.
-- From the **Permissions** tab, paste in the following CORS configuration:
-
-	```shell
-	[
-		{
-			"AllowedHeaders": [
-				"Authorization"
-			],
-			"AllowedMethods": [
-				"GET"
-			],
-			"AllowedOrigins": [
-				"*"
-			],
-			"ExposeHeaders": []
-		}
-	]
-	```
-
-- Copy your **ARN** string.
-- From the **Bucket Policy** tab, select the **Policy Generator** link, and use the following steps:
-	- Policy Type: **S3 Bucket Policy**
-	- Effect: **Allow**
-	- Principal: `*`
-	- Actions: **GetObject**
-	- Amazon Resource Name (ARN): **paste-your-ARN-here**
-	- Click **Add Statement**
-	- Click **Generate Policy**
-	- Copy the entire Policy, and paste it into the **Bucket Policy Editor**
-
-		```shell
-		{
-			"Id": "Policy1234567890",
-			"Version": "2012-10-17",
-			"Statement": [
-				{
-					"Sid": "Stmt1234567890",
-					"Action": [
-						"s3:GetObject"
-					],
-					"Effect": "Allow",
-					"Resource": "arn:aws:s3:::your-bucket-name/*"
-					"Principal": "*",
-				}
-			]
-		}
-		```
-
-	- Before you click "Save", add `/*` to the end of the Resource key in the Bucket Policy Editor (like above).
-	- Click **Save**.
-- From the **Access Control List (ACL)** section, click "Edit" and enable **List** for **Everyone (public access)**, and accept the warning box.
-	- If the edit button is disabled, you need to change the **Object Ownership** section above to **ACLs enabled** (mentioned above).
-
-#### IAM
-
-Back on the AWS Services Menu, search for and open **IAM** (Identity and Access Management).
-Once on the IAM page, follow these steps:
-
-- From **User Groups**, click **Create New Group**.
-	- Suggested Name: `group-flight_academy` (group + the project name)
-- Tags are optional, but you must click it to get to the **review policy** page.
-- From **User Groups**, select your newly created group, and go to the **Permissions** tab.
-- Open the **Add Permissions** dropdown, and click **Attach Policies**.
-- Select the policy, then click **Add Permissions** at the bottom when finished.
-- From the **JSON** tab, select the **Import Managed Policy** link.
-	- Search for **S3**, select the `AmazonS3FullAccess` policy, and then **Import**.
-	- You'll need your ARN from the S3 Bucket copied again, which is pasted into "Resources" key on the Policy.
-
-		```shell
-		{
-			"Version": "2012-10-17",
-			"Statement": [
-				{
-					"Effect": "Allow",
-					"Action": "s3:*",
-					"Resource": [
-						"arn:aws:s3:::your-bucket-name",
-						"arn:aws:s3:::your-bucket-name/*"
-					]
-				}
-			]
-		}
-		```
-	
-	- Click **Review Policy**.
-	- Suggested Name: `policy-flight_academy` (policy + the project name)
-	- Provide a description:
-		- "Access to S3 Bucket for flight_academy static files."
-	- Click **Create Policy**.
-- From **User Groups**, click your "group-flight_academy".
-- Click **Attach Policy**.
-- Search for the policy you've just created ("policy-flight_academy") and select it, then **Attach Policy**.
-- From **User Groups**, click **Add User**.
-	- Suggested Name: `user-flight_academy` (user + the project name)
-- For "Select AWS Access Type", select **Programmatic Access**.
-- Select the group to add your new user to: `group-flight_academy`
-- Tags are optional, but you must click it to get to the **review user** page.
-- Click **Create User** once done.
-- You should see a button to **Download .csv**, so click it to save a copy on your system.
-	- **IMPORTANT**: once you pass this page, you cannot come back to download it again, so do it immediately!
-	- This contains the user's **Access key ID** and **Secret access key**.
-	- `AWS_ACCESS_KEY_ID` = **Access key ID**
-	- `AWS_SECRET_ACCESS_KEY` = **Secret access key**
-
-#### Final AWS Setup
-
-- If Heroku Config Vars has `DISABLE_COLLECTSTATIC` still, this can be removed now, so that AWS will handle the static files.
-- Back within **S3**, create a new folder called: `media`.
-- Select any existing media images for your project to prepare them for being uploaded into the new folder.
-- Under **Manage Public Permissions**, select **Grant public read access to this object(s)**.
-- No further settings are required, so click **Upload**.
 
 ### Stripe API
 
@@ -970,8 +771,6 @@ Deployment steps are as follows, after account setup:
 
 | Key | Value |
 | --- | --- |
-| `AWS_ACCESS_KEY_ID` | user's own value |
-| `AWS_SECRET_ACCESS_KEY` | user's own value |
 | `DATABASE_URL` | user's own value |
 | `DISABLE_COLLECTSTATIC` | 1 (*this is temporary, and can be removed for the final deployment*) |
 | `EMAIL_HOST_PASS` | user's own value |
@@ -980,7 +779,6 @@ Deployment steps are as follows, after account setup:
 | `STRIPE_PUBLIC_KEY` | user's own value |
 | `STRIPE_SECRET_KEY` | user's own value |
 | `STRIPE_WH_SECRET` | user's own value |
-| `USE_AWS` | True |
 
 Heroku needs two additional files in order to deploy properly.
 
@@ -1031,8 +829,6 @@ Sample `env.py` file:
 ```python
 import os
 
-os.environ.setdefault("AWS_ACCESS_KEY_ID", "user's own value")
-os.environ.setdefault("AWS_SECRET_ACCESS_KEY", "user's own value")
 os.environ.setdefault("DATABASE_URL", "user's own value")
 os.environ.setdefault("EMAIL_HOST_PASS", "user's own value")
 os.environ.setdefault("EMAIL_HOST_USER", "user's own value")
@@ -1095,24 +891,7 @@ I have not noticed any differences between the local version and the live deploy
 
 ## Credits
 
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section you need to reference where you got your content, media, and extra help from.
-It is common practice to use code from other repositories and tutorials,
-however, it is important to be very specific about these sources to avoid plagiarism.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
-
 ### Content
-
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to provide attribution links to any borrowed code snippets, elements, or resources.
-A few examples have been provided below to give you some ideas.
-
-Ideally, you should provide an actual link to every resource used, not just a generic link to the main site!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
 | Source | Location | Notes |
 | --- | --- | --- |
@@ -1148,15 +927,7 @@ Ideally, you should provide an actual link to every resource used, not just a ge
 
 ### Acknowledgements
 
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to provide attribution to any supports that helped, encouraged, or supported you throughout the development stages of this project.
-A few examples have been provided below to give you some ideas.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
-
 - I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for their support throughout the development of this project.
 - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
 - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
-- I would like to thank my partner (John/Jane), for believing in me, and allowing me to make this transition into software development.
-- I would like to thank my employer, for supporting me in my career development change towards becoming a software developer.
+- I would like to thank my partner Caoimhe, for believing in me, and supporting me throughout this course
