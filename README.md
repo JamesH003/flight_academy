@@ -48,35 +48,38 @@ I've used CSS `:root` variables to easily update the global colour scheme by cha
 
 ## User Stories
 
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, list all of your user stories for the project.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
-
 ### New Site Users
 
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
+- As a new site user, I would like to view a list of products, so that I can decide which one to purchase.
+- As a new site user, I would like to view individual product details, so that I can decide which one I want to purchase.
+- As a new site user, I would like to clearly see the types of products available, so that I can select the appropriate one.
+- As a new site user, I would like to easily add a product to my shopping bag, so that I can purchase the product.
+- As a new site user, I would like to view the items in my bag to be purchased, so that I can know which products I have selected.
+- As a new site user, I would like to adjust the quantity of products in my bag, so that I can increase or decrease the number of products I want to purchase.
+- As a new site user, I would like to easily view the total price of my purchases, so that I can stay aware of my spending.
+- As a new site user, I would like to easily enter my payment information, so that I can pay for my chosen products with great ease.
+- As a new site user, I would like to view an order confirmation after checkout, so that I can have a record of what I have ordered.
+- As a new site user, I would like to receive an email confirmation, so that I can have proof of purchase.
+- As a new site user, I would like to subscribe to a newsletter, so that I can get more information.
+- As a new site user, I would like to view different training courses, so that I can assess my options.
 
 ### Returning Site Users
 
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
+- As a returning site user, I would like to register an account, so that I can have a personal account.
+- As a returning site user, I would like to login to my account, so that I can access my personal account.
+- As a returning site user, I would like to logout of my account, so that I can logout of my personal account.
+- As a returning site user, I would like to recover my password, so that I can regain access to my account.
+- As a returning site user, I would like to know my information is secure, so that I can be confident in entering my payment information.
+- As a returning site user, I would like to access links to social media pages, so that I can view their social media content.
 
 ### Site Admin
 
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
+- As a site administrator, I should be able to add new products to the store, so that I can increase the amount of products on offer.
+- As a site administrator, I should be able to edit or update products, so that I can keep the product information up to date.
+- As a site administrator, I should be able to delete products from the store, so that I can remove products that are no longer for sale.
+- As a site administrator, I should be able to add new training course options, so that I can improve what the site has to offer.
+- As a site administrator, I should be able to edit training courses, so that I can change certain aspects as needs be.
+- As a site administrator, I should be able to delete training courses, so that I can remove courses that are no longer available.
 
 ## Wireframes
 
