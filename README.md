@@ -2,41 +2,12 @@
 
 Welcome to Flight Academy! Flight Academy is a website used to advertise and promote the training options and vouchers available for sale from the flight school of the same name. Users are able to browse through the multiple training courses on offer and learn more about each individual course. They also have the option of registering their interest in a particular course in order to receive further information and contact from the flight school. Users can also browse through the list of flight vouchers available and make a purchase directly through the site. People interested in becoming a pilot or aviation enthusiasts in general will find this website useful as they can obtain the information required to begin planning their training, or sign up for a monthly newsletter where they will get the latest industry news. From the site owners perspective, the Flight Academy website is a well laid out, clean and informative. The site admin can create, edit and delete new vouchers and training courses from the front end without having to access the admin panel. The site is aimed at users from early teens upwards and at anyone who has an interest in aviation from both a professional and casual perspective. Users will find the site intuitive and responsive across all devices.
 
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+![screenshot](documentation/amiresponsive.png)
 
-In this section, you will include a few paragraphs providing an overview of your project.
-Essentially, this part is your "sales pitch".
-
-At this stage, you should have a name for your project so use it!
-Don't introduce the project as a "portfolio project" for the diploma.
-
-In this section, describe what the project hopes to accomplish, who it is intended to target, and how it will be useful to the target audience.
-
-Consider adding a mockup image using the "Am I Responsive" website.
-Here's your deployed site as an example:
-https://ui.dev/amiresponsive?url=https://flight-academy-e7e5adf022d9.herokuapp.com
-
-Screenshots for the README and testing should not be inside of `assets/` or `static/` image folders.
-(reminder: `assets/` and `static/` are for files used on the live site, not documentation)
-Consider adding a new folder called `documentation`, and add the amiresponsive screenshot inside of that folder.
-To add the image into your README, use this format:
-(assuming you have a new folder called `documentation` with an image called "mockup.png")
-
-![screenshot](documentation/mockup.png)
-
-Note: Markdown files (.md) should not contain HTML elements like `img`, `br`, `div`, `a`, etc, only Markdown formatting.
-Find out more about using Markdown elements here:
-https://pandao.github.io/editor.md/en.html
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
 ## UX
 
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, you will briefly explain your design processes.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
+The design of the site is intended to reflect the business and industry it intends to promote and sell. Strong colours, with minimalist features give the site a bold, striking and professional appearance. Each page features a main background image with a faded overlay and strong bold text for emphasis. Both the training courses and vouchers available are displayed on card backgrounds, with large text and headline images. The sleek and minimalist navbar ensures effortless navigation. The responsive design guarantees a smooth and visually appealing interface, whether you're on a desktop, tablet, or mobile.
 
 ### Colour Scheme
 
