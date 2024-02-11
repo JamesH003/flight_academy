@@ -106,69 +106,60 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 ### Mobile Wireframes
 
-< details >
-< summary > Click here to see the Mobile Wireframes < / summary >
+<details>
+<summary> Click here to see the Mobile Wireframes </summary>
 
 Home
-  - ![screenshot](documentation/wireframes/mobile-home.png)
+  - ![screenshot](documentation/wireframes/wireframe-mobile-home.png)
 
-About
-  - ![screenshot](documentation/wireframes/mobile-about.png)
+Training
+  - ![screenshot](documentation/wireframes/wireframe-mobile-training.png)
+
+Vouchers
+  - ![screenshot](documentation/wireframes/wireframe-mobile-vouchers.png)
 
 Contact
-  - ![screenshot](documentation/wireframes/mobile-contact.png)
+  - ![screenshot](documentation/wireframes/wireframe-mobile-contact.png)
 
-Gallery
-  - ![screenshot](documentation/wireframes/mobile-gallery.png)
-
-etc.
-  - repeat for any remaining mobile wireframes
-
-< / details >
+</details>
 
 ### Tablet Wireframes
 
-< details >
-< summary > Click here to see the Tablet Wireframes < / summary >
+<details>
+<summary> Click here to see the Tablet Wireframes </summary>
 
 Home
-  - ![screenshot](documentation/wireframes/tablet-home.png)
+  - ![screenshot](documentation/wireframes/wireframe-tablet-home.png)
 
-About
-  - ![screenshot](documentation/wireframes/tablet-about.png)
+Training
+  - ![screenshot](documentation/wireframes/wireframe-tablet-training.png)
+
+Vouchers
+  - ![screenshot](documentation/wireframes/wireframe-tablet-vouchers.png)
 
 Contact
-  - ![screenshot](documentation/wireframes/tablet-contact.png)
+  - ![screenshot](documentation/wireframes/wireframe-tablet-contact.png)
 
-Gallery
-  - ![screenshot](documentation/wireframes/tablet-gallery.png)
-
-etc.
-  - repeat for any remaining tablet wireframes
-
-< / details >
+</details>
 
 ### Desktop Wireframes
 
-< details >
-< summary > Click here to see the Desktop Wireframes < / summary >
+<details>
+<summary> Click here to see the Desktop Wireframes </summary>
 
 Home
-  - ![screenshot](documentation/wireframes/desktop-home.png)
+  - ![screenshot](documentation/wireframes/wireframe-desktop-home.png)
 
-About
-  - ![screenshot](documentation/wireframes/desktop-about.png)
+Training
+  - ![screenshot](documentation/wireframes/wireframe-desktop-training.png)
+
+Vouchers
+  - ![screenshot](documentation/wireframes/wireframe-desktop-vouchers.png)
 
 Contact
-  - ![screenshot](documentation/wireframes/desktop-contact.png)
+  - ![screenshot](documentation/wireframes/wireframe-desktop-contact.png)
 
-Gallery
-  - ![screenshot](documentation/wireframes/desktop-gallery.png)
-
-etc.
-  - repeat for any remaining desktop wireframes
-
-< / details >
+</details>
 
 ## Features
 
