@@ -633,15 +633,9 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
 [GitHub Projects](https://github.com/JamesH003/flight_academy/projects) served as an Agile tool for this project.
 It isn't a specialized tool, but with the right tags and project creation/issue assignments, it can be made to work.
 
-Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board.
+Through it, user stories, issues and tasks were planned, then tracked on a weekly basis using the basic Kanban board.
 
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Consider adding a basic screenshot of your Projects Board.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
-
-![screenshot](documentation/gh-projects.png)
+![screenshot](documentation/projects-board.png)
 
 ### GitHub Issues
 
@@ -650,19 +644,13 @@ There, I used my own **User Story Template** to manage user stories.
 
 It also helped with milestone iterations on a weekly basis.
 
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Consider adding a screenshot of your Open and Closed Issues.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
-
 - [Open Issues](https://github.com/JamesH003/flight_academy/issues)
 
-    ![screenshot](documentation/gh-issues-open.png)
+    ![screenshot](documentation/github-open-issues.png)
 
 - [Closed Issues](https://github.com/JamesH003/flight_academy/issues?q=is%3Aissue+is%3Aclosed)
 
-    ![screenshot](documentation/gh-issues-closed.png)
+    ![screenshot](documentation/github-closed-issues.png)
 
 ### MoSCoW Prioritization
 
