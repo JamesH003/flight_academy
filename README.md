@@ -163,77 +163,127 @@ Contact
 
 ## Features
 
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, you should go over the different parts of your project,
-and describe each in a sentence or so.
-
-You will need to explain what value each of the features provides for the user,
-focusing on who this website is for, what it is that they want to achieve,
-and how your project is the best way to help them achieve these things.
-
-For some/all of your features, you may choose to reference the specific project files that implement them.
-
-IMPORTANT: Remember to always include a screenshot of each individual feature!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
-
 ### Existing Features
 
-- **Title for feature #1**
+- **Landing Page**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Visitors to the site will first encounter the landing page which is the homepage of the site. The homepage consists of a navbar at the top with a hero background image as the main feature of the page. The navbar is a solid dark colour with contrasting white text displaying the site name/logo and a contrasting red Font Awesome icon. On medium sized screens and larger, the right side of the navbar features navigation links to the training, voucher and contact us page. A vertical white divider line separates the navigation links from the account and shopping bag links. The main section of the page features a background image of a line of aircraft with a dark overlay with graduated darkness. There is also a large, bright and contrasting Learn More button which links to the About page.
 
-![screenshot](documentation/feature01.png)
+![screenshot](documentation/features/features-homepage.png)
 
-- **Title for feature #2**
+- **Navbar**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    -  The navbar is sticky whereby it is a constant feature at the top of the screen. As the page is fully responsive the navbar compresses on smaller screen sizes along with the logo. The account and shopping bag links move into a dropdown menu separated by a red horizontal divider line
 
-![screenshot](documentation/feature02.png)
+![screenshot](documentation/features/features-navbar-1.png)
+![screenshot](documentation/features/features-navbar-2.png)
+![screenshot](documentation/features/features-navbar-3.png)
+![screenshot](documentation/features/features-navbar-4.png)
 
-- **Title for feature #3**
+- **Footer**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - The footer is the same dark navy in colour and features the copyright statement and the social media links.
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/features/features-footer.png)
 
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+- **Training Page**
 
-Repeat as necessary for as many features as your site contains.
+    - The Training Page consists of a large background image at the top with a dark overlay and strong large white text over it. Beneath this are the training course options, displayed on individual cards. Each individual card features an image at the top, the title of the specific course, the aircraft type. The price of the course is at the bottom of the card in white text on a dark navy background.
 
-Hint: the more, the merrier!
+![screenshot](documentation/features/features-training-page.png)
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
+- **Training Course Details Page**
 
-### Future Features
+    - Users can click on each individual Training Course card which will open a Training Details page. This page consists of an image on the left with the aircraft type listed beneath it between horizontal dividing lines. On the right there is the title of the course, followed by the price of the course. Beneath that there is some information text about the course. There is a large red Learn More button which leads to a contact form to register for more information about the courses.
 
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+![screenshot](documentation/features/features-training-details.png)
 
-Do you have additional ideas that you'd like to include on your project in the future?
-Fantastic! List them here!
-It's always great to have plans for future improvements!
-Consider adding any helpful links or notes to help remind you in the future, if you revisit the project in a couple years.
+- **Admin Add/Edit/Delete buttons**
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
+    - As a superuser/admin of the site, there are buttons available to add new training courses/vouchers, edit and delete.
 
-- Title for future feature #1
-    - Any additional notes about this feature.
-- Title for future feature #2
-    - Any additional notes about this feature.
-- Title for future feature #3
-    - Any additional notes about this feature.
+![screenshot](documentation/features/features-add-training.png)
+![screenshot](documentation/features/features-edit-delete.png)
 
-## Tools & Technologies Used
+- **Vouchers Page**
 
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+    - The Vouchers Page consists of a large background image at the top with a dark overlay and strong large white text over it. Beneath this are the various voucher options, displayed on individual cards. Each individual card features an image at the top, the title of the specific voucher, the aircraft type. The price of the voucher is at the bottom of the card in white text on a dark navy background.
 
-In this section, you should explain the various tools and technologies used to develop the project.
-Make sure to put a link (where applicable) to the source, and explain what each was used for.
-Some examples have been provided, but this is just a sample only, your project might've used others.
-Feel free to delete any unused items below as necessary.
+![screenshot](documentation/features/features-vouchers.png)
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
+- **Voucher Details Page**
+
+    - Users can click on each individual Voucher card which will open a Voucher Details page. This page consists of an image on the left with the aircraft type listed beneath it between horizontal dividing lines. On the right there is the title of the voucher, followed by the price of the voucher. Beneath that there is some information text about the voucher. There is a quantity selector with red +/- buttons in line with the red colour throughtout the site. Beneath that there are two buttons, a dark navy Keep Shopping button which returns to the Vouchers page, and a Add To Bag button which adds the voucher to the shopping bag.
+
+![screenshot](documentation/features/features-voucher-details.png)
+
+- **Order Summary**
+
+    - When a user adds a voucher to their shopping bag, an Order Summary box appears. The total cost now appears in the top right corner on the shopping bag icon. The voucher selected is listed in the shopping bag with the total price listed again. At the bottom there is a large Go To Secure Checkout button to progress along the payment flow.
+
+![screenshot](documentation/features/features-order-summary.png)
+
+- **Shopping Bag**
+
+    - The Shopping Bag page features the specific voucher details and preview image. Beneath a horizontal dividing line there is the total cost along with a Keep Shopping button and a Secure Checkout button.
+
+![screenshot](documentation/features/features-shopping-bag.png)
+
+- **Checkout Page**
+
+    - The checkout page features input fields for name, email and credit card details. There are buttons to Adjust the Shopping Bag and Complete Order. On the right there is a summary of the order.
+
+![screenshot](documentation/features/features-checkout-page.png)
+
+- **Checkout Loading**
+
+    - Upon clicking Complete Order, a loading page appears with a spinning red icon on a dark transparent overlay.
+
+![screenshot](documentation/features/features-loading.png)
+
+- **Order Confirmation Page**
+
+    - Upon successful completion of the transaction, the user is presented with an Order Confirmation page. This page consists of a summary of the order as well as a success message in the top right of the page.
+
+![screenshot](documentation/features/features-order-confirmation.png)
+
+- **About Page**
+
+    - The About Page features three background images and two bodies of information text. Each passage of text features a button linking to either the Vouchers Page or the Training Courses Page.
+
+![screenshot](documentation/features/features-about.png)
+
+- **Newsletter**
+
+    - At the bottom of the About Page, there is an input box for users to submit their email addresses to sign up for the monthly newsletter.
+
+![screenshot](documentation/features/features-newsletter.png)
+
+- **Contact Us Page**
+
+    - The Contact Us link in the navbar opens the Contact Us page. It consists of a form for users to fill out to gain more information regarding specific training courses.
+
+![screenshot](documentation/features/features-contact.png)
+
+- **Profile Page**
+
+    - Once a user is logged in, they can access their Profile through the Account dropdown menu in the navbar. The Profile Page consists of the user's order history.
+
+![screenshot](documentation/features/features-profile.png)
+
+- **Register**
+
+    - Users can register an account by selecting the Register button from the Account dropdown menu in the navbar. The page consists of a registration form with a background image with a strong white overlay.
+
+![screenshot](documentation/features/features-register.png)
+
+- **Login**
+
+    - Users can login to their account by selecting the Login button from the Account dropdown menu in the navbar. The page consists of input fields requesting username/email, password with a background image with a strong white overlay.
+
+![screenshot](documentation/features/features-signin.png)
+
+
 
 - [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content.
 - [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
