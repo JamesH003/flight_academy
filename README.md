@@ -1132,15 +1132,19 @@ Ideally, you should provide an actual link to every resource used, not just a ge
 
 | Source | Location | Type | Notes |
 | --- | --- | --- | --- |
-| [Pexels](https://www.pexels.com) | entire site | image | favicon on all pages |
-| [Lorem Picsum](https://picsum.photos) | home page | image | hero image background |
-| [Unsplash](https://unsplash.com) | product page | image | sample of fake products |
-| [Pixabay](https://pixabay.com) | gallery page | image | group of photos for gallery |
-| [Wallhere](https://wallhere.com) | footer | image | background wallpaper image in the footer |
-| [This Person Does Not Exist](https://thispersondoesnotexist.com) | testimonials | image | headshots of fake testimonial images |
-| [Audio Micro](https://www.audiomicro.com/free-sound-effects) | game page | audio | free audio files to generate the game sounds |
-| [Videvo](https://www.videvo.net/) | home page | video | background video on the hero section |
+| [Pacific Flying](https://www.pacificflying.com/career/selecting-flight-school/) | homepage, contact form  | image | background image |
+| [AFTA](https://afta.ie/modular-training/) | training page | image | background image |
+| [AOPA](https://www.aopa.org/news-and-media/all-news/2016/november/28/training-tip) | vouchers page | image | background image |
+| [gudstory](https://www.gudstory.com/choosing-the-right-pilot-training-school-for-your-dreams/) | about page | image | background image |
+| [Pilot Career News](https://www.pilotcareernews.com/keilir-acquires-icelandic-flight-academy/) | about page | image | background image |
+| [FTE Jerez](https://www.ftejerez.com/news/category/simulators/) | about page | image | background image |
+| [Airucate](https://airucate.com/accumulate-flying-hours-how-to-build-up-your-flying-experience-at-a-reasonable-cost/) | newsletter | image | background image |
+| [Cessna](https://txtav.com/en/general-aviation/learn-to-fly) | allauth pages | image | background image |
+| [Pilot](https://pilot.ie/product/david-clark-h10-13-4-headset-black-headset-bag/) | about page | image | background image |
+| [Flying Mag](https://www.flyingmag.com/when-is-the-best-time-to-take-the-test/) | training page | image | placeholder image |
+| [JoeWalshTours](https://joewalshtours.co.uk/suggested-tours/joe-walsh-tours-gift-vouchers/) | voucher pages | image | placeholder image |
 | [TinyPNG](https://tinypng.com) | entire site | image | tool for image compression |
+| [Canva](https://www.canva.com/) | entire site | favicon | add red colour to plane icon |
 
 ### Acknowledgements
 
