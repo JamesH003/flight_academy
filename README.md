@@ -906,6 +906,7 @@ I have not noticed any differences between the local version and the live deploy
 | [W3Schools](https://www.w3schools.com/cssref/css3_pr_background-size.php) | background image | background size |
 | [W3Schools](https://www.w3schools.com/cssref/pr_scroll-behavior.php) | entire site | smooth scroll |
 | [WhiteNoise](http://whitenoise.evans.io) | entire site | hosting static files on Heroku temporarily |
+| [Autoprefixer](https://autoprefixer.github.io/) | CSS stylesheets | CSS prefixes |
 
 ### Media
 
