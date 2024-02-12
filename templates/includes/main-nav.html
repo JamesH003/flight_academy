@@ -24,10 +24,14 @@
                 Contact Us
             </a>
         </li>
-        <div class="d-flex d-md-none border-line"></div>
+        
+        <li>
+            <div class="d-flex d-md-none border-line"></div>
+        </li>
+    </ul>
 
         <div class="d-flex flex-row justify-content-between">
-            <li class="d-flex d-md-none nav-item dropdown">
+            <div class="d-flex d-md-none nav-item dropdown">
                 <a class="text-white nav-link" href="#" id="user-options" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
                     <div class="text-center">
@@ -44,9 +48,9 @@
                     <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                     {% endif %}
                 </div>
-            </li>
+            </div>
     
-            <li class="d-flex d-md-none nav-item">
+            <div class="d-flex d-md-none nav-item">
                 <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link"
                     href="{% url 'view_shopping_bag' %}">
                     <div class="text-center">
@@ -60,7 +64,6 @@
                         </p>
                     </div>
                 </a>
-            </li>
+            </div>
         </div>
-    </ul>
 </div>
