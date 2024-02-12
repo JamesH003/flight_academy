@@ -223,6 +223,9 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 | User_profile models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/user_profile/models.py) | ![screenshot](documentation/testing/python-user_profile-models.png) | Pass: No Errors |
 | User_profile urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/user_profile/urls.py) | ![screenshot](documentation/testing/python-user_profile-urls.png) | Pass: No Errors |
 | User_profile views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/user_profile/views.py) | ![screenshot](documentation/testing/python-user_profile-views.png) | Pass: No Errors |
+| flight_academy settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/flight_academy/settings.py) | ![screenshot](documentation/testing/python-flight-academy-settings.png) | Pass: No Errors |
+| flight_academy urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/flight_academy/urls.py) | ![screenshot](documentation/testing/python-flight-academy-urls.png) | Pass: No Errors |
+| flight_academy urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/flight_academy/views.py) | ![screenshot](documentation/testing/python-flight-academy-views.png) | Pass: No Errors |
 
 
 **IMPORTANT**: Django settings.py
