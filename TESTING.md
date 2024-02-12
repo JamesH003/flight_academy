@@ -106,9 +106,9 @@ Sample CSS code validation documentation (tables are extremely helpful!):
 
 | File | Jigsaw URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2FJamesH003.github.io%2Fflight_academy) | ![screenshot](documentation/css-validation-style.png) | Pass: No Errors |
-| checkout.css | n/a | ![screenshot](documentation/css-validation-checkout.png) | Pass: No Errors |
-| x | x | x | repeat for all remaining CSS files |
+| base.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fflight-academy-e7e5adf022d9.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/testing/css-url-testing.png) | Pass: No Errors |
+| payments.css | n/a | ![screenshot](documentation/testing/css-payments.png) | Pass: No Errors |
+| user_profile.css | n/a | ![screenshot](documentation/testing/css-user-profile.png) | Pass: No Errors |
 
 ### JavaScript
 
