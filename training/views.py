@@ -15,7 +15,6 @@ def training(request):
     context = {
         'trainings': trainings,
     }
-    
     return render(request, 'training/training.html', context)
 
 
@@ -27,7 +26,7 @@ def training_detail(request, training_id):
     context = {
         'training': training,
     }
-    
+
     return render(request, 'training/training_detail.html', context)
 
 
@@ -35,19 +34,22 @@ def training_detail(request, training_id):
 def add_training(request):
     """ A view to allow a superuser to add a new Training Course """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only Flight Academy management can access this.')
+        messages.error(
+            request, 'Sorry, only Flight Academy management can access this.')
         return redirect(reverse('training'))
 
     if request.method == 'POST':
         form = TrainingForm(request.POST or None, request.FILES or None)
         if form.is_valid():
             form.save()
-            messages.success(request, 'You have successfully added a new Training Course!')
+            messages.success(
+                request, 'You have successfully added a new Training Course!')
             return redirect('training')
         else:
-            messages.error(request, 'Failed to add training course. Please ensure the form is valid.')
+            messages.error(
+                request, 'Failed to add training course. Please ensure the form is valid.')  # noqa
     else:
-            form = TrainingForm()
+        form = TrainingForm()
 
     template = 'training/add_training.html'
     context = {
@@ -62,7 +64,8 @@ def edit_training(request, id):
     """ A view to allow a superuser to edit a Training Course """
     training = get_object_or_404(Training, id=id)
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only Flight Academy management can access this.')
+        messages.error(
+            request, 'Sorry, only Flight Academy management can access this.')
         return redirect('training')
     form = TrainingForm(
         request.POST or None, request.FILES or None, instance=training)
@@ -72,7 +75,8 @@ def edit_training(request, id):
             messages.success(request, f'Successfully updated {training.title}')
             return redirect('training')
         else:
-            messages.error(request, f'Failed to update {training.title}. Please ensure the form is valid.')
+            messages.error(
+                request, f'Failed to update {training.title}. Please ensure the form is valid.')  # noqa
     else:
         form = TrainingForm(instance=training)
         messages.info(request, f'You are editing {training.title}.')
@@ -89,7 +93,8 @@ def delete_training(request, id):
     """ A view to allow a superuser to delete a training course """
     training = get_object_or_404(Training, id=id)
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only Flight Academy management can access this.')
+        messages.error(
+            request, 'Sorry, only Flight Academy management can access this.')
         return redirect('training')
     training.delete()
     return redirect('training')

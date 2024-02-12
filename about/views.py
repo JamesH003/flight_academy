@@ -28,13 +28,16 @@ def about(request):
 
             Hi {request.POST.get("email")}, and welcome to Flight Academy!
 
-            This is a confirmation email to confirm your subscription to the Flight Academy Newsletter!
-            You'll automatically receive our monthly Newsletter, and can unsubscribe at any time.
+            This is a confirmation email to confirm your subscription to the
+            Flight Academy Newsletter!
+            You'll automatically receive our monthly Newsletter, and can
+            unsubscribe at any time.
 
             Safe flying,
             Flight Academy
 
-            * Flight Academy will never sell your email address or personal data to any third-party companies.
+            * Flight Academy will never sell your email address or personal
+            data to any third-party companies.
             """
             send_mail(
                 subject,

@@ -12,7 +12,7 @@ def user_profile(request):
     user_profile = get_object_or_404(UserProfile, user=request.user)
 
     orders = user_profile.orders.all()
-    
+
     template = 'user_profile/user_profile.html'
     context = {
         'user_profile': user_profile,

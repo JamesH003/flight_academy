@@ -2,6 +2,7 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from flights.models import Voucher
 
+
 def shopping_bag_contents(request):
 
     shopping_bag_items = []

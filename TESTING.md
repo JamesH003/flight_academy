@@ -2,26 +2,7 @@
 
 Return back to the [README.md](README.md) file.
 
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, you need to convince the assessors that you have conducted enough testing to legitimately believe that the site works well.
-Essentially, in this part, you should go over all of your project's features, and ensure that they all work as intended,
-with the project providing an easy and straightforward way for the users to achieve their goals.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
-
 ## Code Validation
-
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use the space to discuss code validation for any of your own code files (where applicable).
-You are not required to validate external libraries/frameworks, such as imported Bootstrap, Materialize, Font Awesome, etc.
-
-**IMPORTANT**: You must provide a screenshot for each file you validate.
-
-**PRO TIP**: Always validate the live site pages, not your local code. There could be subtle/hidden differences.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
 ### HTML
 
@@ -203,12 +184,46 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| run.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/run.py) | ![screenshot](documentation/py-validation-run.png) | W291 trailing whitespace |
-| settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/boutique-ado/settings.py) | ![screenshot](documentation/py-validation-settings.png) | E501 line too long |
-| Blog views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/blog/views.py) | ![screenshot](documentation/py-validation-blog-views.png) | Pass: No Errors |
-| Checkout urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/checkout/urls.py) | ![screenshot](documentation/py-validation-checkout-urls.png) | W292 no newline at end of file |
-| Profiles models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/profiles/models.py) | ![screenshot](documentation/py-validation-profiles-models.png) | Pass: No Errors |
-| x | x | x | repeat for all remaining Python files |
+| About urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/about/urls.py) | ![screenshot](documentation/testing/python-about-urls.png) | Pass: No Errors |
+| About views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/about/views.py) | ![screenshot](documentation/testing/python-about-views.png) | Pass: No Errors |
+| Contact admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/contact/admin.py) | ![screenshot](documentation/testing/python-contact-admin.png) | Pass: No Errors |
+| Contact apps.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/contact/apps.py) | ![screenshot](documentation/testing/python-contact-apps.png) | Pass: No Errors |
+| Contact forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/contact/forms.py) | ![screenshot](documentation/testing/python-contact-forms.png) | Pass: No Errors |
+| Contact models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/contact/models.py) | ![screenshot](documentation/testing/python-contact-models.png) | Pass: No Errors |
+| Contact urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/contact/urls.py) | ![screenshot](documentation/testing/python-contact-urls.png) | Pass: No Errors |
+| Contact views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/contact/views.py) | ![screenshot](documentation/testing/python-contact-views.png) | Pass: No Errors |
+| Flights admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/flights/admin.py) | ![screenshot](documentation/testing/python-flights-admin.png) | Pass: No Errors |
+| Flights apps.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/flights/apps.py) | ![screenshot](documentation/testing/python-flights-apps.png) | Pass: No Errors |
+| Flights forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/flights/forms.py) | ![screenshot](documentation/testing/python-flights-forms.png) | Pass: No Errors |
+| Flights models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/flights/models.py) | ![screenshot](documentation/testing/python-flights-models.png) | Pass: No Errors |
+| Flights urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/flights/urls.py) | ![screenshot](documentation/testing/python-flights-urls.png) | Pass: No Errors |
+| Flights views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/flights/views.py) | ![screenshot](documentation/testing/python-flights-views.png) | Pass: No Errors |
+| Home urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/home/urls.py) | ![screenshot](documentation/testing/python-home-urls.png) | Pass: No Errors |
+| Home views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/home/views.py) | ![screenshot](documentation/testing/python-home-views.png) | Pass: No Errors |
+| Newsletter admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/newsletter/admin.py) | ![screenshot](documentation/testing/python-newsletter-admin.png) | Pass: No Errors |
+| Newsletter forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/newsletter/forms.py) | ![screenshot](documentation/testing/python-newsletter-forms.png) | Pass: No Errors |
+| Newsletter models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/newsletter/models.py) | ![screenshot](documentation/testing/python-newsletter-models.png) | Pass: No Errors |
+| Newsletter urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/newsletter/urls.py) | ![screenshot](documentation/testing/python-newsletter-urls.png) | Pass: No Errors |
+| Payments admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/payments/admin.py) | ![screenshot](documentation/testing/python-payments-admin.png) | Pass: No Errors |
+| Payments apps.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/payments/apps.py) | ![screenshot](documentation/testing/python-payments-apps.png) | Pass: No Errors |
+| Payments forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/payments/forms.py) | ![screenshot](documentation/testing/python-payments-forms.png) | Pass: No Errors |
+| Payments models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/payments/models.py) | ![screenshot](documentation/testing/python-payments-models.png) | Pass: No Errors |
+| Payments signals.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/payments/signals.py) | ![screenshot](documentation/testing/python-payments-signals.png) | Pass: No Errors |
+| Payments urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/payments/urls.py) | ![screenshot](documentation/testing/python-payments-urls.png) | Pass: No Errors |
+| Payments views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/payments/views.py) | ![screenshot](documentation/testing/python-payments-views.png) | Pass: No Errors |
+| Shopping_bag bag_tools.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/shopping_bag/templatetags/bag_tools.py) | ![screenshot](documentation/testing/python-shopping-bagtools.png) | Pass: No Errors |
+| Shopping_bag contexts.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/shopping_bag/contexts.py) | ![screenshot](documentation/testing/python-shopping-contexts.png) | Pass: No Errors |
+| Shopping_bag urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/shopping_bag/urls.py) | ![screenshot](documentation/testing/python-shopping-urls.png) | Pass: No Errors |
+| Shopping_bag views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/shopping_bag/views.py) | ![screenshot](documentation/testing/python-shopping-views.png) | Pass: No Errors |
+| Training admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/training/admin.py) | ![screenshot](documentation/testing/python-training-admin.png) | Pass: No Errors |
+| Training forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/training/forms.py) | ![screenshot](documentation/testing/python-training-forms.png) | Pass: No Errors |
+| Training models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/training/models.py) | ![screenshot](documentation/testing/python-training-models.png) | Pass: No Errors |
+| Training urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/training/urls.py) | ![screenshot](documentation/testing/python-training-urls.png) | Pass: No Errors |
+| Training views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/training/views.py) | ![screenshot](documentation/testing/python-training-views.png) | Pass: No Errors |
+| User_profile models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/user_profile/models.py) | ![screenshot](documentation/testing/python-user_profile-models.png) | Pass: No Errors |
+| User_profile urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/user_profile/urls.py) | ![screenshot](documentation/testing/python-user_profile-urls.png) | Pass: No Errors |
+| User_profile views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/user_profile/views.py) | ![screenshot](documentation/testing/python-user_profile-views.png) | Pass: No Errors |
+
 
 **IMPORTANT**: Django settings.py
 

@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse  # noqa
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.core.mail import send_mail
@@ -21,7 +21,8 @@ def cache_checkout_data(request):
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
         stripe.PaymentIntent.modify(pid, metadata={
-            'shopping_bag': json.dumps(request.session.get('shopping_bag', {})),
+            'shopping_bag': json.dumps(
+                request.session.get('shopping_bag', {})),
             'save_info': request.POST.get('save_info'),
             'username': request.user,
         })
@@ -69,14 +70,17 @@ def payments(request):
                             )
                             order_line_item.save()
                 except Voucher.DoesNotExist:
-                    messages.error(request, ("One of the vouchers in your shopping bag wasn't found in our database. "
+                    messages.error(
+                        request, (
+                            "One of the vouchers in your shopping bag wasn't found in our database. "  # noqa
                         "Please call us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('view_shopping_bag'))
 
             request.session['save_info'] = 'save_info' in request.POST
-            return redirect(reverse('payments_success', args=[order.order_number]))
+            return redirect(reverse(
+                'payments_success', args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please check your information.')
@@ -94,7 +98,6 @@ def payments(request):
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
         )
-
 
         order_form = OrderForm()
 
@@ -123,7 +126,7 @@ def payments_success(request, order_number):
         # Attach the user's profile to the order
         order.user_profile = user_profile
         order.save()
-    
+
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}')
@@ -152,5 +155,3 @@ def payments_success(request, order_number):
     }
 
     return render(request, template, context)
-
-

@@ -1,7 +1,6 @@
 from django.contrib import admin
 from .models import Aircraft, Voucher
 
-# Register your models here.
 
 class AircraftAdmin(admin.ModelAdmin):
     list_display = (
@@ -11,6 +10,7 @@ class AircraftAdmin(admin.ModelAdmin):
     )
 
     ordering = ('aircraft_type',)
+
 
 class VoucherAdmin(admin.ModelAdmin):
     list_display = (
@@ -23,6 +23,7 @@ class VoucherAdmin(admin.ModelAdmin):
     )
 
     ordering = ('title',)
+
 
 admin.site.register(Aircraft, AircraftAdmin)
 admin.site.register(Voucher, VoucherAdmin)

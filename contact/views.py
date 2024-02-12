@@ -12,12 +12,12 @@ def contact(request):
         form = ContactForm(request.POST or None, request.FILES or None)
         if form.is_valid():
             form.save()
-            messages.success(request, "Thank You! A member of our team will be in touch soon with further information.")
+            messages.success(request, "Thank You! A member of our team will be in touch soon with further information.")  # noqa
             return redirect('home')
         else:
-            messages.error(request, 'Failed to submit form. Please ensure the form is valid.')
+            messages.error(request, 'Failed to submit form. Please ensure the form is valid.')  # noqa
     else:
-            form = ContactForm()
+        form = ContactForm()
 
     template = 'contact/contact.html'
     context = {

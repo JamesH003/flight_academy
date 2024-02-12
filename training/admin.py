@@ -28,5 +28,3 @@ class LicenceAdmin(admin.ModelAdmin):
 
 admin.site.register(Training, TrainingAdmin)
 admin.site.register(Licence, LicenceAdmin)
-
-

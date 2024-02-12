@@ -9,7 +9,7 @@ class Licence(models.Model):
     """
     A model to handle licence types
     """
-    ENGINES = [("1", "1"), ("2", "2"),]
+    ENGINES = [("1", "1"), ("2", "2"), ]
 
     licence_type = models.CharField(max_length=100, null=False, blank=False)
     required_flight_time = models.PositiveIntegerField(
@@ -57,9 +57,3 @@ class Training(models.Model):
 
     def __str__(self):
         return self.title
-
-
-
-
-
-

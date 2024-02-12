@@ -3,13 +3,12 @@ from cloudinary.models import CloudinaryField
 from django.db import models
 
 
-
 class Aircraft(models.Model):
     """
     A model to handle aircraft types.
     """
-    SEATS = [("2", "2"), ("4", "4"),]
-    ENGINES = [("1", "1"), ("2", "2"),]
+    SEATS = [("2", "2"), ("4", "4"), ]
+    ENGINES = [("1", "1"), ("2", "2"), ]
 
     aircraft_type = models.CharField(max_length=100, null=False, blank=False)
     seats = models.CharField(
