@@ -287,15 +287,14 @@ Sample browser testing documentation:
 
 I've tested my deployed project on multiple browsers to check for compatibility issues.
 
-| Browser | Home | About | Contact | etc | Notes |
-| --- | --- | --- | --- | --- | --- |
-| Chrome | ![screenshot](documentation/browser-chrome-home.png) | ![screenshot](documentation/browser-chrome-about.png) | ![screenshot](documentation/browser-chrome-contact.png) | ![screenshot](documentation/browser-chrome-etc.png) | Works as expected |
-| Firefox | ![screenshot](documentation/browser-firefox-home.png) | ![screenshot](documentation/browser-firefox-about.png) | ![screenshot](documentation/browser-firefox-contact.png) | ![screenshot](documentation/browser-firefox-etc.png) | Works as expected |
-| Edge | ![screenshot](documentation/browser-edge-home.png) | ![screenshot](documentation/browser-edge-about.png) | ![screenshot](documentation/browser-chrome-edge.png) | ![screenshot](documentation/browser-edge-etc.png) | Works as expected |
-| Safari | ![screenshot](documentation/browser-safari-home.png) | ![screenshot](documentation/browser-safari-about.png) | ![screenshot](documentation/browser-safari-contact.png) | ![screenshot](documentation/browser-safari-etc.png) | Minor CSS differences |
-| Brave | ![screenshot](documentation/browser-brave-home.png) | ![screenshot](documentation/browser-brave-about.png) | ![screenshot](documentation/browser-brave-contact.png) | ![screenshot](documentation/browser-brave-etc.png) | Works as expected |
-| Opera | ![screenshot](documentation/browser-opera-home.png) | ![screenshot](documentation/browser-opera-about.png) | ![screenshot](documentation/browser-opera-contact.png) | ![screenshot](documentation/browser-opera-etc.png) | Minor differences |
-| repeat for any other tested browsers | x | x | x | x | x |
+| Browser | Home | Training | Vouchers | About | Contact Us | Notes |
+| --- | --- | --- | --- | --- | --- | --- |
+| Chrome | ![screenshot](documentation/chrome-home-desktop.png) | ![screenshot](documentation/chrome-training-desktop.png) | ![screenshot](documentation/chrome-vouchers-desktop.png) | ![screenshot](documentation/chrome-about-desktop.png) | ![screenshot](documentation/chrome-contact-desktop.png) | Works as expected |
+| Firefox | ![screenshot](documentation/firefox-home-desktop.png) | ![screenshot](documentation/firefox-training-desktop.png) | ![screenshot](documentation/firefox-vouchers-desktop.png) | ![screenshot](documentation/firefox-about-desktop.png) | ![screenshot](documentation/firefox-contact-desktop.png) | Works as expected |
+| Edge | ![screenshot](documentation/edge-home-desktop.png) | ![screenshot](documentation/edge-training-desktop.png) | ![screenshot](documentation/edge-vouchers-desktop.png) | ![screenshot](documentation/edge-about-desktop.png) | ![screenshot](documentation/edge-contact-desktop.png) | Works as expected |
+| Safari | ![screenshot](documentation/safari-home-desktop.png) | ![screenshot](documentation/safari-training-desktop.png) | ![screenshot](documentation/safari-vouchers.desktop.png) | ![screenshot](documentation/safari-about-desktop.png) | ![screenshot](documentation/safari-contact-desktop.png) | Works as expected |
+| Brave | ![screenshot](documentation/brave-home-desktop.png) | ![screenshot](documentation/brave-training-desktop.png) | ![screenshot](documentation/brave-vouchers-desktop.png) | ![screenshot](documentation/brave-about-desktop.png) | ![screenshot](documentation/brave-contact-desktop.png) | Works as expected |
+| Opera | ![screenshot](documentation/opera-home-desktop.png) | ![screenshot](documentation/opera-training-desktop.png) | ![screenshot](documentation/opera-voucher-desktop.png) | ![screenshot](documentation/opera-about-desktop.png) | ![screenshot](documentation/opera-contact-desktop.png) | Works as expected |
 
 ## Responsiveness
 
