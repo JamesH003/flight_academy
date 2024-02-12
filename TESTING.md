@@ -353,10 +353,17 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 | Page | Mobile | Desktop | Notes |
 | --- | --- | --- | --- |
-| Home | ![screenshot](documentation/lighthouse-home-mobile.png) | ![screenshot](documentation/lighthouse-home-desktop.png) | Some minor warnings |
-| About | ![screenshot](documentation/lighthouse-about-mobile.png) | ![screenshot](documentation/lighthouse-about-desktop.png) | Some minor warnings |
-| Gallery | ![screenshot](documentation/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse-gallery-desktop.png) | Slow response time due to large images |
-| x | x | x | repeat for any other tested pages/sizes |
+| Home | ![screenshot](documentation/lighthouse-mobile-home.png) | ![screenshot](documentation/lighthouse-desktop-home.png) | Some minor warnings |
+| Training | ![screenshot](documentation/lighthouse-mobile-training.png) | ![screenshot](documentation/lighthouse-desktop-training.png) | Slow response time due to large images |
+| Vouchers | ![screenshot](documentation/lighthouse-mobile-vouchers.png) | ![screenshot](documentation/lighthouse-desktop-vouchers.png) | Some minor warnings |
+| About | ![screenshot](documentation/lighthouse-mobile-about.png) | ![screenshot](documentation/lighthouse-desktop-about.png) | Some minor warnings |
+| Contact | ![screenshot](documentation/lighthouse-mobile-contact.png) | ![screenshot](documentation/lighthouse-desktop-contact.png) | Some minor warnings |
+| Voucher Details | ![screenshot](documentation/lighthouse-mobile-voucher-details.png) | ![screenshot](documentation/lighthouse-desktop-voucher-details.png) | Some minor warnings |
+| Training Details | ![screenshot](documentation/lighthouse-mobile-training-details.png) | ![screenshot](documentation/lighthouse-desktop-training-details.png) | Some minor warnings |
+| Shopping Bag | ![screenshot](documentation/lighthouse-mobile-shopping-bag.png) | ![screenshot](documentation/lighthouse-desktop-shopping-bag.png) | Some minor warnings |
+| Payments Success | ![screenshot](documentation/lighthouse-mobile-payments-success.png) | ![screenshot](documentation/lighthouse-desktop-payments-success.png) | Some minor warnings |
+| Register | ![screenshot](documentation/lighthouse-mobile-register.png) | ![screenshot](documentation/lighthouse-desktop-register.png) | Some minor warnings |
+| User Profile | ![screenshot](documentation/lighthouse-mobile-user-profile.png) | ![screenshot](documentation/lighthouse-desktop-user-profile.png) | Some minor warnings |
 
 ## Defensive Programming
 
