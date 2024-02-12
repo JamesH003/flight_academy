@@ -135,51 +135,6 @@ Sample JS code validation documentation (tables are extremely helpful!):
 
 ### Python
 
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-The CI Python Linter can be used two different ways.
-- Copy/Paste your Python code directly into the linter.
-- As an API, using the "raw" URL appended to the linter URL.
-    - To find the "raw" URL, navigate to your file directly on the GitHub repo.
-    - On that page, GitHub provides a button on the right called "Raw" that you can click on.
-    - From that new page, copy the full URL, and paste it after the CI Python Linter URL (with a `/` separator).
-    - Check the example table below for a live demo.
-
-It's recommended to validate each file using the API URL.
-This will give you a custom URL which you can use on your testing documentation.
-It makes it easier to return back to a file to validate it again in the future.
-Use the steps above to generate your own custom URLs for each Python file.
-
-**IMPORTANT**: `E501 line too long` errors
-
-You must strive to fix any Python lines that are too long ( >80 characters ).
-In rare cases where you cannot break the lines [without breaking the functionality],
-then by adding `# noqa` to the end of those lines will ignore linting validation.
-
-`# noqa` = **NO Quality Assurance**
-
-**NOTE**: You must include 2 *spaces* before the `#`, and 1 *space* after the `#`.
-
-Do not use `# noqa` all over your project just to clear down validation errors!
-This can still cause a project to fail, for failing to fix actual PEP8 validation errors.
-
-Sometimes strings or variables get too long, or long `if` conditional statements.
-These are acceptable instances to use the `# noqa`.
-
-When trying to fix "line too long" errors, try to avoid using `/` to split lines.
-A better approach would be to use any type of opening bracket, and hit Enter just after that.
-
-Any opening bracket type will work: `(`, `[`, `{`.
-
-By using an opening bracket, Python knows where to appropriately indent the next line of code,
-without having to "guess" yourself and attempt to tab to the correct indentation level.
-
-Sample Python code validation documentation below (tables are extremely helpful!).
-
-**Note**: This gives examples of PP3 (Python-only), and Flask/Django files, so eliminate the ones not applicable to your own project.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
-
 I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
 
 | File | CI URL | Screenshot | Notes |
@@ -226,38 +181,6 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 | flight_academy settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/flight_academy/settings.py) | ![screenshot](documentation/testing/python-flight-academy-settings.png) | Pass: No Errors |
 | flight_academy urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/flight_academy/urls.py) | ![screenshot](documentation/testing/python-flight-academy-urls.png) | Pass: No Errors |
 | flight_academy urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/JamesH003/flight_academy/main/flight_academy/views.py) | ![screenshot](documentation/testing/python-flight-academy-views.png) | Pass: No Errors |
-
-
-**IMPORTANT**: Django settings.py
-
-The Django settings.py file comes with 4 lines that are quite long, and will throw the `E501 line too long` error.
-This is default behavior, but can be fixed by adding `# noqa` to the end of those lines.
-
-Example:
-
-```python
-AUTH_PASSWORD_VALIDATORS = [
-    {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",  # noqa
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",  # noqa
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",  # noqa
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",  # noqa
-    },
-]
-```
-
-**IMPORTANT**: migration and pycache files
-
-You do not have to ever validate files from the `migrations/` or `pycache/` folders!
-Ignore these `.py` files, and validate just the files that you've created or modified.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ## Browser Compatibility
 
@@ -424,70 +347,31 @@ Defensive programming was manually tested with the below user acceptance testing
 
 | Page | Expectation | Test | Result | Fix | Screenshot |
 | --- | --- | --- | --- | --- | --- |
-| Home | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature01.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature02.png) |
-| About | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature03.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature04.png) |
-| Gallery | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature05.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature06.png) |
-| Contact | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature07.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
-| repeat for all remaining pages | x | x | x | x | x |
+| Training | | | | | |
+| | From the training page a user should be able to view the training courses, but not add new ones, unless the user is a superuser | Tested the feature by logging in as a non-superuser | The feature behaved as expected, and the Add Training Course button was not displayed | Test concluded and passed | ![screenshot](documentation/defprog-training-add-training.png) |
+| | From the training page a user should be able to view the training courses, but not add new ones, unless the user is a superuser | Tested the feature by logging in as a non-superuser and trying to access the page through the add_training url directly | The feature behaved as expected, and a 500 error page was displayed with a warning toast | Test concluded and passed | ![screenshot](documentation/deefprog-training-add-url.png) |
+| | From the training page a user should be able to view the training courses, but not add new ones, unless the user is a superuser | Tested the feature by not logging in at all and trying to access the page through the add_training url directly | The feature behaved as expected, and displayed the Signin page | Test concluded and passed | ![screenshot](documentation/defprog-training-add-not-logged-in.png) |
+| | From the training page a user should be able to view the training courses, but not edit or delete, unless the user is a superuser | Tested the feature by not logging in at all and trying to access the page through the edit url directly | The feature behaved as expected, and displayed the Signin page | Test concluded and passed | ![screenshot](documentation/defprog-training-edit-not-logged-in.png) |
+| | From the training details page a user should be able to view the training courses, but not edit or delete, unless the user is a superuser | Tested the feature by logging in as a non-superuser | The feature behaved as expected, and the Edit and Delete buttons were not displayed | Test concluded and passed | ![screenshot](documentation/defprog-training-edit.png) |
+| | From the training details page a superuser should not be able to delete a training courses without a warning modal to confirm their decision. | Tested the feature by logging in as a superuser and clicking delete | The feature behaved as expected, and the Delete modal was displayed | Test concluded and passed | ![screenshot](documentation/defprog-training-delete-modal.png) |
+| | From the training details page a user should be able to view the training courses, but not edit or delete, unless the user is a superuser | Tested the feature by logging in as a non-superuser and trying to access the page through the edit url directly | The feature behaved as expected, and the edit page was not accessed and a warning toast was displayed | Test concluded and passed | ![screenshot](documentation/defprog-training-edit-url.png) |
+| Vouchers | | | | | |
+| | From the vouchers page a user should be able to view the vouchers, but not add new ones, unless the user is a superuser | Tested the feature by logging in as a non-superuser | The feature behaved as expected, and the Add Voucher button was not displayed | Test concluded and passed | ![screenshot](documentation/defprog-vouchers-add.png) |
+| | From the vouchers page a user should be able to view the vouchers, but not add new ones, unless the user is a superuser | Tested the feature by logging in as a non-superuser and trying to access the page through the add_voucher url directly | The feature behaved as expected, and a 500 error page was displayed with a warning toast | Test concluded and passed | ![screenshot](documentation/defprog-vouchers-add-url.png) |
+| | From the vouchers page a user should be able to view the vouchers, but not add new ones, unless the user is a superuser | Tested the feature by not logging in at all and trying to access the page through the add_voucher url directly | The feature behaved as expected, and displayed the Signin page | Test concluded and passed | ![screenshot](documentation/defprog-vouchers-add-not-logged-in.png) |
+| | From the vouchers page a user should be able to view the vouchers, but not Edit or Delete, unless the user is a superuser | Tested the feature by not logging in at all and trying to access the page through the edit url directly | The feature behaved as expected, and displayed the Signin page | Test concluded and passed | ![screenshot](documentation/defprog-vouchers-edit-not-logged-in.png) |
+| | From the voucher details page a user should be able to view the voucher details, but not edit or delete, unless the user is a superuser | Tested the feature by logging in as a non-superuser | The feature behaved as expected, and the Edit and Delete buttons were not displayed | Test concluded and passed | ![screenshot](documentation/defprog-vouchers-edit.png) |
+| | From the voucher details page a superuser should not be able to delete a voucher without a warning modal to confirm their decision. | Tested the feature by logging in as a superuser and clicking delete | The feature behaved as expected, and the Delete modal was displayed | Test concluded and passed | ![screenshot](documentation/defprog-vouchers-delete.png) |
+| | From the voucher details page a user should be able to view the vouchers, but not edit or delete, unless the user is a superuser | Tested the feature by logging in as a non-superuser and trying to access the page through the edit url directly | The feature behaved as expected, and the edit page was not accessed and a warning toast was displayed | Test concluded and passed | ![screenshot](documentation/defprog-vouchers-edit-url.png) |
+| User Profile | | | | | |
+| | A user should only be able to view their user profile and order history when they're logged in. | Tested the feature by not logging in and trying to access the page using the user_profile url | The feature behaved as expected, and the Signin page was displayed | Test concluded and passed | ![screenshot](documentation/defprog-user-profile-url.png) |
+| | A user should only be able to view their user profile and order history when they're logged in. | Tested the feature by not logging in and trying to access the page using account dropdown menu in the navbar. | The feature behaved as expected, and the Profile link was not displayed | Test concluded and passed | ![screenshot](documentation/defprog-user-profile-profile.png) |
+| Newsletter | | | | | |
+| | To sign up for the newsletter, a user should not be able to submit a blank form | Tested the feature by leaving the email input field black and clicking submit | The feature behaved as expected and an error message appeared requesting the user fill in the field. | Test concluded and passed | ![screenshot](documentation/defprog-newsletter-blank-form.png) |
+| Payments | | | | | |
+| | To complete the payment flow users shouldn't be able to leave input fields blank | Tested the feature by leaving the input fields blank and clicking Complete Order | The feature behaved as expected and an error message appeared requesting the user fill in the fields. | Test concluded and passed | ![screenshot](documentation/defprog-payments-blank-form.png) |
+| | To complete the payment flow users shouldn't be able to leave card input blank | Tested the feature by leaving the input field blank and clicking Complete Order | The feature behaved as expected and an error message appeared stating that the card number is incomplete. | Test concluded and passed | ![screenshot](documentation/defprog-payments-stripe.png) |
 
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Another way of performing defensive testing is a simple Pass/Fail for each test.
-The assessors prefer the above method, with the full test explained, but this is also acceptable in most cases.
-
-When in doubt, use the above method instead, and delete the table below.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
-
-| Page | User Action | Expected Result | Pass/Fail | Comments |
-| --- | --- | --- | --- | --- |
-| Home | | | | |
-| | Click on Logo | Redirection to Home page | Pass | |
-| | Click on Home link in navbar | Redirection to Home page | Pass | |
-| Gallery | | | | |
-| | Click on Gallery link in navbar | Redirection to Gallery page | Pass | |
-| | Load gallery images | All images load as expected | Pass | |
-| Contact | | | | |
-| | Click on Contact link in navbar | Redirection to Contact page | Pass | |
-| | Enter first/last name | Field will accept freeform text | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter message in textarea | Field will accept freeform text | Pass | |
-| | Click the Submit button | Redirects user to form-dump | Pass | User must click 'Back' button to return |
-| Sign Up | | | | |
-| | Click on Sign Up button | Redirection to Sign Up page | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter valid password (twice) | Field will only accept password format | Pass | |
-| | Click on Sign Up button | Asks user to confirm email page | Pass | Email sent to user |
-| | Confirm email | Redirects user to blank Sign In page | Pass | |
-| Log In | | | | |
-| | Click on the Login link | Redirection to Login page | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter valid password | Field will only accept password format | Pass | |
-| | Click Login button | Redirects user to home page | Pass | |
-| Log Out | | | | |
-| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
-| | Click Confirm Logout button | Redirects user to home page | Pass | |
-| Profile | | | | |
-| | Click on Profile button | User will be redirected to the Profile page | Pass | |
-| | Click on the Edit button | User will be redirected to the edit profile page | Pass | |
-| | Click on the My Orders link | User will be redirected to the My Orders page | Pass | |
-| | Brute forcing the URL to get to another user's profile | User should be given an error | Pass | Redirects user back to own profile |
-| repeat for all remaining pages | x | x | x | x |
-
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Repeat for all other tests, as applicable to your own site.
-The aforementioned tests are just an example of a few different project scenarios.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
 ## User Story Testing
 
