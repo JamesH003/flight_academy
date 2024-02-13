@@ -387,16 +387,30 @@ from the respective feature.
 
 | User Story | Screenshot |
 | --- | --- |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature01.png) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature02.png) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature03.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature04.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature05.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature06.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature07.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature08.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature09.png) |
-| repeat for all remaining user stories | x |
+| As a new site user, I would like to view a list of products, so that I can decide which one to purchese. | ![screenshot](documentation/features/features-vouchers.png) |
+| As a new site user, I would like to view individual product details, so that I can decide which one I want to purchase. | ![screenshot](documentation/features/features-voucher-details.png) |
+| As a new site user, I would like to clearly see the types of products available, so that I can select the appropriate one. | ![screenshot](documentation/features/features-vouchers.png) |
+| As a new site user, I would like to easily add a product to my shopping bag, so that I can purchase the product. | ![screenshot](documentation/features/features-voucher-details.png) |
+| As a new site user, I would like to view the items in my bag to be purchased, so that I can know which products I have selected. | ![screenshot](documentation/features/features-shopping-bag.png) |
+| As a new site user, I would like to adjust the quantity of products in my bag, so that I can increase or decrease the number of products I want to purchase. | ![screenshot](documentation/features/features-shopping-bag.png) |
+| As a new site user, I would like to easily view the total price of my purchases, so that I can stay aware of my spending. | ![screenshot](documentation/user-stories-view-cost.png) |
+| As a new site user, I would like to easily enter my payment information, so that I can pay for my chosen products with great ease. | ![screenshot](documentation/features/features-checkout-page.png) |
+| As a new site user, I would like to view an order confirmation after checkout, so that I can have a record of what I have ordered. | ![screenshot](documentation/features/features-order-confirmation.png) |
+| As a new site user, I would like to receive an email confirmation, so that I can have proof of purchase. | ![screenshot](documentation/features/features-order-confirmation.png) |
+| As a new site user, I would like to subscribe to a newsletter, so that I can get more information. | ![screenshot](documentation/features/features-newsletter.png) |
+| As a new site user, I would like to view different training courses, so that I can assess my options. | ![screenshot](documentation/features/features-training-page.png) |
+| As a returning site user, I would like to register an account, so that I can have a personal account. | ![screenshot](documentation/features/features-register.png) |
+| As a returning site user, I would like to login to my account, so that I can access my personal account. | ![screenshot](documentation/features/features-signin.png) |
+| As a returning site user, I would like to logout of my account, so that I can logout of my personal account. | ![screenshot](documentation/user-story-signout.png) |
+| As a returning site user, I would like to recover my password, so that I can regain access to my account. | ![screenshot](documentation/user-story-forgot-password.png) |
+| As a returning site user, I would like to know my information is secure, so that I can be confident in entering my payment information. | ![screenshot](documentation/features/features-checkout-page.png) |
+| As a returning site user, I would like to access links to social media pages, so that I can view their social media content. | ![screenshot](documentation/features/features-footer.png) |
+| As a site administrator, I should be able to add new products to the store, so that I can increase the amount of products on offer. | ![screenshot](documentation/features/features-add-training.png) |
+| As a site administrator, I should be able to edit or update products, so that I can keep the product information up to date. | ![screenshot](documentation/features/features-edit-delete.png) |
+| As a site administrator, I should be able to delete products from the store, so that I can remove products that are no longer for sale. | ![screenshot](documentation/features/features-edit-delete.png) |
+| As a site administrator, I should be able to add new training course options, so that I can improve what the site has to offer. | ![screenshot](documentation/features/features-add-training.png) |
+| As a site administrator, I should be able to edit training courses, so that I can change certain aspects as needs be. | ![screenshot](documentation/features/features-edit-delete.png) |
+| As a site administrator, I should be able to delete training courses, so that I can remove courses that are no longer available. | ![screenshot](documentation/features/features-edit-delete.png) |
 
 ## Bugs
 
