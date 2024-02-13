@@ -414,86 +414,33 @@ from the respective feature.
 
 ## Bugs
 
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+- Background image not displaying on deployed site through Heroku
 
-This section is primarily used for JavaScript and Python applications,
-but feel free to use this section to document any HTML/CSS bugs you might run into.
+    ![screenshot](documentation/bugs-image-heroku.png)
 
-It's very important to document any bugs you've discovered while developing the project.
-Make sure to include any necessary steps you've implemented to fix the bug(s) as well.
+    - I originally had my css code as per the screenshot above. To fix this, I contacted tutor support and was advised by a tutor to hard-code the URL. Although this isn't an ideal solution, it got the job done. I intend to revisit this when I have more time to do it properly.
 
-**PRO TIP**: screenshots of bugs are extremely helpful, and go a long way!
+    ![screenshot](documentation/bugs-cloudinary-fix.png)
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
+- Test flowing onto next line on Samsung mobile screens
 
-- JS Uncaught ReferenceError: `foobar` is undefined/not defined
+    ![screenshot](documentation/bugs-samsung-mobile.JPG)
+    ![screenshot](documentation/bugs-samsung-mobile2.JPG)
 
-    ![screenshot](documentation/bug01.png)
+    - To fix this, I removed the Bootstrap display-4 class and replaced it with a custom CSS class and reduced font size.
 
-    - To fix this, I _____________________.
+- Line too long error in Python testing
 
-- JS `'let'` or `'const'` or `'template literal syntax'` or `'arrow function syntax (=>)'` is available in ES6 (use `'esversion: 11'`) or Mozilla JS extensions (use moz).
+    ![screenshot](documentation/bugs-line-too-long.png)
 
-    ![screenshot](documentation/bug02.png)
+    - To fix this, I added # noqa to the end of the line as it was a string.
 
-    - To fix this, I _____________________.
+- Commit messages starting with lowercase letter.
 
-- Python `'ModuleNotFoundError'` when trying to import module from imported package
+    ![screenshot](documentation/bug-commit-messages.png)
 
-    ![screenshot](documentation/bug03.png)
+    - From following along with the walkthrough Boutique Ado lessons, I followed suit with regard to my commit messages and used lowercase letters for the first few weeks of my project. Upon realising my error, I reverted to beginning my commit message with capital letters.
 
-    - To fix this, I _____________________.
-
-- Django `TemplateDoesNotExist` at /appname/path appname/template_name.html
-
-    ![screenshot](documentation/bug04.png)
-
-    - To fix this, I _____________________.
-
-- Python `E501 line too long` (93 > 79 characters)
-
-    ![screenshot](documentation/bug04.png)
-
-    - To fix this, I _____________________.
-
-### GitHub **Issues**
-
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-An improved way to manage bugs is to use the built-in **Issues** tracker on your GitHub repository.
-To access your Issues, click on the "Issues" tab at the top of your repository.
-Alternatively, use this link: https://github.com/JamesH003/flight_academy/issues
-
-If using the Issues tracker for your bug management, you can simplify the documentation process.
-Issues allow you to directly paste screenshots into the issue without having to first save the screenshot locally,
-then uploading into your project.
-
-You can add labels to your issues (`bug`), assign yourself as the owner, and add comments/updates as you progress with fixing the issue(s).
-
-Once you've sorted the issue, you should then "Close" it.
-
-When showcasing your bug tracking for assessment, you can use the following format:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
-
-**Fixed Bugs**
-
-All previously closed/fixed bugs can be tracked [here](https://github.com/JamesH003/flight_academy/issues?q=is%3Aissue+is%3Aclosed).
-
-| Bug | Status |
-| --- | --- |
-| [JS Uncaught ReferenceError: `foobar` is undefined/not defined](https://github.com/JamesH003/flight_academy/issues/1) | Closed |
-| [Python `'ModuleNotFoundError'` when trying to import module from imported package](https://github.com/JamesH003/flight_academy/issues/2) | Closed |
-| [Django `TemplateDoesNotExist` at /appname/path appname/template_name.html](https://github.com/JamesH003/flight_academy/issues/3) | Closed |
-
-**Open Issues**
-
-Any remaining open issues can be tracked [here](https://github.com/JamesH003/flight_academy/issues).
-
-| Bug | Status |
-| --- | --- |
-| [JS `'let'` or `'const'` or `'template literal syntax'` or `'arrow function syntax (=>)'` is available in ES6 (use `'esversion: 11'`) or Mozilla JS extensions (use moz).](https://github.com/JamesH003/flight_academy/issues/4) | Open |
-| [Python `E501 line too long` (93 > 79 characters)](https://github.com/JamesH003/flight_academy/issues/5) | Open |
 
 ## Unfixed Bugs
 
