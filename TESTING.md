@@ -26,12 +26,24 @@ Sample HTML code validation documentation (tables are extremely helpful!):
 
 | Page | W3C URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FJamesH003.github.io%2Fflight_academy%2Findex.html) | ![screenshot](documentation/html-validation-home.png) | Section lacks header h2-h6 warning |
-| Contact | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FJamesH003.github.io%2Fflight_academy%2Fcontact.html) | ![screenshot](documentation/html-validation-contact.png) | obsolete iframe warnings |
-| Quiz | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FJamesH003.github.io%2Fflight_academy%2Fquiz.html) | ![screenshot](documentation/html-validation-quiz.png) | Pass: No Errors |
-| Add Blog | n/a | ![screenshot](documentation/html-validation-add-blog.png) | Duplicate IDs found, and fixed |
-| Checkout | n/a | ![screenshot](documentation/html-validation-checkout.png) | Pass: No Errors |
-| x | x | x | repeat for all remaining HTML files |
+| Home | [W3C](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fflight-academy-e7e5adf022d9.herokuapp.com%2F#l223c63) | ![screenshot](documentation/testing/html-home.png) | Duplication of ID warnings related to separate navbar file |
+| Training | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fflight-academy-e7e5adf022d9.herokuapp.com%2Ftraining%2F) | ![screenshot](documentation/testing/html-training.png) | Duplication of ID warnings related to separate navbar file |
+| Training Details | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fflight-academy-e7e5adf022d9.herokuapp.com%2Ftraining%2F2%2F) | ![screenshot](documentation/testing/html-training-details.png) | Duplication of ID warnings related to separate navbar file |
+| Add Training | [W3C](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fflight-academy-e7e5adf022d9.herokuapp.com%2Faccounts%2Flogin%2F%3Fnext%3D%2Ftraining%2Fadd_training%2F#l288c69) | ![screenshot](documentation/testing/html-add-training.png) | Duplication of ID warnings related to separate navbar file & trailing slash due to crispy forms |
+| Edit Training | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fflight-academy-e7e5adf022d9.herokuapp.com%2Faccounts%2Flogin%2F%3Fnext%3D%2Ftraining%2Fedit%2F2) | ![screenshot](documentation/testing/html-edit-training.png) | Duplication of ID warnings related to separate navbar file & trailing slash due to crispy forms |
+| Vouchers | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fflight-academy-e7e5adf022d9.herokuapp.com%2Fvouchers%2F) | ![screenshot](documentation/testing/html-vouchers.png) | Duplication of ID warnings related to separate navbar file |
+| Voucher Details | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fflight-academy-e7e5adf022d9.herokuapp.com%2Fvouchers%2F2%2F) | ![screenshot](documentation/testing/html-voucher-details.png) | Duplication of ID warnings related to separate navbar file |
+| Add Voucher | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fflight-academy-e7e5adf022d9.herokuapp.com%2Faccounts%2Flogin%2F%3Fnext%3D%2Fvouchers%2Fadd_voucher%2F) | ![screenshot](documentation/testing/html-add-voucher.png) | Duplication of ID warnings related to separate navbar file & trailing slash due to crispy forms |
+| Edit Voucher | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fflight-academy-e7e5adf022d9.herokuapp.com%2Faccounts%2Flogin%2F%3Fnext%3D%2Fvouchers%2Fedit%2F2) | ![screenshot](documentation/testing/html-edit-vouchers.png) | Duplication of ID warnings related to separate navbar file & trailing slash due to crispy forms |
+| About | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fflight-academy-e7e5adf022d9.herokuapp.com%2Fabout%2F) | ![screenshot](documentation/testing/html-about.png) | Duplication of ID warnings related to separate navbar file |
+| Contact Us | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fflight-academy-e7e5adf022d9.herokuapp.com%2Fcontact%2F) | ![screenshot](documentation/testing/html-contact.png) | Duplication of ID warnings related to separate navbar file |
+| Shopping Bag | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fflight-academy-e7e5adf022d9.herokuapp.com%2Fshopping_bag%2F) | ![screenshot](documentation/testing/html-shopping-bag.png) | Duplication of ID warnings related to separate navbar file |
+| Payments | [W3C](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fflight-academy-e7e5adf022d9.herokuapp.com%2Fpayments%2F) | ![screenshot](documentation/testing/html-payments.png) | Duplication of ID warnings related to separate navbar file |
+| Payments Success | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fflight-academy-e7e5adf022d9.herokuapp.com%2Fpayments%2Fpayments_success%2F825F88D40E09444CA6DD9B0F8356D6ED&showsource=yes) | ![screenshot](documentation/testing/html-payments-success.png) | Duplication of ID warnings related to separate navbar file |
+| User Profile | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fflight-academy-e7e5adf022d9.herokuapp.com%2Faccounts%2Flogin%2F%3Fnext%3D%2Fuser_profile%2F&showsource=yes) | ![screenshot](documentation/testing/html-user-profile.png) | Duplication of ID warnings related to separate navbar file & trailing slash due to allauth |
+| Register | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fflight-academy-e7e5adf022d9.herokuapp.com%2Faccounts%2Fsignup%2F&showsource=yes) | ![screenshot](documentation/testing/html-register.png) | Duplication of ID warnings related to separate navbar file |
+| Signin | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fflight-academy-e7e5adf022d9.herokuapp.com%2Faccounts%2Flogin%2F&showsource=yes) | ![screenshot](documentation/testing/html-signin.png) | Duplication of ID warnings related to separate navbar file |
+
 
 <!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
@@ -60,31 +72,6 @@ In order to properly validate HTML pages with Jinja syntax for authenticated pag
 
 I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
 
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- If you are copying/pasting your HTML code, use this link: https://jigsaw.w3.org/css-validator/#validate_by_input
-- (*recommended*) If you are using the live deployed site, use this link: https://jigsaw.w3.org/css-validator/#validate_by_uri
-
-It's recommended to validate the live site if you only have a single CSS file using the deployed URL.
-This will give you a custom URL as well, which you can use on your testing documentation.
-It makes it easier to return back to the page to validate it again in the future.
-The URL will look something like this:
-
-- https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2FJamesH003.github.io%2Fflight_academy
-
-If you have multiple CSS files, then individual [validation by input](https://jigsaw.w3.org/css-validator/#validate_by_input)
-is recommended for the additional CSS files.
-
-**IMPORTANT**: Third-Party tools
-
-If you're using extras like Bootstrap, Materialize, Font Awesome, then sometimes the validator
-will attempt to also validate this code, even if it's not part of your own actual code.
-You are not required to validate the external libraries or frameworks!
-
-Sample CSS code validation documentation (tables are extremely helpful!):
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
-
 | File | Jigsaw URL | Screenshot | Notes |
 | --- | --- | --- | --- |
 | base.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fflight-academy-e7e5adf022d9.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/testing/css-url-testing.png) | Pass: No Errors |
@@ -94,37 +81,6 @@ Sample CSS code validation documentation (tables are extremely helpful!):
 ### JavaScript
 
 I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files.
-
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-If using modern JavaScript (ES6) methods, then make sure to include the following
-line at the very top of every single JavaScript file (this should remain in your files for submission):
-
-    /* jshint esversion: 11 */
-
-If you are also including jQuery (`$`), then the updated format will be:
-
-    /* jshint esversion: 11, jquery: true */
-
-This allows the JShint validator to recognize modern ES6 methods, such as:
-`let`, `const`, `template literals`, `arrow functions (=>)`, etc.
-
-**IMPORTANT**: External resources
-
-Sometimes we'll write JavaScript that imports variables from other files, such as an array of questions
-from `questions.js`, which are used within the main `script.js` file elsewhere.
-If that's the case, the JShint validation tool doesn't know how to recognize unused variables
-that would normally be imported locally in your code.
-These warnings are acceptable to showcase on your screenshots.
-
-The same thing applies when using external libraries such as Stripe, Leaflet, Bootstrap, Materialize, etc..
-To instantiate these components, we need to use their respective declarator.
-Again, the JShint validation tool would flag these as undefined/unused variables.
-These warnings are acceptable to showcase on your screenshots.
-
-Sample JS code validation documentation (tables are extremely helpful!):
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
 | File | Screenshot | Notes |
 | --- | --- | --- |
@@ -184,30 +140,6 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 ## Browser Compatibility
 
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to discuss testing the live/deployed site on various browsers.
-
-Consider testing at least 3 different browsers, if available on your system.
-
-Recommended browsers to consider:
-- [Chrome](https://www.google.com/chrome)
-- [Firefox (Developer Edition)](https://www.mozilla.org/firefox/developer)
-- [Edge](https://www.microsoft.com/edge)
-- [Safari](https://support.apple.com/downloads/safari)
-- [Brave](https://brave.com/download)
-- [Opera](https://www.opera.com/download)
-
-**IMPORTANT**: You must provide screenshots of the tested browsers, to "prove" that you've actually tested them.
-
-Please note, there are services out there that can test multiple browser compatibilities at the same time.
-Some of these are paid services, but some are free.
-If you use these, you must provide a link to the source used for attribution, and multiple screenshots of the results.
-
-Sample browser testing documentation:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
-
 I've tested my deployed project on multiple browsers to check for compatibility issues.
 
 | Browser | Home | Training | Vouchers | About | Contact Us | Notes |
@@ -221,27 +153,6 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
 ## Responsiveness
 
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to discuss testing the live/deployed site on various device sizes.
-
-The minimum requirement is for the following 3 tests:
-- Mobile
-- Tablet
-- Desktop
-
-**IMPORTANT**: You must provide screenshots of the tested responsiveness, to "prove" that you've actually tested them.
-
-Using the "amiresponsive" mockup image (or similar) does not suffice the requirements.
-Consider using some of the built-in device sizes in the Developer Tools.
-
-If you have tested the project on your actual mobile phone or tablet, consider also including screenshots of these as well.
-It showcases a higher level of manual tests, and can be seen as a positive inclusion!
-
-Sample responsiveness testing documentation:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
-
 I've tested my deployed project on multiple devices to check for responsiveness issues.
 
 | Device | Home | Training | Vouchers | About | Contact | Notes |
@@ -254,23 +165,6 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 
 
 ## Lighthouse Audit
-
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to discuss testing the live/deployed site's Lighthouse Audit reports.
-Avoid testing the local version (especially if developing in Gitpod), as this can have knock-on effects of performance.
-
-If you don't have Lighthouse in your Developer Tools,
-it can be added as an [extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk).
-
-Don't just test the home page (unless it's a single-page application).
-Make sure to test the Lighthouse Audit results for all of your pages.
-
-**IMPORTANT**: You must provide screenshots of the results, to "prove" that you've actually tested them.
-
-Sample Lighthouse testing documentation:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
 I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
 
@@ -375,16 +269,6 @@ Defensive programming was manually tested with the below user acceptance testing
 
 ## User Story Testing
 
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Testing user stories is actually quite simple, once you've already got the stories defined on your README.
-
-Most of your project's **features** should already align with the **user stories**,
-so this should as simple as creating a table with the user story, matching with the re-used screenshot
-from the respective feature.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
-
 | User Story | Screenshot |
 | --- | --- |
 | As a new site user, I would like to view a list of products, so that I can decide which one to purchese. | ![screenshot](documentation/features/features-vouchers.png) |
@@ -477,10 +361,5 @@ Some examples:
 
     - Attempted fix: this is a known warning and acceptable, and my section doesn't require a header since it's dynamically added via JS.
 
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-If you legitimately cannot find any unfixed bugs or warnings, then use the following sentence:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
 There are no remaining bugs that I am aware of.
