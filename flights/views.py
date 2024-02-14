@@ -102,4 +102,5 @@ def delete_voucher(request, id):
             'Sorry, only Flight Academy management can access this.')
         return redirect('vouchers')
     voucher.delete()
+    messages.success(request, 'Voucher deleted')
     return redirect('vouchers')
