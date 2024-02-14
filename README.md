@@ -245,6 +245,18 @@ Contact
 
 ![screenshot](documentation/features/features-signin.png)
 
+- **404 Error Page**
+
+    - Error handling 404 page
+
+![screenshot](documentation/error404.png)
+
+- **500 Error Page**
+
+    - Error handling 500 page
+
+![screenshot](documentation/error500.png)
+
 
 ### Future Features
 
