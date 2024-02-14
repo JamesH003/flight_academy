@@ -8,22 +8,6 @@ Return back to the [README.md](README.md) file.
 
 I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
 
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- If you are copying/pasting your HTML code, use this link: https://validator.w3.org/#validate_by_input
-- (*recommended*) If you are using the live deployed site pages, use this link: https://validator.w3.org/#validate_by_uri
-
-It's recommended to validate the live pages (each of them) using the deployed URL.
-This will give you a custom URL as well, which you can use on your testing documentation.
-It makes it easier to return back to a page to validate it again in the future.
-The URL will look something like this:
-
-- https://validator.w3.org/nu/?doc=https%3A%2F%2FJamesH003.github.io%2Fflight_academy%2Findex.html
-
-Sample HTML code validation documentation (tables are extremely helpful!):
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
-
 | Page | W3C URL | Screenshot | Notes |
 | --- | --- | --- | --- |
 | Home | [W3C](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fflight-academy-e7e5adf022d9.herokuapp.com%2F#l223c63) | ![screenshot](documentation/testing/html-home.png) | Duplication of ID warnings related to separate navbar file |
@@ -43,30 +27,6 @@ Sample HTML code validation documentation (tables are extremely helpful!):
 | User Profile | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fflight-academy-e7e5adf022d9.herokuapp.com%2Faccounts%2Flogin%2F%3Fnext%3D%2Fuser_profile%2F&showsource=yes) | ![screenshot](documentation/testing/html-user-profile.png) | Duplication of ID warnings related to separate navbar file & trailing slash due to allauth |
 | Register | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fflight-academy-e7e5adf022d9.herokuapp.com%2Faccounts%2Fsignup%2F&showsource=yes) | ![screenshot](documentation/testing/html-register.png) | Duplication of ID warnings related to separate navbar file |
 | Signin | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fflight-academy-e7e5adf022d9.herokuapp.com%2Faccounts%2Flogin%2F&showsource=yes) | ![screenshot](documentation/testing/html-signin.png) | Duplication of ID warnings related to separate navbar file |
-
-
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-**IMPORTANT**: Python/Jinja syntax in HTML
-
-Python projects that use Jinja syntax, such as `{% for loops %}`, `{% url 'home' %}`, and `{{ variable|filter }}`
-will not validate properly if you're copying/pasting into the HTML validator.
-
-In order to properly validate these types of files, it's recommended to
-[validate by uri](https://validator.w3.org/#validate_by_uri) from the deployed Heroku pages.
-
-Unfortunately, pages that require a user to be logged-in and authenticated (CRUD functionality),
-will not work using this method, due to the fact that the HTML Validator (W3C) doesn't have
-access to login to your pages.
-In order to properly validate HTML pages with Jinja syntax for authenticated pages, follow these steps:
-
-- Navigate to the deployed pages which require authentication
-- Right-click anywhere on the page, and select **View Page Source** (usually `CTRL+U` or `⌘+U` on Mac).
-- This will display the entire "compiled" code, without any Jinja syntax.
-- Copy everything, and use the [validate by input](https://validator.w3.org/#validate_by_input) method.
-- Repeat this process for every page that requires a user to be logged-in/authenticated.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
 ### CSS
 
@@ -324,6 +284,13 @@ Defensive programming was manually tested with the below user acceptance testing
     ![screenshot](documentation/bug-commit-messages.png)
 
     - From following along with the walkthrough Boutique Ado lessons, I followed suit with regard to my commit messages and used lowercase letters for the first few weeks of my project. Upon realising my error, I reverted to beginning my commit message with capital letters.
+
+- Training and Voucher title text wrapping on to next line in between Bootstrap screen breakpoints.
+
+    ![screenshot](documentation/training-ipad-bug.PNG)
+    ![screenshot](documentation/voucher-ipad-bug.PNG)
+
+    - To fix this, I created a media query in base.css to reduce the font-size to 2.7rem on screens with a max-width of 850px.
 
 
 ## Unfixed Bugs
