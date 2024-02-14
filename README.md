@@ -260,12 +260,14 @@ Contact
 
 ### Future Features
 
-- Carousel Effect for homepage images
-    - Add carousel effect to scroll through multiple images on the homepage to display more aspects of the Flight School.
+- Webhooks
+    - Add Webhooks in the future to improve the redundancy of the payment flow.
 - Gallery Section
     - Gallery to display images of the Flight School to give the user a better understanding of the quality of the school.
 - Job Vacancies Section
     - Section to advertise job vacancies and accept applications.
+- Carousel Effect for homepage images
+    - Add carousel effect to scroll through multiple images on the homepage to display more aspects of the Flight School.
 
 ## Tools & Technologies Used
 
