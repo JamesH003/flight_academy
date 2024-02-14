@@ -379,13 +379,6 @@ class Order(models.Model):
                                     null=True, blank=True, related_name='orders')
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
-    phone_number = models.CharField(max_length=20, null=False, blank=False)
-    country = models.CharField(max_length=40, null=False, blank=False)
-    postcode = models.CharField(max_length=20, null=True, blank=True)
-    town_or_city = models.CharField(max_length=40, null=False, blank=False)
-    street_address1 = models.CharField(max_length=80, null=False, blank=False)
-    street_address2 = models.CharField(max_length=80, null=True, blank=True)
-    county = models.CharField(max_length=80, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
     order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
@@ -735,6 +728,17 @@ To obtain your own Postgres Database, sign-up with your GitHub account, then fol
 - Select the **Region** and **Data Center** closest to you.
 - Once created, click on the new database name, where you can view the database URL and Password.
 
+### Cloudinary API
+
+This project uses the [Cloudinary API](https://cloudinary.com) to store media assets online, due to the fact that Heroku doesn't persist this type of data.
+
+To obtain your own Cloudinary API key, create an account and log in.
+
+- For *Primary interest*, you can choose *Programmable Media for image and video API*.
+- Optional: *edit your assigned cloud name to something more memorable*.
+- On your Cloudinary Dashboard, you can copy your **API Environment Variable**.
+- Be sure to remove the `CLOUDINARY_URL=` as part of the API **value**; this is the **key**.
+
 ### Stripe API
 
 This project uses [Stripe](https://stripe.com) to handle the ecommerce payments.
@@ -797,12 +801,13 @@ Deployment steps are as follows, after account setup:
 | `SECRET_KEY` | user's own value |
 | `STRIPE_PUBLIC_KEY` | user's own value |
 | `STRIPE_SECRET_KEY` | user's own value |
-| `STRIPE_WH_SECRET` | user's own value |
+| `CLOUDINARY_URL` | user's own value |
 
-Heroku needs two additional files in order to deploy properly.
+Heroku needs three additional files in order to deploy properly.
 
 - requirements.txt
 - Procfile
+- runtime.txt (`python-3.9.18`)
 
 You can install this project's **requirements** (where applicable) using:
 
@@ -854,7 +859,7 @@ os.environ.setdefault("EMAIL_HOST_USER", "user's own value")
 os.environ.setdefault("SECRET_KEY", "user's own value")
 os.environ.setdefault("STRIPE_PUBLIC_KEY", "user's own value")
 os.environ.setdefault("STRIPE_SECRET_KEY", "user's own value")
-os.environ.setdefault("STRIPE_WH_SECRET", "user's own value")
+os.environ.setdefault("CLOUDINARY_URL", "user's own value")
 
 # local environment only (do not include these in production/deployment!)
 os.environ.setdefault("DEBUG", "True")
@@ -916,8 +921,6 @@ I have not noticed any differences between the local version and the live deploy
 | --- | --- | --- |
 | [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
 | [Chris Beams](https://chris.beams.io/posts/git-commit) | version control | "How to Write a Git Commit Message" |
-| [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | entire site | responsive HTML/CSS/JS navbar |
-| [Flexbox Froggy](https://flexboxfroggy.com/) | entire site | modern responsive layouts |
 | [Bootstrap](https://getbootstrap.com/docs/4.0/utilities/flex/) | entire site | modern responsive layouts |
 | [Bootstrap](https://getbootstrap.com/docs/4.0/components/modal/) | voucher_details & training_details pages | interactive pop-up (modal) |
 | [Bootstrap](https://getbootstrap.com/docs/4.0/components/card/) | vouchers & training pages | cards |
@@ -926,6 +929,7 @@ I have not noticed any differences between the local version and the live deploy
 | [W3Schools](https://www.w3schools.com/cssref/pr_scroll-behavior.php) | entire site | smooth scroll |
 | [WhiteNoise](http://whitenoise.evans.io) | entire site | hosting static files on Heroku temporarily |
 | [Autoprefixer](https://autoprefixer.github.io/) | CSS stylesheets | CSS prefixes |
+| [Medium.com](https://medium.com/@yathomasi1/1-using-django-extensions-to-visualize-the-database-diagram-in-django-application-c5fa7e710e16) | README | used to generate the ERD with `graphviz` and `django-extensions` |
 
 ### Media
 
