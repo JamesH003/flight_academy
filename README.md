@@ -289,7 +289,12 @@ Contact
 ## Database Design
 
 Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models.
-Understanding the relationships between different tables can save time later in the project.
+
+I have used `graphviz` and `django-extension` to automate the ERD for my project.
+
+![ERD](documentation/erd.png)
+
+* source: https://medium.com/@yathomasi1/1-using-django-extensions-to-visualize-the-database-diagram-in-django-application-c5fa7e710e16
 
 ```python
 class Voucher(models.Model):
