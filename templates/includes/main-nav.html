@@ -1,4 +1,4 @@
-<div class="collapse navbar-collapse bg-navy w-100 mx-0 px-5" id="main-nav">
+<div class="collapse navbar-collapse bg-navy w-100 mx-0 px-5" id="main-nav-{{ screensize }}">
     <ul class="navbar-nav w-100">
         
         <li class="nav-item dropdown">
@@ -32,14 +32,14 @@
 
         <div class="d-flex flex-row justify-content-between">
             <div class="d-flex d-md-none nav-item dropdown">
-                <a class="text-white nav-link" href="#" id="user-options-1" data-toggle="dropdown"
+                <a class="text-white nav-link" href="#" id="user-options-{{ screensize }}" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
                     <div class="text-center">
                         <div><i class="fas fa-user fa-lg"></i></div>
                         <p class="my-0">Account <i class="fa-solid fa-caret-down"></i></p> 
                     </div>
                 </a>
-                <div class="dropdown-menu border-0" aria-labelledby="user-options-1">
+                <div class="dropdown-menu border-0" aria-labelledby="user-options-{{ screensize }}">
                     {% if request.user.is_authenticated %}
                     <a href="{% url 'user_profile' %}" class="dropdown-item">Profile</a>
                     <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
