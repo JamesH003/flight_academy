@@ -18,3 +18,9 @@
     </div>
 
 {% endblock %}
+
+{% block postloadjs %}
+    <script>
+        $('#id_phone_num').attr('type', 'tel');
+    </script>
+{% endblock %}
