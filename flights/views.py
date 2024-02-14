@@ -32,17 +32,23 @@ def voucher_detail(request, voucher_id):
 def add_voucher(request):
     """ A view to allow a superuser to add a new voucher """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only Flight Academy management can access this.')  # noqa
+        messages.error(
+            request,
+            'Sorry, only Flight Academy management can access this.')
         return redirect(reverse('vouchers'))
 
     if request.method == 'POST':
         form = VoucherForm(request.POST or None, request.FILES or None)
         if form.is_valid():
             form.save()
-            messages.success(request, 'You have successfully added a new voucher!')  # noqa
+            messages.success(
+                request,
+                'You have successfully added a new voucher!')
             return redirect('vouchers')
         else:
-            messages.error(request, 'Failed to add voucher. Please ensure the form is valid.')  # noqa
+            messages.error(
+                request,
+                'Failed to add voucher. Please ensure the form is valid.')
     else:
         form = VoucherForm()
 
@@ -59,7 +65,9 @@ def edit_voucher(request, id):
     """ A view to allow a superuser to edit a voucher """
     voucher = get_object_or_404(Voucher, id=id)
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only Flight Academy management can access this.')  # noqa
+        messages.error(
+            request,
+            'Sorry, only Flight Academy management can access this.')
         return redirect('vouchers')
     form = VoucherForm(
         request.POST or None, request.FILES or None, instance=voucher)
@@ -69,7 +77,10 @@ def edit_voucher(request, id):
             messages.success(request, f'Successfully updated {voucher.title}')
             return redirect('vouchers')
         else:
-            messages.error(request, f'Failed to update {voucher.title}. Please ensure the form is valid.')  # noqa
+            messages.error(
+                request,
+                f'Failed to update {voucher.title}. '
+                'Please ensure the form is valid.')
     else:
         form = VoucherForm(instance=voucher)
         messages.info(request, f'You are editing {voucher.title}.')
@@ -86,7 +97,9 @@ def delete_voucher(request, id):
     """ A view to allow a superuser to delete a voucher """
     voucher = get_object_or_404(Voucher, id=id)
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only Flight Academy management can access this.')  # noqa
+        messages.error(
+            request,
+            'Sorry, only Flight Academy management can access this.')
         return redirect('vouchers')
     voucher.delete()
     return redirect('vouchers')

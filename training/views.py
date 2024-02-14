@@ -47,7 +47,10 @@ def add_training(request):
             return redirect('training')
         else:
             messages.error(
-                request, 'Failed to add training course. Please ensure the form is valid.')  # noqa
+                request,
+                'Failed to add training course. '
+                'Please ensure the form is valid.'
+            )
     else:
         form = TrainingForm()
 
@@ -76,7 +79,10 @@ def edit_training(request, id):
             return redirect('training')
         else:
             messages.error(
-                request, f'Failed to update {training.title}. Please ensure the form is valid.')  # noqa
+                request,
+                f'Failed to update {training.title}. '
+                'Please ensure the form is valid.'
+            )
     else:
         form = TrainingForm(instance=training)
         messages.info(request, f'You are editing {training.title}.')

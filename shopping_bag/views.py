@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, get_object_or_404, reverse, HttpResponse  # noqa
+from django.shortcuts import (
+    render, redirect, get_object_or_404, reverse, HttpResponse)
 from django.contrib import messages
 
 from flights.models import Voucher
@@ -23,7 +24,10 @@ def add_to_shopping_bag(request, voucher_id):
     if voucher_id in list(shopping_bag.keys()):
         shopping_bag[voucher_id] += quantity
         messages.success(
-            request, f'Updated {voucher.title} quantity to {voucher.title} quantity to  # noqa {shopping_bag[voucher_id]}')
+            request,
+            f'Updated {voucher.title} quantity to {voucher.title} '
+            f'quantity to {shopping_bag[voucher_id]}'
+        )
     else:
         shopping_bag[voucher_id] = quantity
         messages.success(
@@ -44,7 +48,8 @@ def adjust_shopping_bag(request, voucher_id):
     if quantity > 0:
         shopping_bag[voucher_id] = quantity
         messages.success(
-            request, f'Updated {voucher.title} quantity to {shopping_bag[voucher_id]}')  # noqa
+            request,
+            f'Updated {voucher.title} quantity to {shopping_bag[voucher_id]}')
     else:
         shopping_bag.pop(voucher_id)
         messages.success(
