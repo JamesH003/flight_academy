@@ -1,6 +1,6 @@
 # [FLIGHT ACADEMY](https://flight-academy-e7e5adf022d9.herokuapp.com)
 
-Welcome to Flight Academy! Flight Academy is a website used to advertise and promote the training options and vouchers available for sale from the flight school of the same name. Users are able to browse through the multiple training courses on offer and learn more about each individual course. They also have the option of registering their interest in a particular course in order to receive further information and contact from the flight school. Users can also browse through the list of flight vouchers available and make a purchase directly through the site. People interested in becoming a pilot or aviation enthusiasts in general will find this website useful as they can obtain the information required to begin planning their training, or sign up for a monthly newsletter where they will get the latest industry news. From the site owners perspective, the Flight Academy website is a well laid out, clean and informative. The site admin can create, edit and delete new vouchers and training courses from the front end without having to access the admin panel. The site is aimed at users from early teens upwards and at anyone who has an interest in aviation from both a professional and casual perspective. Users will find the site intuitive and responsive across all devices.
+Welcome to Flight Academy! Flight Academy is a website used to advertise and promote the training options and vouchers available for sale from the flight school of the same name. Users are able to browse through the multiple training courses on offer and learn more about each individual course. They also have the option of registering their interest in a particular course in order to receive further information and contact from the flight school. Users can also browse through the list of flight vouchers available and make a purchase directly through the site. People interested in becoming a pilot or aviation enthusiasts in general will find this website useful as they can obtain the information required to begin planning their training, or sign up for a monthly newsletter where they will get the latest industry news. From the site owners perspective, the Flight Academy website is well laid out, clean and informative. The site admin can create, edit and delete new vouchers and training courses from the front end without having to access the admin panel. The site is aimed at users from early teens upwards and at anyone who has an interest in aviation from both a professional and casual perspective. Users will find the site intuitive and responsive across all devices.
 
 ![screenshot](documentation/amiresponsive.png)
 
@@ -129,7 +129,7 @@ Contact
 
 - **Landing Page**
 
-    - Visitors to the site will first encounter the landing page which is the homepage of the site. The homepage consists of a navbar at the top with a hero background image as the main feature of the page. The navbar is a solid dark colour with contrasting white text displaying the site name/logo and a contrasting red Font Awesome icon. On medium sized screens and larger, the right side of the navbar features navigation links to the training, voucher and contact us page. A vertical white divider line separates the navigation links from the account and shopping bag links. The main section of the page features a background image of a line of aircraft with a dark overlay with graduated darkness. There is also a large, bright and contrasting Learn More button which links to the About page.
+    - Visitors to the site will first encounter the landing page which is the homepage of the site. The homepage consists of a navbar at the top with a hero background image as the main feature of the page. The navbar is a solid dark colour with contrasting white text displaying the site name/logo and a contrasting red Font Awesome icon. On medium-sized screens and larger, the right side of the navbar features navigation links to the training, voucher and contact us page. A vertical white divider line separates the navigation links from the account and shopping bag links. The main section of the page features a background image of a line of aircraft with a dark overlay with graduated darkness. There is also a large, bright and contrasting Learn More button which links to the About page.
 
 ![screenshot](documentation/features/features-homepage.png)
 
@@ -175,7 +175,7 @@ Contact
 
 - **Voucher Details Page**
 
-    - Users can click on each individual Voucher card which will open a Voucher Details page. This page consists of an image on the left with the aircraft type listed beneath it between horizontal dividing lines. On the right there is the title of the voucher, followed by the price of the voucher. Beneath that there is some information text about the voucher. There is a quantity selector with red +/- buttons in line with the red colour throughtout the site. Beneath that there are two buttons, a dark navy Keep Shopping button which returns to the Vouchers page, and a Add To Bag button which adds the voucher to the shopping bag.
+    - Users can click on each individual Voucher card which will open a Voucher Details page. This page consists of an image on the left with the aircraft type listed beneath it between horizontal dividing lines. On the right there is the title of the voucher, followed by the price of the voucher. Beneath that there is some information text about the voucher. There is a quantity selector with red +/- buttons in line with the red colour throughout the site. Beneath that there are two buttons, a dark navy Keep Shopping button which returns to the Vouchers page, and a Add To Bag button which adds the voucher to the shopping bag.
 
 ![screenshot](documentation/features/features-voucher-details.png)
 
@@ -284,7 +284,7 @@ Contact
 - [ElephantSQL](https://www.elephantsql.com) used as the Postgres database.
 - [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
 - [Cloudinary](https://cloudinary.com) used for online static file storage.
-- [Stripe](https://stripe.com) used for online secure payments of ecommerce products/services.
+- [Stripe](https://stripe.com) used for online secure payments of e-commerce products/services.
 
 ## Database Design
 
@@ -636,7 +636,7 @@ Using this approach, I was able to apply the MoSCow prioritization and labels to
 - **Could Have**: has small impact if left out (*20% of stories*)
 - **Won't Have**: not a priority for this iteration
 
-## Ecommerce Business Model
+## E-commerce Business Model
 
 This site sells goods to individual customers, and therefore follows a `Business to Customer` model.
 It is of the simplest **B2C** forms, as it focuses on individual transactions, and doesn't need anything
@@ -645,7 +645,7 @@ such as monthly/annual subscriptions.
 It is still in its early development stages, although it already has a newsletter, and links for social media marketing.
 
 Social media can potentially build a community of users around the business, and boost site visitor numbers,
-especially when using larger platforms such a Facebook.
+especially when using larger platforms such as Facebook.
 
 A newsletter list can be used by the business to send regular messages to site users.
 For example, what items are on special offer, new items in stock,
@@ -741,7 +741,7 @@ To obtain your own Cloudinary API key, create an account and log in.
 
 ### Stripe API
 
-This project uses [Stripe](https://stripe.com) to handle the ecommerce payments.
+This project uses [Stripe](https://stripe.com) to handle the e-commerce payments.
 
 Once you've created a Stripe account and logged-in, follow these series of steps to get your project connected.
 
@@ -758,7 +758,7 @@ As a backup, in case users prematurely close the purchase-order page during paym
 - Click **receive all events**.
 - Click **Add Endpoint** to complete the process.
 - You'll have a new key here:
-	- `STRIPE_WH_SECRET` = Signing Secret (Wehbook) Key (starts with **wh**)
+	- `STRIPE_WH_SECRET` = Signing Secret (Webhook) Key (starts with **wh**)
 
 ### Gmail API
 
@@ -953,5 +953,5 @@ I have not noticed any differences between the local version and the live deploy
 
 - I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for their support throughout the development of this project.
 - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
-- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
+- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self-doubt and imposter syndrome.
 - I would like to thank my partner Caoimhe, for believing in me, and supporting me throughout this course
