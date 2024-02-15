@@ -226,7 +226,7 @@ Defensive programming was manually tested with the below user acceptance testing
 
     - To fix this, I added # noqa to the end of the line as it was a string.
 
-- Commit messages starting with lowercase letter.
+- Commit messages starting with lowercase letters.
 
     ![screenshot](documentation/bugs-commit-messages.png)
 
