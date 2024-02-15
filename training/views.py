@@ -103,5 +103,5 @@ def delete_training(request, id):
             request, 'Sorry, only Flight Academy management can access this.')
         return redirect('training')
     training.delete()
-    messages.succes(request, 'Training Course Deleted')
+    messages.success(request, 'Training Course Deleted')
     return redirect('training')
