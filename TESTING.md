@@ -224,7 +224,7 @@ Defensive programming was manually tested with the below user acceptance testing
 
     ![screenshot](documentation/bugs-line-too-long.png)
 
-    - To fix this, I added # noqa to the end of the line as it was a string.
+    - To fix this, I added # noqa to the end of the line as it was a string. With time remaining I went back and resolved all the line too long errors completely.
 
 - Commit messages starting with lowercase letters.
 
